@@ -1,0 +1,195 @@
+<?xml version="1.0"?><api><query><normalized><n from="Seriendruckvorlagen_mit_dem_WollMux_erstellen" to="Seriendruckvorlagen mit dem WollMux erstellen" /></normalized><pages><page pageid="38" ns="0" title="Seriendruckvorlagen mit dem WollMux erstellen"><revisions><rev contentformat="text/x-wiki" contentmodel="wikitext" xml:space="preserve">Dieser Artikel erklärt an praktischen Anwendungsbeispielen, wie Seriendruckvorlagen für den WollMux erstellt werden.
+
+== Einfache Serienbriefvorlage erstellen ==
+Dieses Beispiel dient vorrangig der Demonstration. Die durchzuführenden Schritte werden beschrieben, detaillierte Erklärungen fehlen jedoch. Das später folgende Beispiel für eine komplexe Serienbriefvorlage ist in diesem Punkt ausführlicher und sollte nach diesem einfachen Beispiel durchgearbeitet werden.
+
+Wir wollen einen einfachen Serienbrief mit externem Briefkopf verschicken. Die Exemplare des Serienbriefs werden direkt gedruckt. Der Serienbrief soll folgenden Inhalt haben:
+
+ Sehr &lt;Anrede&gt;,
+ 
+ wir laden Sie herzlich zu unserer Jubiläumsveranstaltung anlässlich des 10-jährigen 
+ Bestehens unserer Abteilung ein.
+ 
+ Mit freundlichen Grüßen
+  
+ Sach Bearbeiter
+
+Dabei soll &quot;Sach Bearbeiter&quot; durch den Namen des Sachbearbeiters und &lt;Anrede&gt; jeweils durch &quot;geehrter Herr Soundso&quot; bzw. &quot;geehrte Frau Soundso&quot; ersetzt werden. Das Empfängerfeld des externen Briefkopfs soll die entsprechende Adresse enthalten:
+ Zeile 1  Herrn Soundso                  Frau Soundso
+ Zeile 2  Irgendwostr. 10       bzw.     Nirgendgasse. 31
+ Zeile 3  99999 Nirgendheim              77777 Woauchimmer
+
+=== Durchführung ===
+==== Vorbereitung ====
+# Rufen Sie die WollMux-Leiste auf (auf dem Basisclient: ''K/Büroprogramme/Vorlagen und Formulare'')
+# Fügen Sie Felix Wollmux zur Absenderliste hinzu
+# Wählen Sie Felix Wollmux als Absender aus
+
+==== Serienbriefvorlage erstellen ====
+# Wählen Sie in der WollMux-Leiste Standard/Mischvorlagen/Mischvorlage externer Briefkopf
+# Lesen Sie den Erklärungstext
+# Löschen Sie den Erklärungstext und fügen Sie dann den obigen Serienbrieftext ein. 
+# Selektieren Sie den Brieftext und ändern Sie das Absatzformat auf &quot;Fließtext&quot;.
+# Selektieren Sie das Wort &quot;&lt;Anrede&gt;&quot;
+# Rufen Sie den Dialog ''Einfügen/Feldbefehl/Andere...'' auf. Wählen Sie den Reiter ''Funktionen''
+# Wählen Sie ''Eingabefeld''. Geben Sie bei ''Hinweis'' folgenden Text ein: &quot;&lt;&lt;Anrede&gt;&gt;&quot; (ohne die Anführungszeichen; beachten Sie die doppelten Größer- und Kleinerzeichen)
+# Klicken Sie auf ''Einfügen''. Das folgende Pop-Up bestätigen Sie mit OK, ohne etwas einzugeben. Anstelle von &quot;&lt;Anrede&gt;&quot; ist jetzt im Text ein leeres Eingabefeld, erkennbar an einem kleinen grauen Kasten.
+# Blenden Sie über das Menü ''Ansicht/Symbolleisten'' die Leiste ''Werkzeuge für Vorlagenersteller (WollMux)'' ein.
+# Starten Sie über den Button ''FormularMax 4000'' den FormularMax 4000 (FM4000).
+# Aktivieren Sie im FM4000 den Menüpunkt ''Formular/Formularfelder aus Dokument einlesen''
+# Schließen Sie den FormularMax 4000.
+# Selektieren Sie das Wort &quot;Sach&quot;. Wählen Sie ''Einfügen/Textmarke''
+# Geben Sie folgenden Text ein: &quot;WM(CMD 'insertValue' DB_SPALTE 'Vorname')&quot; und bestätigen Sie mit OK.
+# Selektieren Sie das Wort &quot;Bearbeiter&quot;. Wählen Sie ''Einfügen/Textmarke''
+# Geben Sie folgenden Text ein: &quot;WM(CMD 'insertValue' DB_SPALTE 'Nachname')&quot; und bestätigen Sie mit OK.
+# Speichern Sie die Vorlage als &quot;OpenDocument Textdokumentvorlage (.ott)&quot;
+
+==== Vorlage öffnen ====
+# Öffnen Sie die Vorlage (z.B. Doppelklick im Dateimanager oder über Datei/Öffnen)
+# Wenn ein Pop-Up erscheint für das Eingabefeld &quot;&lt;&lt;Anrede&gt;&gt;&quot; brechen Sie es einfach ab.
+# Es wird nun der externe Briefkopf aufgebaut und mit den ausgewählten Sachbearbeiterdaten (wenn Sie obiger Vorbereitung gefolgt sind, dann sind dies die von Felix Wollmux) befüllt. Die Worte &quot;Sach Bearbeiter&quot; werden durch &quot;Felix Wollmux&quot; ersetzt.
+
+;Achtung: Unter ''keinen'' Umständen dürfen Sie dieses Dokument als Vorlage speichern. Wenn Sie das Dokument in dieser Form speichern, so sind darin der Briefkopf und die Sachbearbeiterdaten fest verdrahtet. Falls sich die Standard-Briefköpfe oder Ihre Daten ändern oder wenn eine andere Person die Vorlage verwendet, dann wird der Inhalt nicht automatisch angepasst.&lt;br&gt;Um die Vorlage zu bearbeiten, müssen Sie sie im Bearbeitungsmodus öffnen. Auf dem Basisclient gibt es im Rechts-Klick Menü des Dateimanagers dafür den Punkt &quot;Vorlage bearbeiten&quot;. Sie können die Vorlage auch in OpenOffice.org über ''Datei/Dokumentvorlage/Bearbeiten...'' öffnen. Dass Sie die Vorlage korrekt zum Bearbeiten geöffnet haben erkennen Sie daran, dass Sie keinen fertigen Briefkopf sehen, sondern nur den Platzhalter &quot;&lt;externer Briefkopf&gt;&quot;.
+
+==== Empfängerdaten für den Seriendruck bereitstellen ====
+Öffnen Sie die Beispieldatei [http://limux.tvc.muenchen.de/ablage/sonstiges/wollmux/schulung/beispiele/Serienbriefdatentabelle.ods Serienbriefdatentabelle.ods].
+
+Sie sehen, dass die Tabelle neben Spalten ''EmpfaengerZeileX'', die die Daten für das Adressfeld links oben im Brief angeben, auch eine Spalte ''Anrede'' besitzt, in der der Anrede-Text genau in der Form enthalten ist, in der er hinter dem &quot;Sehr&quot; im Brief eingefügt werden muss.
+
+==== Seriendruck durchführen ====
+# Wechseln Sie von der Tabellenkalkulation zurück zum Writer-Fenster mit dem Serienbrief (dem &quot;UnbenanntX&quot; Dokument mit fertig ausgefülltem Briefkopf). Halten Sie jedoch die Tabelle mit den Daten für den Seriendruck weiter offen!
+# Wählen Sie in der Writer-Menüleiste Extras/Seriendruck(WollMux) &lt;br&gt;Sie sehen, dass Ihnen neben den bei OpenOffice.org registrierten Datenquellen auch alle offenen Calc-Tabellendokumente als Quelle für den Seriendruck angeboten werden. Die Tabellen müssen nicht einmal gespeichert werden.
+# Wählen Sie die ''Serienbriefdatentabelle'' als Datenquelle aus.
+# Drücken Sie den Button ''Start''. Die Serienbriefe werden nun gedruckt.
+
+== Komplexe Serienbriefvorlage erstellen ==
+Diesmal wollen wir eine komplexe Serienbriefvorlage erstellen. Die Vorlage soll Felder enthalten, die abhängig von der Anrede des Empfängers mit den korrekten geschlechtsspezifischen Begriffen befüllt werden. Zu unseren Empfängern gehören auch Firmen, so dass auch Mehrzahlformen vorkommen können. Des weiteren wollen wir, dass bestimmte Abschnitte nur in den an Firmen adressierten Exemplaren erscheinen. Der Serienbrief soll folgenden Inhalt haben (exemplarisch für den Mehrzahl-Fall):
+ Sehr geehrte Damen und Herren,
+ wie Sie aus der Presse sicher erfahren haben, möchte die Landeshauptstadt München die Love Parade in unsere schöne
+ Heimatstadt holen. Wie in vielen Berichten ebenfalls angesprochen wurde hat die Stadt dafür leider nicht das nötige
+ Kleingeld. Für die Finanzierung der Veranstaltung müssen also neue Geldquellen erschlossen werden. Die Stadt hat sich 
+ daher dazu entschlossen, passend zum Anlass eine einmalige Liebesabgabe zu erheben. Betroffen von der neuen Abgabe
+ sind all diejenigen Münchner Bürgerinnen und Bürger sowie in München ansässige Firmen, die &quot;Liebe&quot; im Namen tragen.
+ Die Höhe der Abgabe richtet sich danach, wie viel Liebe Sie im Herzen tragen. Um Sie korrekt einstufen zu können,
+ möchten wir Sie daher bitten, den unten stehenden Abschnitt auszufüllen, abzutrennen und schnellstmöglichst an uns
+ zurück zu senden.
+ 
+ Mit freundlichen Grüßen
+ Felix WollMux
+ -----------------------------------------------------------------------------------------------------------------
+ Wir, Liebeskind Schrauben GmbH und Co. KG, erklären hiermit, im vergangenen Jahr
+ ____ EUR für wohltätige Zwecke gespendet
+ ____ Bäume gepflanzt
+ ____ Kuschelrock-CDs gekauft
+ ____ neue Jobs geschaffen
+ 
+ zu haben.
+ 
+ Als in München ansässige Firma sind wir Stolz darauf, das Projekt &quot;Love Parade@München&quot; zu unterstützen.
+ 
+ München, den __________________________________________ (Unterschrift des Geschäftsführers)
+
+=== Durchführung ===
+==== Mischvorlage erstellen ====
+# Rufen Sie die WollMuxLeiste auf (falls sie nicht läuft)
+# Wählen Sie Standard/Mischvorlagen/Mischvorlage externer Briefkopf
+# Lesen Sie den Erklärungstext
+# Löschen Sie den Erklärungstext und fügen Sie dann den obigen Serienbrieftext ein.
+# Speichern Sie die Vorlage als &quot;OpenDocument Textdokumentvorlage (.ott)&quot;
+# Doppelklicken Sie auf die neu gespeicherte Vorlage im Dateimanager. Es wird ein neues &quot;UnbenanntX&quot; Dokument geöffnet und der externe Briefkopf wird automatisch mit dem Brieftext gemischt.
+# Schließen Sie das gerade geöffnete &quot;UnbenanntX&quot; Dokument.
+# Falls Sie die Vorlage nicht mehr geöffnet haben, so öffnen Sie sie erneut zum Bearbeiten (Datei/Dokumentvorlage/Bearbeiten oder (auf dem Basisclient) Rechts-Klick im Dateimanager und &quot;Vorlage bearbeiten&quot;. Dass Sie eine Mischvorlage zum Bearbeiten geöffnet haben sehen Sie daran, dass zuoberst &quot;&lt;externer Briefkopf&gt;&quot; steht. Sehen Sie dagegen einen fertig ausgefüllten externen Briefkopf, haben Sie die Datei im falschen Modus geöffnet. &lt;br&gt;'''Speichern Sie unter keinen Umständen eine Datei mit fertig ausgefülltem Briefkopf als Vorlage!'''
+
+==== Formularfelder einfügen ====
+===== Arbeitserleichterung =====
+Jeder WollMux-Serienbrief ist gleichzeitig auch ein WollMux-Formular. Die Erstellung einer WollMux-Serienbriefvorlage entspricht also dem Erstellen einer Formularvorlage. Um das Einfügen von Formularfeldern zu erleichtern, sollten Sie sich das Icon zum Menüpunkt ''Einfügen/Feldbefehl/Andere...'' direkt in die Standardsymbolleiste einfügen. Sie tun dies wie folgt:
+# Öffnen Sie das Menü ''Extras/Anpassen...'' und dort den Reiter ''Symbolleisten''.
+# Wählen Sie die Symbolleiste ''Standard'' aus.
+# Über ''Hinzufügen...'' fügen Sie die Aktion ''Einfügen/Feldbefehle einfügen'' zur Symbolleiste hinzu.
+Durch einen Klick auf das neue Icon (nicht den kleinen Pfeil daneben!) können Sie nun direkt das Menü ''Einfügen/Feldbefehl/Andere...'' aufrufen. Wenn Sie lieber mit Tastenkürzeln arbeiten können Sie natürlich auch das Tastenkürzel Strg-F2 verwenden.
+
+===== Anredeabhängige Felder =====
+# Selektieren Sie das Wort &quot;geehrte&quot;. (Tip: Ein einzelnes Wort lässt sich durch Doppelklick mit der Maus einfach selektieren.)
+# Rufen Sie ''Einfügen/Feldbefehl/Andere...'' auf (z.B. über das oben hinzugefügte Icon).
+# Wählen Sie den Reiter ''Funktionen''
+# Wählen Sie ''Eingabeliste''
+# Geben Sie im Textfeld ''Eintrag'' &quot;geehrter&quot; ein und klicken Sie auf ''Hinzufügen'' (oder drücken Sie ENTER).
+# Geben Sie im Textfeld ''Eintrag'' &quot;geehrte&quot; ein und klicken Sie auf ''Hinzufügen'' (oder drücken Sie ENTER).
+# Geben Sie im Textfeld ''Eintrag'' &quot;geehrte &quot; ein. Beachten Sie, dass nach dem letzten Buchstaben ein Leerzeichen eingegeben wird. Dies umgeht die Beschränkung, dass die Eingabeliste nicht 2 mal den selben Eintrag enthalten kann. Klicken Sie auf ''Hinzufügen'' (oder drücken Sie ENTER).
+# Geben Sie im Textfeld ''Name'' folgenden String ein: &quot;&lt;&lt;gender:EmpfaengerAnrede&gt;&gt;&quot;. Dies ist eine magische Syntax, die angibt, dass der Wert dieser Eingabeliste automatisch in Abhängigkeit vom Feld &quot;EmpfaengerAnrede&quot; gesetzt werden soll. Wenn im Anredefeld (das wir gleich anlegen werden) &quot;Herr&quot; oder &quot;Herrn&quot; ausgewählt wurde, wird der erste Eintrag gewählt, bei &quot;Frau&quot; der zweite und in jedem sonstigen Fall (typischerweise Mehrzahl) wird der dritte Eintrag gewählt. Der dritte Eintrag ist dabei optional. Wenn ihr Formular/Serienbrief den Mehrzahlfall nicht behandeln muss, kann der dritte Eintrag weggelassen werden.
+# Klicken Sie auf ''Einfügen'' (oder Drücken Sie Strg-ENTER). Das selektierte Wort wurde nun durch ein Auswahlfeld ersetzt.
+# Selektieren Sie nun die ganze Phrase &quot;Damen und Herren&quot;.
+# Sofern Sie ihn nicht mehr offen haben, rufen Sie wieder den Dialog ''Einfügen/Feldbefehl/Andere...'' auf.
+# Fügen Sie (in dieser Reihenfolge) die Einträge &quot;Herr&quot;, &quot;Frau&quot;, &quot;Damen und Herren&quot; zur Liste hinzu.
+# Geben Sie im Textfeld ''Name'' folgenden String ein: &quot;Anrede&lt;&lt;EmpfaengerAnrede&gt;&gt;&quot;. Dies ist eine magische Syntax, die angibt, dass zu dieser Eingabeliste in der Formular-GUI eine Combobox erscheinen soll, die mit dem Label &quot;Anrede&quot; versehen wird. Dieser Aspekt ist im Fall einer reinen Serienbriefvorlage natürlich unwichtig, für ein manuelles Ausfüllen von Einzelexemplaren aber nützlich.&lt;br&gt;Des weiteren gibt diese Syntax an, dass der Wert dieses Feldes die ID &quot;EmpfaengerAnrede&quot; haben soll. Diese ID findet zum Beispiel Anwendung bei der bereits verwendeten &quot;&lt;&lt;gender:...&gt;&gt;&quot; Syntax. Alle mit &quot;&lt;&lt;gender:EmpfaengerAnrede&gt;&gt;&quot; versehenen Eingabelisten werden in Abhängigkeit des Feldes mit &quot;&lt;&lt;EmpfaengerAnrede&gt;&gt;&quot; Angabe befüllt.&lt;br&gt;Bei IDs ist darauf zu achten, dass Gross-/Kleinschreibung von Bedeutung ist, und dass die Regeln für Bezeichner eingehalten werden (also z.B. keine enthaltenen Leerzeichen oder Umlaute). Für das Label (den Teil vor dem &lt;&lt;...&gt;&gt;) gelten diese Einschränkungen nicht.
+# Beim Erstellen eines Formulars, das von Hand ausgefüllbar sein soll (und da von Serienbriefen manchmal Einzelexemplare erforderlich sind ist dies auch bei Serienbriefvorlagen meist der Fall), sollten Sie für das neue Formularfeld eine sinnvolle Voreinstellung wählen.  Klicken Sie zu diesem Zweck mit der linken Maustaste auf das neue Formularfeld und wählen Sie den gewünschten Standardwert aus.&lt;br&gt;Bei vielen Schreiben gibt es aufgrund der Sache den Fall, dass sie nicht gleich häufig an Männer und Frauen verschickt werden. Überlegen Sie sich, ob der Ansprechpartner meistens eine Frau, ein Mann oder eine Gruppe ist und wählen Sie die Voreinstellung entsprechend.&lt;br&gt; Eine sinnvolle Voreinstellung spart den Sachbearbeiterinnen und Sachbearbeitern später unnütze Klicks und Frustration. &lt;br&gt;'''Hinweis: ''' Die aktuelle Anzeige des Formularfelds ist ''nicht automatisch'' die Voreinstellung. Eine frisch eingefügte Eingabeliste hat ''keine Voreinstellung'', auch wenn standardmäßig der erste Eintrag der Liste angezeigt wird. Eine Voreinstellung ist daran zu erkennen, dass im Popup-Menü, das bei Links-Klick auf das Feld erscheint, ein Eintrag farblich hervorgehoben ist.&lt;br&gt;'''Hinweis 2: '''Bei abgeleiteten Feldern, deren Inhalt der WollMux automatisch setzt (wie z.B. das weiter oben eingefügte &quot;geehrte/r&quot; Feld) ist das Setzen einer Voreinstellung unnötig.
+# Im Abschnitt unter der gestrichelten Linie, selektieren Sie das Wort &quot;Wir&quot; und ersetzen Sie es durch eine Eingabeliste mit den Einträgen &quot;Ich&quot;, &quot;Ich &quot; und &quot;Wir&quot;. Als ''Name'' wird wieder &quot;&lt;&lt;gender:EmpfaengerAnrede&gt;&gt;&quot; eingetragen.
+# Ersetzen sie das Wort &quot;erklären&quot; durch eine Eingabeliste &quot;erkläre&quot;, &quot;erkläre &quot;, &quot;erklären&quot;, wieder mit Hinweis &quot;&lt;&lt;gender:EmpfaengerAnrede&gt;&gt;&quot;.
+
+===== Weitere Felder =====
+# Fügen Sie hinter dem Anredefeld mit der Liste &quot;Herr&quot;,&quot;Frau&quot;,&quot;Damen und Herren&quot; ein Leerzeichen ein. Mit dem Cursor hinter diesem Leerzeichen stehend wählen Sie im ''Einfügen/Feldbefehl/Andere...'' Dialog den Feldttyp ''Eingabefeld''. Geben Sie bei Hinweis den folgenden String ein: &quot;Nachname&lt;&lt;EmpfaengerNachname&gt;&gt;&quot;. Klicken Sie dann auf ''Einfügen''. Im dann erscheinenden Fenster geben Sie &quot;Mustermann&quot; ein und bestätigen mit OK (bzw. Strg-ENTER).
+# Markieren Sie den Text &quot;Liebeskind Schrauben GmbH und Co. KG&quot;.
+# Fügen Sie an dessen Stelle ein Eingabefeld ein mit ''Hinweis'' &quot;Firma&lt;&lt;EmpfaengerFirma&gt;&gt;&quot;. Geben Sie im Popup-Fenster &quot;Musterfirma&quot; ein.
+# Platzieren Sie den Cursor direkt hinter dem Wort &quot;Musterfirma&quot;. Fügen Sie an dieser Stelle ein Eingabefeld mit ''Hinweis'' &quot;Vorname&lt;&lt;EmpfaengerVorname&gt;&gt;&quot; ein. Im Popup-Fenster geben Sie &quot;Hans&quot; ein. Achten Sie darauf, dass zwischen dem Wort &quot;Musterfirma&quot; und dem Wort &quot;Hans&quot; ''kein'' Leerzeichen steht.
+# Platzieren Sie den Cursor direkt hinter dem Wort &quot;Hans&quot;. Fügen Sie ein Leerzeichen ein. Fügen Sie dann ein Eingabefeld ein mit ''Hinweis'' &quot;&lt;&lt;EmpfaengerNachname&gt;&gt;&quot;. &lt;br&gt;Beachten Sie den Unterschied zum weiter oben eingefügten Feld mit Hinweis &quot;Nachname&lt;&lt;EmpfaengerNachname&gt;&gt;&quot;. Die Label-Angabe vor dem &lt;&lt;...&gt;&gt; fehlt dieses Mal, da das Feld eine Kopie des anderen Nachnamefeldes sein soll. Würde man dieses Mal wieder ein Label vergeben würde dies dazu führen, dass beim manuellen Ausfüllen dem Bearbeiter 2 Felder zur Eingabe des Nachnames angeboten werden. Wegen der identischen ID-Angabe &lt;&lt;EmpfaengerNachname&gt;&gt; könnten beide Felder aber nicht unabhängig voneinander befüllt werden. Es käme zu Ungereimtheiten in der Darstellung.&lt;br&gt;'''Regel: ''' In einem Formular darf es für jede ID nur genau ein Feld (egal ob Eingabefeld oder Eingabeliste) geben mit der magischen Angabe &quot;Label&lt;&lt;ID&gt;&gt;&quot;. Bei allen anderen Feldern darf nur &quot;&lt;&lt;ID&gt;&gt;&quot; ohne Label vorkommen.
+
+===== Formularfelder in WollMux-Felder umwandeln =====
+Damit die in den obigen Schritten eingefügten Formularfelder vom WollMux erkannt werden, müssen entsprechende WollMux-Merkmale hinzugefügt werden. Verwenden Sie dazu den FormularMax 4000 wie im folgenden beschrieben.
+# Blenden Sie über das Menü ''Ansicht/Symbolleisten'' die Leiste ''Werkzeuge für Vorlagenersteller (WollMux)'' ein.
+# Starten Sie über den Button ''FormularMax 40000'' den FormularMax 4000 (FM4000).
+# Aktivieren Sie im FM4000 den Menüpunkt ''Formular/Formularfelder aus Dokument einlesen''.&lt;br&gt; Sie sehen, dass für jedes Element, das mit der magischen Syntax &quot;Label&lt;&lt;ID&gt;&gt;&quot; versehen wurde ein entsprechendes Eingabeelement hinzugekommen ist. Für die Elemente, die mit der Syntax &quot;&lt;&lt;ID&gt;&gt;&quot; versehen wurden, ist kein Eingabeelement erzeugt worden, jedoch finden sich diese Stellen auf dem Reiter ''Einfügungen'' wieder.
+
+===== Formular für das händische Ausfüllen nachbearbeiten =====
+Obwohl unser Ziel die Erstellung einer Serienbriefvorlage ist, ist es durchaus wahrscheinlich, dass die Vorlage auch einmal von Hand ausgefüllt werden muss, um Einzelexemplare zu generieren. Deswegen wollen wir im folgenden die Vorlage so nachbearbeiten, dass sie auch als eigenständige Formularvorlage verwendbar ist. Die folgenden Handlungsanweisungen beziehen sich, wenn nichts anderes erwähnt ist, auf den FM4000.
+# Klicken Sie auf das Wort &quot;Vorname&quot;. Die entsprechende Zeile wird blau markiert. Klicken Sie 2 mal auf den Button ''Hoch'', damit das Element &quot;Vorname&quot; vor das Element &quot;Nachname&quot; wandert.
+# Wenn Sie auf der linken Seite die entsprechenden Eingabeelemente auswählen, können Sie auf der rechten Seite des FM4000 auf dem AUTOFILL Reiter sehen, dass &quot;Hans&quot;, &quot;Mustermann&quot; und &quot;Musterfirma&quot; als Vorgabewerte für &quot;EmpfaengerVorname&quot;, &quot;EmpfaengerNachname&quot; und &quot;EmpfaengerFirma&quot; übernommen wurden. Löschen Sie auf dem AUTOFILL-Reiter diese Vorgabe, indem Sie bei ''Funktion'' auf ''&lt;keine&gt;'' umstellen (der oberste Eintrag in der Funktionen-Liste. Evtl. müssen Sie das Pull-Down-Menü scrollen, um ihn angezeigt zu bekommen).
+# Wählen Sie ''Einfügen/Empfängerauswahl-Tab''.
+# Aktivieren Sie den Reiter namens &quot;Reiter&quot;. Klicken Sie dort in das erste Textfeld mit dem Text &quot;Reiter&quot; und geben Sie dort &quot;Ansprechpartner&quot; ein. Klicken Sie dann in das Textfeld daneben, das ebenfalls das Wort &quot;Reiter&quot; enthält und geben Sie ebenfalls &quot;Ansprechpartner&quot; ein.
+# Rufen Sie ''Formular/Formulartitel setzen'' auf und geben Sie als Titel &quot;Love Parade@München&quot; ein
+# Wählen Sie den Reiter ''Ansprechpartner'' aus. Rufen Sie dann ''Einfügen/Abbrechen,&lt;-Zurück,PDF,Drucken'' auf.
+# Speichern Sie die Vorlage und öffnen Sie sie (nicht zum Bearbeiten, sondern normal). Wenn der Popup-Dialog mit Titel &quot;Eintrag auswählen: &lt;&lt;gender:EmpfaengerAnrede&gt;&gt;&quot; erscheint, drücken Sie einfach Abbrechen (bzw. ESC). Der Briefkopf wird mit Ihren Sachbearbeiterdaten befüllt und die WollMux-Formular-GUI erscheint zum Ausfüllen des Formulars. Durch das Umschalten der Anrede können Sie überprüfen, dass die abgeleiteten Felder sich korrekt ändern.
+
+==== Einfügestellen für Sachbearbeiterdaten markieren ====
+An der Stelle wo im Text im Moment noch &quot;Felix Wollmux&quot; steht, soll wie im Briefkopf der Name des Sachbearbeiters automatisch eingefügt werden. Derzeit bietet der FormularMax 4000 leider noch keine bequeme Möglichkeit, entsprechende Markierungen zu setzen. Deswegen werden wir die entsprechende Markierung manuell einfügen.
+# Wenn Sie die Vorlage nicht mehr zum Bearbeiten geöffnet haben, dann tun Sie dies bitte wieder. Schließen Sie alle &quot;UnbenanntX&quot; Dokumente, die von vorherigen Tests noch offen sind, um zu vermeiden, dass Sie Änderungen im falschen Fenster durchführen und evtl. aus Versehen Ihre Vorlage mit einem Dokument überschreiben, das einen bereits ausgefüllten Briefkopf enthält.
+# Schließen Sie den FormularMax 4000, falls Sie ihn noch offen haben.
+# Selektieren Sie das Wort &quot;Felix&quot;. Wählen Sie ''Einfügen/Textmarke''
+# Geben Sie folgenden Text ein: &quot;WM(CMD 'insertValue' DB_SPALTE 'Vorname')&quot; und bestätigen Sie mit OK (oder Strg-ENTER).
+# Selektieren Sie das Wort &quot;WollMux&quot;. Wählen Sie ''Einfügen/Textmarke''
+# Geben Sie folgenden Text ein: &quot;WM(CMD 'insertValue' DB_SPALTE 'Nachname')&quot; und bestätigen Sie mit OK (oder Strg-ENTER).
+# Speichern Sie die geänderte Vorlage und öffnen Sie sie zum Testen normal. Statt &quot;Felix WollMux&quot; sollte dort nun der selbe Name stehen wie im Briefkopf.
+
+==== Ein-/Ausblendungen ====
+Die Angabe &quot;(Unterschrift des Geschäftsführers)&quot; und der Satz &quot;Als in München ansässige Firma sind wir Stolz darauf, das Projekt &quot;Love Parade@München&quot; zu unterstützen.&quot; sollen nur dann erscheinen, wenn der Empfänger eine Firma ist. Dies ließe sich zwar durch einen Missbrauch der &quot;&lt;&lt;gender:EmpfaengerAnrede&gt;&gt;&quot; Funktionalität realisieren, indem Eingabelisten verwendet werden, die nur für den Mehrzahlfall einen nicht-leeren Text enthalten, jedoch gibt es mit den Ein-/Ausblendungen eine bessere Funktionalität für diesen Zweck.
+
+===== Ein-/Ausblendungen von Textfetzen =====
+Für die Ausblendung des Textes &quot;(Unterschrift des Geschäftsführers)&quot; nutzen wir die WollMux-Funktion zum Ausblenden von Textfetzen. 
+
+# Öffnen Sie die Vorlage wieder zum Bearbeiten und schließen Sie alle anderen Fenster.
+# Selektieren Sie den Text &quot;(Unterschrift des Geschäftsführers)&quot;.
+# Fügen Sie eine Textmarke ein mit folgender Bezeichnung: &quot;WM(CMD 'setGroups' GROUPS 'Firma')&quot;
+# Öffnen Sie den FM4000.
+# Rufen Sie ''Formular/Formularbeschreibung editieren'' auf.
+# Scrollen Sie nach unten bis Sie das Wort &quot;Sichtbarkeit&quot; in Anführungszeichen gefunden haben.
+# Entfernen Sie die Anführungszeichen um das Wort &quot;Sichtbarkeit&quot; und fügen Sie ein öffnende und schließende Klammer dahinter ein: &lt;tt&gt;Sichtbarkeit()&lt;/tt&gt;&lt;br&gt;Da fehlende Klammern zu sehr schwierig zu findenden Fehlern führen können, ist es generell immer ratsam, Klammern nur paarig einzufügen oder zu löschen.
+# Platzieren Sie den Cursor zwischen die neu gesetzten Klammern und fügen Sie folgenden Text ein: &lt;tt&gt;Firma(MATCH(VALUE(&quot;EmpfaengerAnrede&quot;), &quot;Damen und Herren&quot;))&lt;/tt&gt;&lt;br&gt;Dies gibt an, dass die Gruppe &quot;Firma&quot; (siehe oben erzeugte ''setGroups''-Textmarke) nur sichtbar sein soll, wenn als Anrede &quot;Damen und Herren&quot; ausgewählt wurde.
+# Wählen Sie ''Datei/Speichern'' (im &quot;Formularbeschreibung bearbeiten&quot; Fenster!). Dies speichert in diesem Fall ''nicht'' die Vorlage, sondern bestätigt nur die geänderte Formularbeschreibung.
+# Speichern und testen Sie die Vorlage. Bei der Auswahl von &quot;Herr&quot; oder &quot;Frau&quot; in der Anrede-Combobox sollte der Text &quot;(Unterschrift des Geschäftsführers)&quot; nun nicht mehr erscheinen.
+
+===== Ein-/Ausblendungen von Bereichen =====
+Für das Ausblenden des Satzes &quot;Als in München...&quot; verwenden wir die WollMux-Funktionalität zum Ausblenden von Bereichen. Diese sollte grundsätzlich immer zum Einsatz kommen, wenn größere Textteile auszublenden sind. Nur diese Funktionalität ist zum Beispiel in der Lage auch Tabellen korrekt auszublenden.
+# Öffnen Sie die Vorlage wieder zum Bearbeiten und schließen Sie alle anderen Fenster.
+# Selektieren Sie den Satz &quot;Als in München...&quot;
+# Wählen Sie ''Einfügen/Bereich...''. Geben Sie bei ''Name'' folgenden Text an:&lt;br&gt;&lt;tt&gt;Als in München... GROUPS 'Firma'&lt;/tt&gt;&lt;br&gt;Bestätigen Sie mit dem ''Einfügen'' Button.
+# Speichern und testen Sie die Vorlage. Wie der Text &quot;(Unterschrift des Geschäftsführers)&quot; sollte der Satz &quot;Als in München...&quot; nur noch sichtbar sein, wenn die Anrede &quot;Damen und Herren&quot; eingestellt ist.
+
+===== Kompatibilität mit dem Adressauswahl-Dialog =====
+# die Standardspaltennamen verwenden (siehe unten)
+# DIALOG-AUTOFILL setzen
+;Hinweis: Der Adressauswahl-Dialog wird von den Referaten angepasst. Welche Standardspalten durch ihn befüllt werden, ist also nicht einheitlich.
+;Hinweis 2: Nicht alle Daten, die der Adressauswahl-Dialog einfügen kann, sind in der Form-GUI vorhanden.
+
+
+[[Category:Eierlegender_WollMux]]
+[[Category:Handbuch_des_WollMux]]
+[[Category:Office_Vorlagenumsteller_Handbuch]]</rev></revisions></page></pages></query></api>

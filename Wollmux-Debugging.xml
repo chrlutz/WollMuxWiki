@@ -1,0 +1,50 @@
+<?xml version="1.0"?><api><query><pages><page pageid="156" ns="0" title="Wollmux-Debugging"><revisions><rev contentformat="text/x-wiki" contentmodel="wikitext" xml:space="preserve">Der WollMux hat als OpenOffice- / LibreOffice-Erweiterung ein paar Besonderheiten im Vergleich zu einer normalen Java-Anwendung.
+
+Für das Debuggen des WollMux gibt es zwei Möglichkeiten, die trotzdem ein komfortables Arbeiten ermöglichen: Remote Debugging und Verwendung eines externen WollMux. Beide Möglichkeiten werden im Folgenden kurz vorgestellt.
+
+= Remote Debugging =
+Bei dieser Methode verbindet man sich aus der Entwicklungsumgebung heraus mit einer bereits laufenden WollMux-Instanz.
+
+Nachteil dieser Methode ist, dass bei Codeänderungen das Plugin immer erst neu installiert werden muss. Dafür lässt sich auch eine bereits laufende WollMux-Instanz auch nachträglich debuggen.
+
+== Einstellungen für LibreOffice ==
+Unter '''Extras''' -&gt; '''Optionen...''' -&gt; '''LibreOffice''' -&gt; '''Erweitert''' -&gt; '''Parameter...''' folgende Werte zuweisen:
+* &lt;code&gt;-Xdebug&lt;/code&gt;
+* &lt;code&gt;-Xrunjdwp:transport=dt_socket,address=8000,server=y,suspend=n&lt;/code&gt;
+
+Der letzte Parameter ''suspend'' kann auch auf ''y'' gesetzt werden - LibreOffice wartet dann beim Start darauf, dass sich ein Debugger verbindet, bevor es den Start fortsetzt. Dies kann für eine Fehleranalyse im Startvorgang des WollMux nützlich sein.
+
+Die folgende Anleitung geht von der Verwendung von LibreOffice und Eclipse aus, die Schritte funktionieren aber natürlich prinzipiell auch mit anderen OpenOffice.org-Abkömmlingen und Entwicklungsumgebungen.
+
+== Einstellungen für Eclipse ==
+Unter '''Run''' -&gt; '''Debug configurations...''' -&gt; '''Remote Java Application''' -&gt; '''New launch configuration''':
+* Im Reiter '''Connect''':
+** Bei '''Project''': Das Projekt ''WollMux'' auswählen
+** Bei '''Connection Type''': ''Standard (Socket Attach)''
+** Bei '''Connection Properties''':
+*** '''Host''': ''localhost''
+*** '''Port''': ''8000''
+* Im Reiter '''Common''':
+** Bei Bedarf ein Menü unter '''Display in favorites menu''' auswählen - der WollMux kann dann z.B. über den Debugknopf direkt debuggt werden.
+
+== Verwendung ==
+Zum Debugging wird die oben erstellte Remote-Debugverbindung verwendet. LibreOffice muss dazu bereits gestartet worden sein.
+
+= Externer WollMux =
+Bei dieser Variante wird das WollMux-Plugin für LibreOffice von extern geladen, d.h. der WollMux ist nicht in LibreOffice installiert. Das Nachladen des WollMux geschieht in diesem Fall über die WollMuxBar.
+
+Vorteil ist, dass Codeänderungen direkt ohne Neuinstallation übernommen werden, mittels &quot;hot code replace&quot; funktioniert das - wie von anderen Java-Anwendungen gewohnt - auch im laufenden Betrieb. Nachteil ist, dass diese Methode nicht in allen Fällen stabil ist und unter Umständen zum Absturz von LibreOffice führen kann.
+
+== Einstellungen für LibreOffice ==
+Das LibreOffice-Plugin des WollMux darf nicht installiert sein; eine Prüfung und Deinstallation ist z.B. unter '''Extras''' -&gt; '''Extension Manager...''' möglich.
+
+== Einstellungen in der wollmux.conf ==
+Folgende Einstellung muss der WollMux-Konfiguration hinzugefügt werden:
+
+&lt;code&gt;ALLOW_EXTERNAL_WOLLMUX &quot;true&quot;&lt;/code&gt;
+
+== Verwendung ==
+Das Debugging erfolgt durch den Start der WollMuxBar (WollMux/src/de/muenchen/allg/itd51/wollmux/dialog/WollMuxBar.java) im Debugmodus.
+
+[[Category:Eierlegender_WollMux]]
+[[Category:Handbuch_des_WollMux]]</rev></revisions></page></pages></query></api>

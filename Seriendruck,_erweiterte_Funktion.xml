@@ -1,0 +1,109 @@
+<?xml version="1.0"?><api><query><normalized><n from="Seriendruck,_erweiterte_Funktion" to="Seriendruck, erweiterte Funktion" /></normalized><pages><page pageid="120" ns="0" title="Seriendruck, erweiterte Funktion"><revisions><rev contentformat="text/x-wiki" contentmodel="wikitext" xml:space="preserve">Auf dieser Seite werden die neuen Funktionen des WollMux-Serienbrief beschrieben und die Szenarien aus dem [[Seriendruck_Konzept|Konzept]] aufgegriffen.
+
+= ad hoc Seriendruck mit einer vorgegebenen Tabelle =
+Um einen ad hoc Serienbrief mit einer vorgegebenen Tabelle erstellen zu können, sind folgende Schritte notwendig:
+
+== Briefkopf öffnen ==
+Über einen Klick auf &quot;Externer Briefkopf&quot; in der WollMux-Leiste wird ein neues Serienbriefdokument erzeugt.
+
+[[Bild:WOL_sd_wollmuxleiste.png]]
+
+
+== Inhalte und Seriendruckfelder einfügen ==
+Im soeben erzeugten Serienbriefdokument können die Textinhalte des Briefs frei eingegeben werden. Um ein Serienbrieffeld in das Dokument einzufügen, wird die Seriendruck-Leiste zu Hilfe genommen, die über Extras-&gt;Seriendruck (WollMux) gestartet wird:
+
+Beim ersten Aufruf von 'Extras-&gt;Seriendruck (WollMux)' muss die Datenquelle, in diesem Beispiel eine bereits bestehende Datenquelle festgelegt werden. Dazu erscheint folgender Dialog:
+
+[[Bild:WOL sb dq_final.png]]
+
+
+
+{|border=0 width=&quot;100%&quot;
+ | Da die Datenquelle in diesem Beispiel unter &lt;br/&gt;/home/christoph.lutz/Datenquelle_Einladung.ods abgelegt ist,&lt;br/&gt;wird die Datenquelle über den Knopf &quot;Datei ...&quot; &lt;br/&gt;geöffnet. Es erscheint folgender Dateiauswahldialog:
+
+[[Bild:WOL_sd_dq2.png|left|thumb|400px]]
+
+ | Nach der Auswahl der Datei datenquelle.ods erscheint ein weiterer Dialog zur Auswahl des zu verwendenden Tabellenblattes.
+
+[[Bild:WOL_sd_dq4_final.png]]
+
+Anmerkungen:
+* Wenn die Beispieldatenquelle genau ein beschriebenes Tabellenblatt besitzt, dann wird dieses verwendet und der Dialog erscheint nicht. Die Beispieldatenquelle enthält aber mehrerer beschriebene Tabellenblätter und darum erscheint die Auswahl.
+* Nach der Auswahl des Tabellenblattes kommt das zu bearbeitende Serienbriefdokument wieder in den Vordergrund.
+* Die Auswahl der zu verwendenden Datenquelle ist nun abgeschlossen und muss nicht wiederholt werden. Die getroffenen Entscheidungen werden im Serienbriefdokument gespeichert, können aber nachträglich geändert werden.
+
+Nun erscheint folgende Leiste, die frei auf der Arbeitsfläche positioniert werden kann und immer im Vordergrund ist, solange an dem Serienbriefdokument gearbeitet wird.
+ |}
+
+= Dokument/Vorlage bearbeiten =
+Serienbriefe lassen sich jederzeit speichern und zu einem späteren Zeitpunkt wieder öffnen. Es kann dabei die bisherige Datenquelle, aber auch eine andere/neuere verwendet werden. Falls sich in dem Dokument bzw. der Vorlage noch Felder befinden, die in der Datenquelle nicht vorhanden sind, so lassen sich diese Felder mittels &quot;Tabelle-&gt;Alle Felder anpassen&quot; neuen Feldern zuweisen.
+
+= Serienbrief-Vorlage erstellen =
+Eine Serienbrief-Vorlage unterscheidet sich nur dadurch von einem ad hoc Serienbrief, dass bei der Erstellung eine Vorlage bzw. Michschvorlage mit der Dateiendung *.ott benutzt wird.
+
+= WollMux-Formular verwenden =
+Ein bereits bestehendes WollMux-Formular lässt sich ebenso zu einem Serienbrief abändern. Die Serienbrieffunktionalität lässt sich auch noch nachträglich via &quot;Exras-&gt;Seriendruck (WollMux)&quot; einfügen.
+
+= Seriendruckleiste =
+Anmerkung:
+* Beim Umschalten auf ein anderes Fenster von OOo wird die Serienbriefleiste ausgeblendet.
+
+[[Bild:WOL_sd_seriendruckleiste.png]]
+
+== Datenquelle ==
+Über diesen Button lässt sich eine andere Datenquelle festlegen. Es wird der Dialog zur Datenquellenauswahl geöffnet, der auch bei neuen Serienbriefen angezeigt wird.
+
+Folgende Möglichkeiten sind auswählbar:
+* neue Datenquelle in Calc
+* bestehende Calc-Datenquelle verwenden
+* Verknüpfung zu einer Datenbank herstellen
+
+== Serienbrieffeld ==
+Über das Menü &quot;Serienbrieffeld&quot; können die in der Datenquelle enthaltenen Serienbrieffelder in das Dokument eingefügt werden. Alle Serienbrieffelder sind in dem Menü aufgelistet.
+
+Wenn in dem Menü mehr Serienbrieffelder sind als auf dem Bildschirm darstellbar, so lautet der letzte Menüpunkt &quot;Weitere Felder...&quot; und führt zu einem Dialog, in dem alle Felder in einer Listbox aufgelistet sind und so eingefügt werden können.
+
+== Spezialfeld ==
+Über das Menü &quot;Spezialfeld&quot; können folgende Spezialfelder in das Dokument eingefügt werden:
+
+=== Gender ===
+Über den Button &quot;Gender&quot; können geschlechtsabhängige Bezeichnungen, anhand eines Seriebrieffeldes (i.d.R. Anrede mit dem Inhalt Frau/Herr - w/m - weibl./männl.) eingefügt werden. 
+
+Bsp: steht in der Datenquelle im Anredefeld Frau, so wird &quot;Ansprechpartnerin&quot; eingefügt. Steht im Anredefeld Herr, so ist das Ergebnis &quot;Ansprechpartner&quot;.
+
+[[Bild:Gender_final.png]]
+
+=== Wenn...Dann...Sonst ===
+Mit diesem Button können &quot;Wenn...Dann...Sonst&quot;-Felder eingefügt werden. Es ist auch möglich mehrere Bedingungsfelder in einander zu verschachteln. Über den Button &quot;Serienbrieffeld&quot; lassen sich in jedem Texteld weitere Serienbrieffelder einfügen.
+
+[[Bild:Wenn Dann Sonst.png_final.png]]
+=== Datensatznummer ===
+-
+=== Serienbriefnummer ===
+-
+=== Feld bearbeiten ===
+Über diesen Button lassen sich zuvor markierte Spezialfelder bearbeiten.
+
+== Vorschau - &lt;&lt;Feldname&gt;&gt; ==
+Nach Klick auf die Schaltfläche &quot;Vorschau&quot; kann über die Pfeilknöpfe geprüft werden, ob alle Datensätze zu den gewünschten Ergebnissen führen. Bei Formatierungsfehlern können die notwendigen Änderungen direkt im Dokument vorgenommen werden. Bei Fehlern in den Serienbriefdaten kann die zugehörige Datentabelle über &quot;Tabelle bearbeiten&quot; in den Vordergrund geholt werden. Danach können die Fehler direkt in der Datenquelle korriegiert werden.
+
+Der Knopf &quot;Vorschau&quot; zeigt immer den Modus an, in den gewechselt werden soll. Ist die Seriendruck-Leiste bereits im Vorschau-Modus, so zeigt der Knopf &quot;&lt;&lt;Feldname&gt;&gt;&quot; an.
+
+
+== Drucken ==
+Über die Schaltfläche &quot;Drucken&quot; werden die Serienbriefe erstellt. Die Serienbriefe können dabei entweder direkt auf dem Drucker ausgegeben oder in ein Gesamtdokument geschrieben werden. Es erscheint der folgende Dialog:
+
+[[Bild:WOL sd drucken_final.png]]
+
+== Tabelle ==
+=== Tabelle bearbeiten ===
+Wechsel zur ausgewählten Datenquelle (funktioniert bei Datenbanken natürlich nicht)
+=== Tabellenspalten ergänzen ===
+[[Bild:Tabellenspalten_ergaenzen.png]]
+=== Alle Felder anpassen ===
+-
+
+
+
+[[Category:Eierlegender_WollMux]]
+[[Kategorie:Handbuch des WollMux]]</rev></revisions></page></pages></query></api>

@@ -1,0 +1,316 @@
+<?xml version="1.0"?><api><query><normalized><n from="Hilfen_für_Sachleitende_Verfügungen_verwenden" to="Hilfen für Sachleitende Verfügungen verwenden" /></normalized><pages><page pageid="36" ns="0" title="Hilfen für Sachleitende Verfügungen verwenden"><revisions><rev contentformat="text/x-wiki" contentmodel="wikitext" xml:space="preserve">Dieser Artikel beschreibt die Verwendung der Hilfen für Sachleitende Verfügungen, die der WollMux bereitstellt, aus Benutzersicht.
+
+= Voraussetzungen für die Benutzung von Sachleitenden Verfügungen =
+Bevor Sie mit dem WollMux Sachleitende Verfügungen erstellen können, müssen folgende Voraussetzungen erfüllt sein:
+
+== Software Voraussetzungen ==
+Folgende Pakete müssen installiert sein:
+* Ein [[WollMux_Testversionen_und_Installationsanleitung#Download_der_Software|WollMux]] '''ab Revision 1349'''
+* Eine [[Konfiguration_des_WollMux_in_Ihrem_Referat#Die_WollMux-Standard-Konfiguration|WollMux-Standard-Konfiguration]] '''ab Version 2.3.0'''
+
+Ob diese Pakete installiert sind, können Sie wie folgt fest stellen:
+
+* Öffnen Sie die WollMux-Leiste &quot;Vorlagen und Formulare (WollMux)&quot;
+* Klicken Sie auf den Menüpunkt &quot;Extras-&gt;Info über Vorlagen und Formulare&quot;
+* Es erscheint folgende Meldung:
+[[Bild:WOL_AboutDialog.png|thumb|none|400px|'''Info über Vorlagen und Formulare''']]
+
+Wenn der Menüpunkt &quot;Extras-&gt;Info über Vorlagen und Formulare&quot; nicht vorhanden ist oder die (Re)Versionen nicht den oben genannten Mindestanforderungen entsprechen, kontaktieren Sie bitte Ihre Systemadministration.
+
+== Einstellungen in OpenOffice ==
+Folgende Einstellungen müssen in OpenOffice gesetzt sein, damit eine reibungslose Arbeit mit Sachleitenden Verfügungen möglich ist:
+* Unter &quot;Extras-&gt;Optionen.../Writer/Formatierungshilfen&quot; muss die Anzeige von ausgeblendeten Text ausgeschaltet sein. Beim Drucken verwendet der WollMux die Möglichkeit in OpenOffice, Textbereiche ausblenden zu können. Damit OpenOffice beim Drucken die Anzahl der Gesamtseiten richtig berechnen kann, dürfen die ausgeblendeten Bereiche nicht angezeigt werden. Diese Option ist auf dem Basisclient bereits richtig gesetzt.
+[[Bild:SLV_Writer-Formatierungshilfen.jpg|thumb|none|600px|'''Ausgeblendeter Text darf nicht angezeigt werden''']]
+
+* Unter &quot;Extras-&gt;AutoKorrektur/Optionen&quot; muss die Option &quot;Nummerierung anwenden - Symbol:*&quot; deaktiviert sein. Die Verfügungspunkte von Sachleitenden Verfügungen beginnen mit römischen Ziffern. Damit OpenOffice diese Ziffern nicht als Aufzählungen interpretiert, muss diese Option ausgeschaltet werden. Auf dem Basisclient ist diese Option bereits richtig gesetzt. Ausserdem schaltet der WollMux diese Option automatisch ab, wenn das erste mal mit Sachleitenden Verfügungen gearbeitet wird.
+[[Bild:SLV_Extras-Autokorrektur.jpg|thumb|none|400px|'''Automatische Nummerierung in OpenOffice abschalten''']]
+
+== Die OpenOffice Writer Symbolleiste &quot;Sachleitende Verfügungen&quot; ==
+Die Symbolleiste &quot;Sachleitende Verfügung&quot; muss im OOo-Writer im Menü &quot;Ansicht&quot; --&gt; Symbolleisten --&gt; Sachleitende Verfügungen aktiviert werden. Die neue Symbolleiste &quot;Sachleitende Verfügungen&quot; enthält Schaltflächen &quot;Ziffer einfügen&quot;, &quot;Abdruck&quot; und &quot;Zuleitungszeile&quot;. Des weiteren sind fünf Schaltflächen zur Erstellung der Blöcke zur Drucksteuerung enthalten: &quot;Immer drucken&quot;, &quot;Nicht im Original&quot;, &quot;Nur Original&quot;, &quot;Nur Entwurf&quot; und &quot;Nur Abdrucke&quot;.
+
+[[Bild:SLV_Symbolleite_aktivieren.jpg|thumb|none|500px|'''Ein- und Ausschalten der Symbolleiste &quot;Sachleitende Verfügungen&quot;''' über Ansicht-&gt;Symbolleisten]]
+
+
+[[Bild:SLV_Symbolleiste.jpg|thumb|none|500px|'''Die Symbolleiste &quot;Sachleitende Verfügungen&quot;''']]
+ 
+Im Folgenden sind die einzelnen Schaltflächen der Symbolleiste ausführlicher beschrieben:
+=== Einfügen oder Entfernen von Elementen ===
+Über die folgenden drei Schaltflächen können Elemente der Sachleitenden Verfügungen eingefügt oder entfernt werden.
+
+==== Die Schaltfläche &quot;Ziffer Einfügen&quot; ====
+; Neue Ziffern einfügen:
+
+Über die Schaltfläche &quot;Ziffer Einfügen&quot; ist es möglich eine römische Ziffer einzufügen, mit der ein weiterer Verfügungspunkt im Dokument gesetzt werden kann. Die neue Nummer ist um eins höher als die bereits im Dokument vorhandenen vorherigen Ziffern. Folgen auf den neu gesetzten Verfügungspunkt noch weitere Verfügungspunkte, so werden diese neu nummeriert, so dass die Gesamtnummerierung aller Verfügungspunkte wieder stimmt.
+
+Folgende Graphiken demonstrieren die Funktionsweise von &quot;Ziffer einfügen&quot;:
+
+{|
+ |-valign=&quot;top&quot;
+ |[[Bild:SLV_zifferEinfuegen1.png|frame|200px|Der Cursor steht am Anfang einer Zeile. Nach dem Drücken auf &quot;Ziffer einfügen&quot; wird eine neue Ziffer am linken Rand gesetzt und es kann mit dem Schreiben der Überschrift für diesen Verfügungspunkt begonnen werden.]] 
+ |[[Bild:SLV_zifferEinfuegen2.png|frame|200px|Der Cursor steht an einer anderen Position in der aktuellen Zeile (hier am Ende): Die aktuelle Zeile wird mit einer Ziffer versehen und als Überschriftszeile eines Verfügungspunktes formatiert.]]
+ |[[Bild:SLV_zifferEinfuegen3.png|frame|200px|Der Cursor markiert einen ganzen Bereich: Die erste Zeile der Markierung erhält eine neue römische Ziffer und wird als Verfügungspunkte formatiert.]]
+|}
+
+; Bestehende Ziffern löschen:
+
+Ebenso können über die Schaltfläche bereits bestehende Verfügungspunkte entfernt werden. Steht der Cursor auf einem Absatz, der bereits eine Überschrift eines Verfügungspunktes ist, so wird die römische Ziffer am Anfang der Überschriftszeile gelöscht und die Formatierung dieses Absatzes auf &quot;Fließtext&quot; zurück gesetzt.
+
+{|
+ |-valign=&quot;top&quot;
+ |[[Bild:SLV_zifferEntfernen1.png|frame|200px|Der Cursor steht bereits auf einer Überschrift für einen Verfügungspunkt. Die römische Ziffer wird wieder entfernt und der Absatz auf &quot;Fließtext&quot; zurück gesetzt.]] 
+ |[[Bild:SLV_zifferEntfernen2.png|frame|200px|Der Cursor markiert einen ganzen Bereich in dem Bereits Überschriften für Verfügungspunkte enthalten sind: Alle Verfügungsunkte die von der Markierung berührt sind, werden auf &quot;Fließtext&quot; zurückgesetzt.]]
+|}
+
+==== Die Schaltfläche &quot;Abdruck&quot; ====
+;Neuen Abdruck einfügen:
+Über die Schaltfläche Abdruck ist es möglich einen Verfügungspunkt mit dem Inhalt &quot;Abdruck von I.[...]&quot; einzufügen. Der neue Verfügungspunkt wird immer hinter dem Absatz eingefügt, in dem der Cursor steht. 
+
+[[Bild:SLV_AbdruckEinfuegen1.png|thumb|none|200px|Durch das Drücken auf &quot;Abdruck&quot; wird eine neue Abdruckzeile eingefügt und der Cursor in die Folgezeile nach &quot;Abdruck von...&quot; gesetzt.]]
+
+Die Nummerierung der restlichen Verfügungspunkte wird dabei wie unter [[#Die_Schaltfl.C3.A4che_.22Ziffer_Einf.C3.BCgen.22|&quot;Ziffer einfügen&quot;]] automatisch angepasst. Bei bereits bestehenden Abdrücken wird dabei auch der Text &quot;Abdruck von I.[...]&quot; so angepasst, dass stets alle Vorgänger aufgeführt sind. Hinter dem automatisch erzeugten Text &quot;Abdruck von I., ...&quot; kann beliebiger Freitext wie z.B. &quot;mit Anlagen&quot; eingegeben werden, der bei der Anpassung der römischen Ziffern unversehrt bleibt. Wird z.B. vor der Überschrift &quot;Abdruck von I. mit Anlagen&quot; ein weiterer Verfügungspunkt eingefügt, so wird der Abdruck in &quot;Abdruck von I. und II. mit Anlagen&quot; umbenannt.
+
+Folgendes Beispiel verdeutlicht, wie die automatische Benennung der Abdruck-Zeilen funktioniert. Es entstand durch mehrmaliges Drücken auf &quot;Abdruck&quot;:
+
+[[Bild:SLV_AbdruckBeispiel.png|thumb|none|500px|So sehen mehrere Abdruck-Zeilen aus. Die Abdrücke enthalten stets alle ihre Vorgänger.]]
+
+;Bestehenden Abdruck entfernen:
+
+Ebenso können über die Schaltfläche bereits bestehende Abdrucke entfernt werden.
+
+{|
+ |-valign=&quot;top&quot;
+ | |[[Bild:SLV_AbdruckEntfernen1.png|frame|px200|Der Cursor steht bereits auf einem Abdruck. Der Abdruck wird wieder entfernt.]]
+ |[[Bild:SLV_AbdruckEntfernen2.png|frame|px200|Der Cursor markiert einen ganzen Bereich in dem Bereits Abdrucke enthalten sind: Alle Abdrucke die von der Markierung berührt sind, werden gelöscht.]]
+|}
+
+==== Die Schaltfläche &quot;Zuleitungszeile&quot; ====
+;Neue Zuleitungszeile einfügen
+Über die Schaltfläche Zuleitungszeile ist es möglich Absätze als Zuleitungszeilen zu markieren die momentan markiert sind bzw. den Cursor enthalten. Jeder Absatz des Typs Zuleitungszeile führt zu einem weiteren Ausdruck. Eine  Zuleitungszeile kann auch eine richtige Adresse mit Straße, Hausnummer und PLZ sein. Für mehrzeilige Zuleitunsangaben muss zwingend ein ''Zeilen''umbruch (Shift-Enter bzw. Einfügen/Manueller Umbruch/Zeilenumbruch), kein ''Absatz''umbruch (einfaches Drücken der Enter-Taste) verwendet werden, da ansonsten die Anzahl der ausgedruckten Exemplare falsch berechnet wird.
+{|
+ |-valign=&quot;top&quot;
+ |[[Bild:SLV_ZuleitungszeileEinfügen1.png|frame|none|px200|Durch das Drücken auf Zuleitungszeile wird die Zeile in der der Cursor steht zur Zuleitungszeile gemacht und beim Ausdrucken wird ein Ausdruck erzeugt]]
+ |[[Bild:SLV_ZuleitungszeileEinfügen2.png|frame|none|px200|Durch das Drücken auf Zuleitungszeile werden alle Zeile die Markiert sind zur Zuleitungszeile gemacht und beim Ausdrucken wird pro Absatz ein Ausdruck erzeugt]]
+ |
+|}
+
+;Bestehende Zuleitungszeile löschen
+Falls der Absatz schon als Zuleitungszeile definiert ist, wird dieser nach Betätigen der Schaltfläche wieder aufgehoben (und das Absatzformat auf Fliesstext zurückgesetzt).
+{|
+ |-valign=&quot;top&quot;
+ |[[Bild:SLV_ZuleitungszeileEntfernen1.png|frame|none|px200|Durch das Drücken auf Zuleitungszeile wird die Zeile in der der Cursor steht auf Fliesstext zurückgesetzt.]]
+ |[[Bild:SLV_ZuleitungszeileEntfernen2.png|frame|none|px200|Durch das Drücken auf Zuleitungszeile werden alle Zeile die Markiert sind auf Fliesstext zurückgesetzt.]]
+ |
+|}
+
+=== Die Schaltflächen zur Drucksteuerung einzelner Blöcke ===
+
+==== Schaltfläche &quot;Immer drucken&quot; ====
+
+Mit der Schaltfläche &quot;Immer drucken&quot; kann ein markierter Block ausgezeichnet werden, der immer gedruckt wird, auch dann, wenn Textbereiche unter einer Überschrift eines Verfügungspunktes sonst ausgeblendet werden.
+
+; Block &quot;immer drucken&quot; einfügen
+[[Bild:SLV_einfügen_allVersions_Block.png|thumb|none|700px|Text markieren und Schaltfläche betätigen]]   
+
+; Block &quot;immer drucken&quot; entfernen
+Zum Entfernen einer &quot;immer drucken&quot;-Markierung markieren Sie bitte den entsprechenden Text mit der Maus und betätigen die Schaltfläche &quot;immer drucken&quot; erneut:
+[[Bild:SLV_entfernen_allVersions_Block.png|thumb|none|700px|Text markieren und Schaltfläche &quot;Block: immer drucken&quot; betätigen]]
+
+Ist in der [[Konfigurationsdatei_wollmux.conf#Der_Abschnitt_SachleitendeVerfuegungen|WollMux-Konfiguration]] eine Hintergrundfarbe für diesen Druckblock definiert, so wird der Druckblock mit der dort definierten Farbe hinterlegt um den Block optisch abzuheben und leichter orten zu können. Ob eine solche Farbe definiert ist, können Sie bei Ihrer Systemadministration erfragen. Beim Drucken eines entsprechenden Dokuments wird die Hintergrundfarbe '''nicht''' mit ausgedruckt.
+
+==== Schaltfläche &quot;Nicht im Original&quot; ====
+
+Mit der Schaltfläche &quot;Nicht im Original&quot; kann ein markierter Block ausgezeichnet werden der in allen Ausdrucken außer dem Original gedruckt wird (als Original gilt dabei grundsätzlich immer die Fassung, bei der alle römischen Ziffern inklusive I. ausgeblendet sind).
+
+Das Markieren eines Blocks und das Aufheben der Markierung eines Blocks funktioniert analog zum Block &quot;Immer drucken&quot; durch das Betätigen der zugehörigen Schaltfläche.
+
+Ist in der [[Konfigurationsdatei_wollmux.conf#Der_Abschnitt_SachleitendeVerfuegungen|WollMux-Konfiguration]] eine Hintergrundfarbe für diesen Druckblock definiert, so wird der Druckblock mit der dort definierten Farbe hinterlegt um den Block optisch abzuheben und leichter orten zu können. Ob eine solche Farbe definiert ist, können Sie bei Ihrer Systemadministration erfragen. Beim Drucken eines entsprechenden Dokuments wird die Hintergrundfarbe '''nicht''' mit ausgedruckt.
+
+==== Schaltfläche &quot;Nur Original&quot; ====
+
+Mit der Schaltfläche &quot;Nur Original&quot; kann ein markierter Block ausgezeichnet werden der ausschließlich im Original gedruckt wird (als Original gilt dabei grundsätzlich immer die Fassung, bei der alle römischen Ziffern inklusive I. ausgeblendet sind).
+
+Das Markieren eines Blocks und das Aufheben der Markierung eines Blocks funktioniert analog zum Block &quot;Immer drucken&quot; durch das Betätigen der zugehörigen Schaltfläche.
+
+Ist in der [[Konfigurationsdatei_wollmux.conf#Der_Abschnitt_SachleitendeVerfuegungen|WollMux-Konfiguration]] eine Hintergrundfarbe für diesen Druckblock definiert, so wird der Druckblock mit der dort definierten Farbe hinterlegt um den Block optisch abzuheben und leichter orten zu können. Ob eine solche Farbe definiert ist, können Sie bei Ihrer Systemadministration erfragen. Beim Drucken eines entsprechenden Dokuments wird die Hintergrundfarbe '''nicht''' mit ausgedruckt.
+
+==== Schaltfläche &quot;Nur Entwurf&quot; ====
+
+Mit der Schaltfläche &quot;Nur Entwurf&quot; kann ein markiert Block ausgezeichnet werden der nur im Entwurf gedruckt wird. Als Entwurf wird der Ausdruck bezeichnet der alle Sachleitende Verfügungen enthält.
+
+Das Markieren eines Blocks und das Aufheben der Markierung eines Blocks funktioniert analog zum Block &quot;Immer drucken&quot; durch das Betätigen der zugehörigen Schaltfläche.
+
+Ist in der [[Konfigurationsdatei_wollmux.conf#Der_Abschnitt_SachleitendeVerfuegungen|WollMux-Konfiguration]] eine Hintergrundfarbe für diesen Druckblock definiert, so wird der Druckblock mit der dort definierten Farbe hinterlegt um den Block optisch abzuheben und leichter orten zu können. Ob eine solche Farbe definiert ist, können Sie bei Ihrer Systemadministration erfragen. Beim Drucken eines entsprechenden Dokuments wird die Hintergrundfarbe '''nicht''' mit ausgedruckt.
+
+==== Schaltfläche &quot;Nur Abdrucke&quot; ====
+
+Mit der Schaltfläche &quot;Nur Abdrucke&quot; kann ein markiert Block ausgezeichnet werden der nur in Abdrucken gedruckt wird. Als Abdrucke werden alle Ausdrucke außer dem ersten (dem Original) und dem letzten (dem Entwurf) bezeichnet.
+
+Das Markieren eines Blocks und das Aufheben der Markierung eines Blocks funktioniert analog zum Block &quot;Immer drucken&quot; durch das Betätigen der zugehörigen Schaltfläche.
+
+Ist in der [[Konfigurationsdatei_wollmux.conf#Der_Abschnitt_SachleitendeVerfuegungen|WollMux-Konfiguration]] eine Hintergrundfarbe für diesen Druckblock definiert, so wird der Druckblock mit der dort definierten Farbe hinterlegt um den Block optisch abzuheben und leichter orten zu können. Ob eine solche Farbe definiert ist, können Sie bei Ihrer Systemadministration erfragen. Beim Drucken eines entsprechenden Dokuments wird die Hintergrundfarbe '''nicht''' mit ausgedruckt.
+
+== Der Textrahmen &quot;WollMuxVerfuegungspunkt1&quot; ==
+Im im Dokument ein Textrahmen mit dem Namen &quot;WollMuxVerfuegungspunkt1&quot; vorhanden (Beispiel siehe externer Briefkopf), so wird dieser Rahmen besonders behandelt. Er dient dazu, die Ziffer &quot;I.&quot; zu positionieren, die im externen Briefkopf neben dem Empfängerfeld angezeigt werden soll. 
+
+[[Bild:SLV_RahmenWollMuxVerfuegungspunkt1.png|none|thumb|600px|Der Textrahmen &quot;WollMuxVerfuegungspunkt1&quot; legt fest, an welcher Stelle die Ziffer &quot;I.&quot; im externen Briefkopf erscheinen soll, wenn Verfügungspunkte im Dokument vorhanden sind.]]
+
+Der Rahmen kann ausschließlich den Inhalt &quot;I.&quot; besitzen und wird vom WollMux automatisch verwaltet. Bei der Erstellung dieses Textrahmens muss kein Inhalt eingefügt werden, da der WollMux den Inhalt &quot;I.&quot; genau dann automatisch einträgt, wenn mindestens ein (weiterer) Verfügungspunkt im Dokument vorhanden ist. Ist kein Verfügungspunkt im Dokument vorhanden, so bleibt dieser Rahmen leer.
+
+Ist im Dokument ein Textrahmen &quot;WollMuxVerfuegungspunkt1&quot; vorhanden, so beginnt die Zählung der weiteren Verfügungspunkte automatisch mit &quot;II.&quot;.
+
+== Definition von Textbereichen zum Ausblenden problematischer Inhalte ==
+Manche Textinhalte werden von OpenOffice.org nicht korrekt ausgeblendet, wenn sie sich unterhalb eines während des Drucks ausgeblendeten Verfügungspunktes befinden. Davon sind folgende, uns bekannte Elemente betroffen:
+* Tabellen mit sichtbaren Rahmen: Beim Ausblenden eines Verfügungspunktes der eine Tabelle mit sichtbaren Rahmen enthält, wird zwar der Inhalt der Tabelle ausgeblendet, die Rahmen bleiben aber als Gerüst sichtbar.
+* Manuelle Seitenumbrüche: Wird unterhalb eines ausgeblendeten Verfügungspunktes mit Seitenumbrüchen gearbeitet, so blendet OpenOffice.org diese Seitenumbrüche nicht aus. Als Ergebnis entstehen ungewünschte leere Seiten, bei denen nur die Kopfzeile mit einer falschen Gesamtseitenzahl angezeigt wird.
+
+Beispiel:
+{|
+|[[Bild:Slv_entwurfMitTabelle.png|thumb|400px|none|Diese Vormerkung enthält nach dem letzten Verfügungspunkt Wiedervorlage einen Textteil mit Informationen zum Dokument, die nur im Entwurf gedruckt werden sollen. Die Informationen sollen dabei als Tabelle dargestellt werden.]]
+|[[Bild:Slv_druckfehlerBeiTabelle.png|thumb|400px|none|Beim Ausdrucken des Originals werden zwar die Überschriften der Verfügungspunkte II und III richtig ausgeblendet, von der Tabelle bleibt jedoch ein ungewollter leerer Rahmen übrig.]]
+|}
+
+Mit Hilfe sogenannter Textbereiche ist es aber dennoch möglich, diese Inhalte zuverlässig auszublenden. Dazu markieren Sie (als Vorlagenersteller) bitte die betroffenen Textteile mit der Maus und fügen Sie über Einfügen-&gt;Bereich... einen neuen Bereich ein. Abhängig von der Position des betroffenen Textteils achten Sie bei der Erstellung des Bereichs bitte auf folgende Regeln:
+
+;Unterhalb eines Verfügungspunktes: Befindet sich der problematische Inhalt unterhalb einer '''Überschrift eines Verfügungspunktes''', so kann der Bereich beliebig benannt werden. Bitte achten Sie beim Markieren der betroffenen Textteile aber darauf, dass der Bereich nicht vor der Überschrift des zugehörigen Verfügungspunktes startet. Innerhalb eines so erzeugten Bereichs können keine Druckblöcke (z.B. &quot;Block immer drucken&quot;) verwendet werden, da stets der gesamte betroffene Bereich ausgeblendet wird und so auch die Druckblöcke nicht angezeigt würden wenn sie angezeigt werden sollten.
+
+Beispiel:
+{|
+|[[Bild:Slv_entwurfMitTabelleUndBereich.png|thumb|400px|none|Diese Vormerkung enthält nach dem letzten Verfügungspunkt Wiedervorlage einen Textteil mit Informationen zum Dokument und einer Tabelle, die nur im Entwurf gedruckt werden sollen. Der problematische Textteil wurde nun aber in einen Textbereich (grauer Rand um den Textteil) mit dem Namen &quot;Dokumentinfo&quot; verpackt.]]
+|[[Bild:Slv_keinDruckfehlerBeiTabelle.png|thumb|400px|none|Beim Ausdrucken des Originals werden alle auszublendenden Inhalte korrekt ausgeblendet.]]
+|}
+
+;Innerhalb eines Blocks zur Drucksteuerung: Mit den '''[[#Die_Schaltfl.C3.A4chen_zur_Drucksteuerung_einzelner_Bl.C3.B6cke|Blöcken zur Drucksteuerung]]''' können beliebige Textstellen beim Drucken der Sachleitenden Verfügungen ein- oder ausgeblendet werden, auch dann, wenn sie sich nicht direkt unterhalb einer Überschrift, sondern z.B. in einem eigenen Textrahmen befinden. Liegt der problematische Inhalt in einem solchen Druckblock, so muss der Bereichsname nach folgendem System aufgebaut sein: 
+ &lt;beliebiger Name&gt; GROUPS '&lt;SLV_Sichtbarkeitsgruppe&gt;'
+:Dabei können Sie an die Stelle &lt;beliebiger Name&gt; einen beliebigen Namen setzen. An der Stelle &lt;SLV_Sichtbarkeitsgruppe&gt; muss einer der folgenden Werte eingetragen werden:
+:* '''SLV_AllVersions''': Analog zum Druckblock &quot;Immer drucken&quot; wird dieser Bereich in allen Ausdrucke gedruckt.
+:* '''SLV_NotInOriginal''': Analog zum Druckblock &quot;Nicht im Original&quot; wird dieser Bereich in alle Ausdrucke außer dem Original gedruckt.
+:* '''SLV_OriginalOnly''': Analog zum Druckblock &quot;Nur Original&quot; wird dieser Bereich ausschließlich im Original gedruckt.
+:* '''SLV_DraftOnly''': Analog zum Druckblock &quot;Nur Entwurf&quot; wird dieser Bereich nur im Entwurf gedruckt.
+:* '''SLV_CopyOnly''': Analog zum Druckblock &quot;Nur Abdrucke&quot; wird dieser Bereich in alle Ausdrucke außer dem Original und dem Entwurf gedruckt.
+:Auf diese Weise definieren Sie einen [[Dokumentkommandos_des_WollMux#Textbereiche_mit_der_Namenserweiterung_GROUPS_.3CListe_mit_Sichtbarkeitsgruppen.3E|Textbereich mit der Namenserweiterung GROUPS]], der über obige spezielle Sichtbarkeitsgruppen angesteuert wird. Die Sichtbarkeitsgruppen werden beim Drucken automatisch vom WollMux gesetzt und steuern so die Sichtbarkeit des Textbereichs.
+
+== Drucken von Sachleitende Verfügungen ==
+
+Sachleitende Verfügungen können über die OOo-Writer Symbolleiste &quot;Standard&quot; --&gt; Schaltfläche &quot;Datei direkt drucken&quot;
+
+ [[Bild:SLV_Datei_direkt_drucken.png|thumb|none|500px|OOo-Writer Symbolleiste &quot;Standard&quot; --&gt; Schaltfläche &quot;Datei direkt drucken&quot;]]
+
+oder über das OOo-Writer Menü &quot;Datei&quot; --&gt; &quot;Drucken&quot; ausgedruckt werden.
+
+[[Bild:SLV_Datei_drucken.png|thumb|none|500px|OOo-Writer Menü &quot;Datei&quot; --&gt; &quot;Drucken&quot;]]
+
+
+Es erscheint der Dialog &quot;Wollmux Komfortdruck&quot;, falls Sachleitende Verfügungen Elemente vorhanden sind.
+
+[[Bild:SLV_WollmuxKomfortdruck.png|frame|none|200px|Dialog &quot;Wollmux Komfortdruck&quot;]]
+
+;Ausdrucke: In der Spalte &quot;Ausdrucke&quot; sind die Überschriften aller erkannten Verfügungspunkte aufgelistet. Beim Klick auf eine Überschrift klappt eine Liste aller Zuleitungszeilen auf, die diesem Verfügungspunkt zugeordnet sind. Jede dort aufgelistete Zuleitungszeile zählt den Kopien-Zähler dieses Verfügungspunktes um eins rauf.
+;Kopien: In der Spalte &quot;Kopien&quot; kann für jeden Ausdruck eingestellt werden, wie oft dieser Ausdruck gedruckt werden soll. Da normalerweise für jede Zuleitungszeile des Verfügungspunktes eine Kopie benötigt wird, wird der Kopien-Zähler mit der Anzahl der zugehörigen Zuleitungszeilen vorbelegt. Um zu verhindern, dass eine Ausfertigung gedruckt wird, setzen Sie den entsprechenden Kopien-Zähler auf 0.
+
+=== Beispiel: Drucken eines internen Briefes ===
+
+Über die Symbolleiste &quot;Datei direkt drucken&quot; oder den Menüeintrag &quot;Drucken&quot; erscheint der Dialog &quot;Wollmux Komfortdruck&quot;.
+
+[[Bild:SLV_internerBriefkopf_drucken.png|frame|none|300px|Der Dialog &quot;Wollmux Komfortdruck&quot;erscheint über die Schaltfläche &quot;Datei direkt drucken&quot; oder den Menüeintrag &quot;Drucken&quot;]]
+
+Nach Betätigen der Schaltfläche &quot;Alle Ausdrucke drucken&quot; erhält man folgende drei Ausdrucke. Jede als Zuleitungszeile markierte Zeile, zählt als ein Ausdruck. Weglegen zählt ebenfalls als ein Ausdruck. 
+Bei nicht benötigen eines Ausdruckes muss die Zahl entsprechend gesetzt werden. Ein- und Ausblendungen z.B für &quot;I.A. Name&quot; können über [[Hilfen_f%C3%BCr_Sachleitende_Verf%C3%BCgungen_verwenden#Die_Schaltfl.C3.A4chen_zur_Drucksteuerung_einzelner_Bl.C3.B6cke|Schaltflächen zur Drucksteuerung einzelner Blöcke]] gesetzt werden.
+
+{|
+ |-valign=&quot;top&quot;
+ |[[Bild:SLV_Ausdruck_internerBriefkopf1.png|frame|Ausdruck kann auch einzeln über die Schaltfläche &quot;Drucken&quot; rechts neben &quot;III. Weglegen&quot; ausgedruckt werden]] 
+ |[[Bild:SLV_Ausdruck_internerBriefkopf2.png|frame|200px|Ausdruck kann auch einzeln über die Schaltfläche &quot;Drucken&quot; rechts neben &quot;II. Abdruck von I.&quot; ausgedruckt werden]]
+ | [[Bild:SLV_Ausdruck_internerBriefkopf3.png|frame|200px|Ausdruck
+kann auch einzeln über die Schaltfläche &quot;Drucken&quot; rechts neben &quot;I. Vormerkung&quot; ausgedruckt werden]]
+|}
+
+=== Beispiel: Drucken eines externen Briefes ===
+
+Über die Symbolleiste &quot;Datei direkt drucken&quot; oder den Menüeintrag &quot;Drucken&quot; erscheint der Dialog &quot;Wollmux Komfortdruck&quot;.
+
+[[Bild:SLV_externerBriefkopf_drucken.png|thumb|none|600px|Der Dialog &quot;Wollmux Komfortdruck&quot;erscheint über die Schaltfläche &quot;Datei direkt drucken&quot; oder den Menüeintrag &quot;Drucken&quot;]]
+
+Nach Betätigen der Schaltfläche &quot;Alle Ausdrucke drucken&quot; erhält man folgende vier Ausdrucke. Jede als Zuleitungszeile markierte Zeile, zählt als ein Ausdruck. WV (Wiedervorlage) zählt ebenfalls als ein Ausdruck. 
+Bei nicht benötigen eines Ausdruckes muss die Zahl entsprechend gesetzt werden. Ein- und Ausblendungen z.B für &quot;I.A. Name&quot; können über [[Hilfen_f%C3%BCr_Sachleitende_Verf%C3%BCgungen_verwenden#Die_Schaltfl.C3.A4chen_zur_Drucksteuerung_einzelner_Bl.C3.B6cke|Schaltflächen zur Drucksteuerung einzelner Blöcke]] gesetzt werden.
+
+{|
+ ! Ausdruck &quot;III. WV.....&quot;
+ ! Ausdruck &quot;II. Abdruck von I.&quot;
+ ! Ausdruck &quot;II. Abdruck von I.&quot;
+ ! Ausdruck &quot;I. Original&quot;
+ |-valign=&quot;top&quot;
+ |[[Bild:SLV_Ausdruck_externerBriefkopf1.png|thumb|235px|Ausdruck kann auch einzeln über die Schaltfläche &quot;Drucken&quot; rechts neben &quot;III. WV .....&quot; ausgedruckt werden]] 
+ |[[Bild:SLV_Ausdruck_externerBriefkopf2.png|thumb|235px|Ausdruck kann auch einzeln über die Schaltfläche &quot;Drucken&quot; rechts neben &quot;II. Abdruck von I.&quot; ausgedruckt werden]]
+ |[[Bild:SLV_Ausdruck_externerBriefkopf2.png|thumb|235px|Ausdruck kann auch einzeln über die Schaltfläche &quot;Drucken&quot; rechts neben &quot;II. Abdruck von I.&quot; ausgedruckt werden]]
+ | [[Bild:SLV_Ausdruck_externerBriefkopf3.png|thumb|235px|Ausdruck
+kann auch einzeln über die Schaltfläche &quot;Drucken&quot; rechts neben &quot;I. Original&quot; ausgedruckt werden]]
+|}
+
+
+
+=== Grundsätzliches zu Sachleitende Verfügungen Drucken ===
+
+* Bei einem Externen Brief wird die I. als &quot;I. Original&quot; angezeigt, sonst wird die Beschreibung aus der Verfügung angezeigt (z.B. Vormerkung oder Niederschrift).
+* Falls bei einer Verfügung kein Absatz als Zuleitungszeile markiert ist, wird der Druckzähler mit 1 initialisiert.
+* Alle als Zuleitungszeile markierten Absätze werden als Dropdown zu der jeweiligen Verfügung angezeigt, mit der dazugehörigen Anzahl der Ausdrucke.
+* Jeder Ausdruck kann einzeln mit einer Schaltfläche &quot;Drucken&quot; neben der entsprechenden Verfügung ausgedruckt werden.
+* Die Summe aller Ausdrucke wird als &quot;read only&quot; Feld angezeigt. 
+* Alle Ausdrucke können über die Schaltfläche &quot;Alle Drucken&quot; ausgedruckt werden.
+* Über die Schaltfläche &quot;Druckeinstellungen&quot; kann ein anderer Drucker ausgewählt werden oder Einstellungen geändert werden.
+
+== Anhang Details==
+
+Hier eine Zusammenfassung des Verhaltens aller Schaltflächen in den verschiedenen möglichen Situationen:
+{|{{prettytable}}
+ ! Situation/Schaltfläche 
+ ! Ziffer Einfügen
+ ! Abdruck
+ ! Zuleitungszeile
+
+ |-
+ ! 1) Der Cursor steht auf Fließtext und markiert keinen Bereich
+ | 1a) Die römische Ziffer wird links in dem Absatz eingefügt, in dem sich der Cursor befindet (bei Bereichen an der Startposition des Cursors) und als Verfügungspunkt (fett) formatiert. Der Cursor bleibt unverändert.
+ | 1b) An der Cursorposition (Bei Bereichen vor der Startposition des Cursors) wird ein neuer Absatz eingefügt und als Verfügungspunkt mit dem Text &quot;Abdruck von I. ...&quot; formatiert. Danach folgt ein zusätzlicher Absatz nach dem Abdruck. Der Cursor steht in jedem Fall danach am Anfang des ersten Absatzes nach dem Abdruck.
+ | 1c) Der Absatz in dem sich der Cursor befindet wird als Zuleitungszeile formatiert und der Cursor bleibt unverändert.
+
+ |-
+ ! 2) Der Cursor steht auf einem Verfügungspunkt und markiert keinen Bereich
+ | 2a) Die römische Ziffer des Verfügungspunktes wird gelöscht und das Absatzformat auf &quot;Fließtext&quot; zurück gesetzt. Der Cursor bleibt unverändert.
+ | 2b) Am Ende des Absatzes des Verfügungspunktes wird der Abdruck eingefügt (bis auf die Position) wie unter 1b) beschrieben.
+ | 2c) Der Verfügungspunkt in dem sich der Cursor befindet wird als Verfügung mit Zuleitung formatiert und der Cursor bleibt unverändert.
+
+ |-
+ ! 3) Der Cursor steht auf einem Abdruck und markiert keinen Bereich
+ | 3a) Der Abdruck wird entfernt wie unter 3b) beschrieben.
+ | 3b) Der komplette Absatz des Abdrucks wird gelöscht. Folgte auf den Abdruck eine Leerzeile, so wird auch diese gelöscht. Der Cursor steht danach am Ende der Vorgängerzeile des Abdrucks.
+ | 3c) Nach dem Abdruck wird eine neue Leerzeile eingefügt und diese als Zuleitungszeile formatiert. Der Cursor steht am Anfang der neuen Zuleitungszeile.
+
+ |-
+ ! 4) Der Cursor steht auf einem Verfügungspunkt mit Zuleitung und markiert keinen Bereich
+ | 4a) Die Ziffer wird entfernt und der Absatz als Zuleitungszeile markiert. Der Cursor bleibt unverändert.
+ | 4b) Am Ende des Absatzes des Verfügungspunktes mit Zuleitung wird der Abdruck eingefügt (bis auf die Position) wie unter 1b) beschrieben. 
+ | 4c) Die Zuleitung wird entfernt, in dem der Absatz als normaler Verfügungspunkt formatiert wird. Der Cursor bleibt unverändert.
+
+ |-
+ ! 5) Der Cursor steht auf einer Zuleitungszeile und markiert keinen Bereich
+ | 5a) Die römische Ziffer wird in dem Absatz eingefügt, in dem der Cursor steht (bei Bereichen an der Startposition des Cursors) und der Absatz als Verfügungspunkt mit Zuleitung markiert. Der Cursor bleibt unverändert.
+ | 5b) Der Abdruck wird eingefügt wie unter 1b) beschrieben.
+ | 5c) Die Zuleitungszeile wird entfernt, in dem das Absatzformat auf &quot;Fließtext&quot; zurück gesetzt wird. Der Cursor bleibt unverändert.
+
+ |-
+ ! 6) Der Cursor erstreckt sich über mehrere Zeilen und markiert damit verschiedene Elemente (Verfügungspunkte, Zuleitungszeilen, Abdrücke, Verfügungspunkte mit Zuleitungen). Mindestens ein Absatz mit dem Typ des einzufügenden Elements ist in der Auswahl vorhanden:
+ | 6a) Alle enthaltenen Verfügungspunkte mit Zuleitung werden wie in 4a) beschrieben entfernt. Alle enthaltenen Abdrücke werden wie in 3b) beschrieben entfernt. Alle anderen enthaltenen Verfügungspunkte werden wie in 2a) beschrieben entfernt. Der Cursor bleibt unverändert.
+ | 6b) Alle enthaltenen Abdrücke werden wie in 3b) beschrieben entfernt. Der Cursor bleibt unverändert.
+ | 6c) Alle enthaltenen Zuleitungszeilen werden wie in 5c) beschrieben entfernt. Der Cursor bleibt unverändert.
+
+ |-
+ ! 7) Der Cursor erstreckt sich über mehrere Zeilen und markiert damit verschiedene Elemente (Verfügungspunkte, Zuleitungszeilen, Abdrücke, Verfügungspunkte mit Zuleitungen). Jedoch ist '''kein''' Absatz mit dem Typ des einzufügenden Elements ist in der Auswahl vorhanden:
+ | 7a) Der Absatz, in dem sich die Startposition des Bereichs befindet wird als Verfügungspunkt formatiert (für Fließtext 1a) und für Zuleitungszeilen 5a)). Der Cursor bleibt unverändert.
+ | 7b) An der Startposition des Bereiches wird der der Abdruck eingefügt (für Fließtext und Zuleitungszeilen 1b), für für Verfügungspunkte 3b)).
+ | 7c) Alle Fließtext-Absätze werden wie in 1c) behandelt, alle Abdrücke werden ignoriert und alle anderen Verfügungspunkte wie 2c) behandelt. Der Cursor bleibt unverändert.
+
+ |}
+
+
+[[Category:Eierlegender_WollMux]]
+[[Category:Handbuch_des_WollMux]]</rev></revisions></page></pages></query></api>
