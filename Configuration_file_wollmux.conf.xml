@@ -1,108 +1,109 @@
-<?xml version="1.0"?><api><query><normalized><n from="Configuration_file_wollmux.conf" to="Configuration file wollmux.conf" /></normalized><pages><page pageid="161" ns="0" title="Configuration file wollmux.conf"><revisions><rev contentformat="text/x-wiki" contentmodel="wikitext" xml:space="preserve">Der [[:Kategorie:Eierlegender_WollMux|WollMux]] hat konzeptuell nur eine einzige Konfigurationsdatei, im Folgenden als ''wollmux.conf'' bezeichnet. In der Praxis wird diese meist mit Hilfe des [[Format_von_WollMux-Config-Dateien#.25include|%include-Mechanismus]] auf mehrere Dateien verteilt (siehe [[Format_von_WollMux-Config-Dateien|Format von WollMux-Config-Dateien]]). Die ''wollmux.conf'' wird vom WollMux an folgenden Stellen in der angegebenen Reihenfolge gesucht:
+<?xml version="1.0"?><api><query><normalized><n from="Configuration_file_wollmux.conf" to="Configuration file wollmux.conf" /></normalized><pages><page pageid="161" ns="0" title="Configuration file wollmux.conf"><revisions><rev contentformat="text/x-wiki" contentmodel="wikitext" xml:space="preserve">[[:Kategorie:Eierlegender_WollMux|WollMux]] has, at least in concept, a single configuration file, referred to throughout as  ''wollmux.conf''. In practice, however, the configuration is spread out over multiple files by using the [[Format_von_WollMux-Config-Dateien#.25include|%include mechanism]]. (See [[Format_von_WollMux-Config-Dateien|WollMux configuration file format]]). WollMux looks for ''wollmux.conf'' in the following locations and in the following order:
 
-'''Unter Windows:'''
-# über die Umgebungsvariable %WOLLMUX_CONF_PATH% (Pfad inklusive Dateiname, Beispiel: ''C:\Programme\wollmux\wollmux.conf'')
-# unter dem Dateipfad (inkl. Dateiname), der im Wert &quot;ConfigPath&quot; im Registrierungsschlüssel ''HKEY_CURRENT_USER\Software\WollMux'' festgelegt ist
-# ''&lt;code&gt;&lt;Profilverzeichnis&gt;&lt;/code&gt;/.wollmux/wollmux.conf'', wobei &lt;code&gt;&lt;Profilverzeichnis&gt;&lt;/code&gt; auf einem deutschen Windows das Verzeichnis &quot;C:\Dokumente und Einstellungen\&lt;code&gt;&lt;Benutzername&gt;&lt;/code&gt;&quot; bezeichnet
-# unter dem Dateipfad (inkl. Dateiname), der im Wert &quot;ConfigPath&quot; im Registrierungsschlüssel ''HKEY_LOCAL_MACHINE\Software\WollMux'' festgelegt ist
-# ''C:\Programme\wollmux\wollmux.conf''
+'''Under Windows:'''
+# using the enviroment variable %WOLLMUX_CONF_PATH% (path including filename, for example: ''C:\Program Files\WollMux\wollmux.conf'')
+# via the path (incl. filename) set in the registry key &quot;ConfigPath&quot; under ''HKEY_CURRENT_USER\Software\WollMux'' 
+# ''&lt;code&gt;&lt;Profile_Folder&gt;&lt;/code&gt;/.wollmux/wollmux.conf'', where &lt;code&gt;&lt;Profile_Folder&gt;&lt;/code&gt; under Windows 7 is the folder &quot;C:\Users\&lt;code&gt;&lt;UserName&gt;&lt;/code&gt;&quot;.
+# via the path (incl. filename) set in the registry key &quot;ConfigPath&quot; under ''HKEY_LOCAL_MACHINE\Software\WollMux''
+# ''C:\Program Files\WollMux\wollmux.conf'' (This is the default installation directory. WollMux will also find ''wollmux.conf'' if you use the EXE configuration installer to install to a different directory, for example &quot;C:\WollMux&quot;.)
 
-'''Unter Linux:'''
-# über die Umgebungsvariable $WOLLMUX_CONF_PATH (Pfad inklusive Dateiname, Beispiel: ''/etc/wollmux/wollmux.conf'')
+'''Under Linux:'''
+# using the enviroment variable %WOLLMUX_CONF_PATH% (path including filename, for example: ''/etc/wollmux/wollmux.conf'')
 # ''&lt;code&gt;$HOME&lt;/code&gt;/.wollmux/wollmux.conf''
 # ''/etc/wollmux/wollmux.conf''
 
-Sobald die Konfigurationsdatei gefunden wurde, wird vom WollMux nicht mehr an den übrigen Stellen weitergesucht. Wenn also unter Linux eine Datei ''&lt;code&gt;$HOME&lt;/code&gt;/.wollmux/wollmux.conf'' existiert, ist das eventuelle Vorhandensein einer Konfigurationsdatei unter ''/etc/wollmux/wollmux.conf'' irrelevant und wird vom WollMux ignoriert.
+Once WollMux finds a configuration file, it stops looking in the remaining locations. So if (under Linux) a file ''&lt;code&gt;$HOME&lt;/code&gt;/.wollmux/wollmux.conf'' exists, the existence of another configuration file ''/etc/wollmux/wollmux.conf'' is irrelevant and ignored by WollMux.
 
-Bitte achten Sie beim Editieren der wollmux.conf immer auf die '''korrekte Gross-/Kleinschreibung'''! Verwenden Sie bitte insbesondere alle Schlüssel (bzw. Attribute) ausschließlich wie in der hier beschriebenen Form.
+When editing wollmux.conf, '''use the correct upper/lower case'''! In particular, please use all keys (and attributes) exactly as they're written here.
 
-= Der DEFAULT_CONTEXT =
-Der DEFAULT_CONTEXT beschreibt einen Verzeichnis-Pfad in [[Format_von_WollMux-Config-Dateien#URLs|URL-Notation]], an dem zentrale WollMux-Daten (z.B. Textfragmente, Benutzerdaten) abgelegt sind. An verschiedenen Stellen der wollmux.conf wird der DEFAULT_CONTEXT als Basis zur Auflösung relativer URLs verwendet. Dies ist an den entsprechenden Stellen vermerkt. Die Syntax zur Festlegung des DEFAULT_CONTEXT ist wie folgt:
+= The DEFAULT_CONTEXT variable=
+The variable DEFAULT_CONTEXT describes the path to the folder in [[Format_von_WollMux-Config-Dateien#URLs|URL notation]], in which central WollMux data (i.e. text fragments, user data) is stored. In different places throughout the wollmux.conf structure, DEFAULT_CONTEXT is used as the basis for resolving relative URLs. This is noted in the corresponding places. The syntax for setting DEFAULT_CONTEXT is as follows:
  DEFAULT_CONTEXT &quot;&lt;url&gt;&quot;
-Dazu ein kleines Beispiel:
- DEFAULT_CONTEXT &quot;file:///L:/WollMuxDaten&quot; # WollMux-Daten werden im zentralen Verzeichnis L:/WollMuxDaten vorgehalten.
+Examples:
+ DEFAULT_CONTEXT &quot;file:///L:/WollMuxData&quot; # WollMux data is stored in the central location L:/WollMuxData. 
+ Under Windows 7, the first line may be something like 'DEFAULT_CONTEXT &quot;file:/C:/WollMux&quot;'
+ or 'DEFAULT_CONTEXT &quot;file:/C:/Program Files/WollMux&quot;' if you use the EXE installer.
+DEFAULT_CONTEXT can be defined anywhere on the top level of the configuration file outside of all sections. DEFAULT_CONTEXT can be redefined later elsewhere in the configuration file. The final definition applies to the ''entire'' wollmux.conf structure.
 
-Der DEFAULT_CONTEXT kann überall auf oberster Ebene der Konfigurationsdatei außerhalb aller Abschnitte definiert werden. Der DEFAULT_CONTEXT kann an einer späteren Stelle in der Konfigurationsdatei redefiniert werden. Die letzte Definition hat Gültigkeit für die ''gesamte'' wollmux.conf.
+If there is no DEFAULT_CONTEXT entry, WollMux uses the folder where wollmux.conf [[#top|was found]] to determine DEFAULT_CONTEXT.
 
-Wird der DEFAULT_CONTEXT nicht angegeben, so wird das Verzeichnis als DEFAULT_CONTEXT verwendet, in dem die wollmux.conf [[#top|gefunden wurde]].
+If a relative path is entered for DEFAULT_CONTEXT (i.e. ../networkdrive/fileserver/wollmux), this is interpreted as being relative to the folder where wollmux.conf [[#top|was found]] by WollMux.
 
-Wird ein relativer Pfad als DEFAULT_CONTEXT angegeben (z.B. ../netzlaufwerke/fileserver/wollmux), so wird dieser relativ zu dem Verzeichnis ausgewertet, in dem die wollmux.conf [[#top|gefunden wurde]].
+= Integrating plugins to suit your workplace/CLASSPATH =
+WollMux lets you integrate custom plugins suitable for your department. For example, you might transform values from a data source, or make it easier for users to print. Integrating external functions like these is done via  [[Konfigurationsdatei_wollmux.conf#EXTERN_.28URL_.3Curl.3E_PARAMS.28.3Cparam1.3E_..._.3CparamN.3E.29.29|EXTERN basic functions]] . This can be determined globally in the sections [[Konfigurationsdatei_wollmux.conf#Druckfunktionen|Print functions]] und [[Konfigurationsdatei_wollmux.conf#Funktionen|Functions]], or as part of a template itself. See the [[FormularMax_4000#Referatsspezifische_Plugins|corresponding documentation for FormularMax 4000]] for more information.
 
-= Einbinden referatseigener Plugins/CLASSPATH =
-Der WollMux erlaubt den Referaten an verschiedenen Stellen das Einbinden eigener Plugins, z.B. zur Transformation von aus einer Datenquelle eingefügten Werten oder um Komfortdruckfunktionen zur Verfügung zu stellen. Das Einbinden derartiger externer Funktionen erfolgt mittels [[Konfigurationsdatei_wollmux.conf#EXTERN_.28URL_.3Curl.3E_PARAMS.28.3Cparam1.3E_..._.3CparamN.3E.29.29|EXTERN-Grundfunktion]] . Dies kann global in den Abschnitten [[Konfigurationsdatei_wollmux.conf#Druckfunktionen|Druckfunktionen]] und [[Konfigurationsdatei_wollmux.conf#Funktionen|Funktionen]] erfolgen, oder direkt in einer Vorlage. Siehe hierzu die [[FormularMax_4000#Referatsspezifische_Plugins|entsprechende Dokumentation zum FormularMax 4000]].
-
-Der eigentliche Programmcode der externen Funktion muss als statische Methode einer beliebigen Klasse realisiert sein. Damit der WollMux die entsprechende Klasse auch findet, muss das Verzeichnis bzw. die JAR-Datei in der die Klasse enthalten ist dem WollMux über CLASSPATH-Direktiven bekannt gemacht werden. Im folgenden einige Beispiele für erlaubte CLASSPATH-Angaben:
- &lt;nowiki&gt;CLASSPATH( &quot;file:///usr/share/wollmux/&quot; &quot;http://foo.bar.muenchen.de/funktionen.jar&quot;)&lt;/nowiki&gt;
+The actual program code for an external function must be realized as a static method in a class of your choice. In order for WollMux to find your plugin's class, either the path to the folder containing it or the path to the JAR file itself must appear in the CLASSPATH directive. The following are permissible CLASSPATH entries (under Linux):
+ &lt;nowiki&gt;CLASSPATH( &quot;file:///usr/share/wollmux/&quot; &quot;http://foo.bar.muenchen.de/functions.jar&quot;)&lt;/nowiki&gt;
  &lt;nowiki&gt;CLASSPATH &quot;file:///usr/share/wollmux/&quot;&lt;/nowiki&gt;
 
-Zu beachten ist:
-* CLASSPATH-Angaben müssen auf oberster Verschachtelungsebene der wollmux.conf stehen.
-* Die angebenen Werte sind immer URLs.
-* Es wird ''nicht'' das Verzeichnis angegeben, in dem sich die .class Datei befindet, sondern das Oberverzeichnis der Package-Hierarchie. Die .class-Datei muss sich in einer ihrem Package entsprechendem Unterverzeichnis befinden. Beispiel: Die Funktion de.muenchen.sozref.Druck.komfortDruck() ist in der .class Datei Druck.class zu finden. Diese Datei liegt im Verzeichnis /usr/share/wollmux/de/muenchen/sozref/. Dann ist die CLASSPATH Angabe dazu &quot;file:///usr/share/wollmux/&quot;.
-* Relative URLs werden relativ zum DEFAULT_CONTEXT aufgelöst.
+Please note:
+* CLASSPATH entries must appear at the uppermost nesting level of wollmux.conf. 
+* The values entered must be URLs.
+* Do ''not'' enter the name of the folder containing the .class file, but rather the topmost folder of the package hierarchy. The .class file itself must be located in the sub-folder belonging to your package. Example: The function de.muenchen.sozref.Druck.comfortPrint() is located in the .class file Print.class. This file is in the folder /usr/share/wollmux/de/muenchen/sozref/. This means the proper CLASSPATH entry for your function is &quot;file:///usr/share/wollmux/&quot;.
+* Relative URLs are resolved relative to DEFAULT_CONTEXT.
 
-= Logging und Debugging =
-Der WollMux schreibt jede auszugebende Meldungen an das Ende der Log-Datei ''$HOME/.wollmux/wollmux.log'', die mit der ersten auszugebenden Meldung automatisch erzeugt wird. Der WollMux kann in den verschiedensten Situationen Meldungen erzeugen, die jedoch nicht alle protokolliert werden müssen. Über den LOGGING_MODE können Sie steuern, in welchem Detailgrad die Informationen des WollMux protokolliert werden. Die Datei wird nie automatisch gelöscht. In der Standardeinstellung schreibt der WollMux jedoch nur Meldungen in die Datei wollmux.log um über kritische Fehler oder Meldungen zu informieren. Ein unnötiges Anwachsen der Log-Datei wird dadurch verhindert.
+= Logging and Debugging =
+WollMux appends its messages to ''$HOME/.wollmux/wollmux.log''. This file is automatically generated the first time WollMux issues a message. In some situations WollMux may issue messages that don't need to be logged. Using LOGGING_MODE you can control the level of detail that WollMux gives in its log messages. The log file is never deleted automatically. In standard mode, WollMux only logs messages involving critical failure or informative messages. This reduces the tendency of the log file to grow unnecessarily.
 
-== Der LOGGING_MODE ==
+== LOGGING_MODE ==
 ;Syntax
- LOGGING_MODE &quot;&lt;modus&gt;&quot;
-;Beispiel
+ LOGGING_MODE &quot;&lt;modes&gt;&quot;
+;Example
  LOGGING_MODE &quot;ERROR&quot;
- oder
+ or
  LOGGING_MODE &quot;DEBUG&quot;
-;Beschreibung: Steuert den Detaillierungsgrad in dem '''Ausgaben des WollMux (und der WollMuxBar) in der Datei wollmux.log''' erfolgen.
+;Description: Controls the level of detail of '''output from WollMux (and the WollMuxBar) appended to wollmux.log'''.
 
-Dabei kennt der WollMux folgende Modi:
+WollMux recognizes the following modes:
 {|{{Prettytable}}
- ! &lt;modus&gt;
- ! Beschreibung
- ! Debugmodus
+ ! &lt;mode&gt;
+ ! Description
+ ! Debug mode
  |-
  ! NONE
  | 
-Im Logging-Modus NONE werden in keinem Fall Nachrichten ausgegeben.
- | Nein
+In Logging Mode NONE no output is logged.
+ | No
  |-
  ! ERROR
  | 
-Der Logging-Modus ERROR zeigt nur dann Nachrichten an, wenn bei der Ausführung des WollMux Fehler auftreten. Darin sind u.A. enthalten
-* Meldungen über Fehler in den Konfigurationsdateien, 
-* Meldungen über Fehler in Vorlagen,
-* Meldungen über Fehler beim Zugriff auf die konfigurierten Datenbanken,
-* Meldungen über interne Fehler des WollMux.
- | Nein
+The Logging Mode ERROR only logs errors encountered while running WollMux. These include messages about
+* errors in the configuration file, 
+* errors in templates,
+* errors in accessing configured databases,
+* WollMux internal failures.
+ | No
  |-
  ! LOG
  | 
-Im Logging-Modus LOG werden alle Meldungen ausgegeben, die für den täglichen Einsatz des WollMux interessant und nützlich sein können, ohne jedoch die Logdatei wollmux.log sinnlos anwachsen zu lassen. Dazu zählen alle Fehlermeldungen (wie im Logging-Modus ERROR) und zusätzlich wichtige Warnungen oder Informationen im laufenden Betrieb. '''Der Logging-Modus LOG ist standardmäßig gesetzt''', wenn die Konfigurationsdatei wollmux.conf keine andere Festlegung enthält.
- | Nein
+In Logging Mode LOG WollMux records all messages that might be interesting or useful for daily use of Wollmux, while avoiding pointless metastasizing of the logfile. These include all error messages (as in Logging Mode ERROR) and additional important warnings and information about the running process. '''Logging Mode LOG is the standard setting''', unless modified in wollmux.conf.
+ | No
  |-
  ! DEBUG
  |
-Der Logging-Modus DEBUG wird genutzt, um eränzend zum Logging-Modus LOG detaillierte
-Informationen über den Status des Programmablaufs auszugeben, mit denen die Fehlersuche bei der Entwicklung und Pflege der Konfigurationsdateien, der Textfragmente und Vorlagen und bei der internen Programmentwicklung erleichtert werden kann. Im Logging-Modus DEBUG werden sehr viele Meldungen erzeugt, von denen nicht alle für den täglichen Einsatz bei Anwenderinnen und Anwendern notwendig sind. Durch die vielen Ausgaben kann sich die Logdatei wollmux.log unnötig aufblähen und sollte von Zeit zu Zeit manuell wieder gelöscht werden. Ist der Logging-Modus DEBUG gesetzt, so reduziert sich die Bearbeitungsgeschwindigkeit des WollMux spürbar!
+Logging Mode DEBUG is used to augment the information given by LOG Mode, providing information about the status of program flow. These messages can ease the task of rooting out errors related to development and maintenance of configuration files, text fragments and templates, and to internal program development. Logging Mode DEBUG generates lots of messages, not all of which are necessary for daily use of WollMux. Overuse of Logging Mode DEBUG can cause the size of wollmux.log to explode unnecessarily, requiring manual deletion of the logfile. If Logging Mode DEBUG is set, you will definitely experience a reduction in WollMux's responsiveness!
 
-Erwähnenswert sind außerdem die ersten drei Ausgaben beim Starten des WollMux im Logging-Modus DEBUG, wie in folgendem Beispiel:
+Worth mentioning are the first three messages WollMux issues when starting in DEBUG mode, as in this example:
  2006-07-13 11:14 DEBUG2(Logger:162): =========== Logger::init(): LoggingMode = 7 ==========
  
  2006-07-13 11:14 DEBUG(WollMuxSingleton:146): StartupWollMux
  
  2006-07-13 11:14 DEBUG(WollMuxSingleton:147): '''Build-Info: Paketversion: 1.2.1, Revision: 986'''
-Sie enthalten Informationen über die eingesetzte WollMux-Version, die Sie insbesondere bei Rückfragen zum WollMux oder bei der Meldung von Problemen stets angegeben sollten.
- | Ja
+
+They contain information about the current WollMux version, which you should always include in further inquiry about WollMux or when reporting problems.
+ | Yes
  |-
  ! ALL
  | 
-Der Logging-Modus ALL gibt uneingeschränkt alle Nachrichten des WollMux aus. Er liefert zusätzlich zum Logging-Modus DEBUG interne Statusinformationen zurück, die selbst für normale DEBUG-Zwecke zu detailliert sind und im Regelfall nur von den Entwicklern des WollMux benötigt werden. Für die reine Fehlersuche bei der Pflege von Konfigurationsdateien, Textfragmenten und Vorlagen ist dieser Modus nicht zu empfehlen.
- | Ja
+Logging Mode ALL records each and every message WollMux generates. This mode records internal status information not generated by DEBUG, too detailed for normal debugging purposes and in general only suitable for use by developers. If you're simply looking for errors purely related to maintenance of configuration files, text fragments and templates, use of this mode is not recommended.
+ | Yes
  |}
 
-== Der Debugmodus ==
-Neben dem Logging-Modus, der festlegt welche Meldungen in die wollmux.log-Datei geschrieben werden, gibt es ausserdem eine Betriebsart des WollMux, in der die Fehlersuche für Vorlagenersteller, Systemverwalter und Entwickler erleichtert werden soll, den sog. Debugmodus. Der Debugmodus ist automatisch eingeschalten, wenn der LOGGING_MODE &quot;DEBUG&quot; oder &quot;ALL&quot; gesetzt ist (siehe auch obige Tabelle).
+== Debug Mode ==
+Besides the logging mode, which determines what messages are written to wollmux.log, there exists also a mode of operation for WollMux that makes it easier for template creators, sysadmins and developers to find errors: Debug Mode. Debug Mode is automatically started if LOGGING_MODE &quot;DEBUG&quot; or &quot;ALL&quot; is set (see the table above).
 
-Im Debugmodus verhält sich der WollMux in folgenden Punkten anders als bei nicht gesetztem Debugmodus:
-* Beim Öffnen einer Vorlage führt der WollMux alle darin enthaltenen Dokumentkommandos aus. Im Normalfall werden danach alle Bookmarks der vollständig abgearbeiteten Dokumentkommandos aus dem Dokument entfernt. Im Debugmodus bleiben die Bookmarks der Dokumentkommandos erhalten. Auf diese Weise können Fehler in Dokumentkommandos leichter gefunden werden, ohne die entsprechende Vorlage zum Bearbeiten öffnen zu müssen.
+In Debug Mode, WollMux behaves differently in the following regard than when Debug Mode is not set:
+* When opening a template, WollMux carries out every command the template contains. In normal use, once all commands in a template have been carried out, the bookmarks are removed from the generated document. In Debug Mode, these bookmarks remain intact. This makes it easier to find errors in document commands, obviating the need to open the corresponding template for editing.
 
 = Das SENDER_DISPLAYTEMPLATE =
 ;Syntax

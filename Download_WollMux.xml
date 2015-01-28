@@ -1,6 +1,6 @@
-<?xml version="1.0"?><api><query><normalized><n from="Download_WollMux" to="Download WollMux" /></normalized><pages><page pageid="158" ns="0" title="Download WollMux"><revisions><rev contentformat="text/x-wiki" contentmodel="wikitext" xml:space="preserve">Auf dieser Seite finden Sie direkte Links zum Download des aktuellsten Releases.
+<?xml version="1.0"?><api><query><normalized><n from="Download_WollMux" to="Download WollMux" /></normalized><pages><page pageid="158" ns="0" title="Download WollMux"><revisions><rev contentformat="text/x-wiki" contentmodel="wikitext" xml:space="preserve">On this page, you will find direct links to download the most recent release.
 
-Eine detaillierte Installationsanleitung finden Sie auf der Seite &quot;[[WollMux installieren]]&quot;.
+You can find detailed installation instructions on the page &quot;[[Install WollMux]]&quot; 
 
 = Current Release =
 == Windows ==
@@ -26,7 +26,7 @@ Eine detaillierte Installationsanleitung finden Sie auf der Seite &quot;[[WollMu
 |-
 |}
 
-== Manual Installation (alle Systeme) ==
+== Manual Installation (all systems) ==
 {|{{prettytable}}
 !width=250px colspan=&quot;2&quot; | Download 
 !colspan=&quot;2&quot; | Description
@@ -43,13 +43,14 @@ Eine detaillierte Installationsanleitung finden Sie auf der Seite &quot;[[WollMu
 
 You can find the command &lt;code&gt;unopkg&lt;/code&gt; in the program registry of your OpenOffice.org installation registry.
 
-Für eine Installation im Bereich Ihres Benutzers können Sie den Extensionmanager verwenden, den Sie über Extras-&gt;Extension Manager in OpenOffice.org starten können.
+You can use the extension manager for an installation in the user area. You can start it in OpenOffice.org via Extras-&gt; Extension Manager.
 
-''Anmerkung: Sie benötigen zusätzlich eine Konfiguration, damit der WollMux funktioniert. Diese können Sie weiter unten herunterladen.
+''Note: You will need an additional configuration for WollMux to run. You can download it further down.
 |-
 | WollMuxBar.jar
-| Enthält die Java-Klassen zum Starten der WollMux-Leiste. Kopieren Sie diese Datei in ein Programm-Verzeichnis Ihrer Wahl, z.B. nach /usr/share/java/ (für Linux) oder C:\Programme\wollmux (für Windows).
+| Contains the Java classes to start the WollMux bar. Copy this file to a program directory of your choice, for example to /usr/share/java/ (for Linux) or C:\programs\wollmux (for Windows).
 
+The WollMux bar can be
 Die WollMux-Leiste kann mit dem Befehl &lt;code&gt;java -jar WollMuxBar.jar&lt;/code&gt; aufgerufen werden. Alternativ können Sie auch eines der beiden folgenden Starter-Skripte verwenden:
 |-
 | wollmuxbar (für Linux)

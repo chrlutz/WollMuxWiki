@@ -3,9 +3,9 @@
 __NOTOC__
 = [[Datei:Wollmux_logo_medium.gif]] - Munich's letterhead and form system =
 
-The Wollmux is an extension for [http://www.openoffice.org OpenOffice.org] / [http://www.documentfoundation.org LibreOffice] developed by the [http://www.muenchen.de/int/en city administration of Munich]. WollMux adds functions to OpenOffice.org / LibreOffice, to make the handling of templates, forms and letterheads much easier. Because WollMux is OpenSource and available for everyone, it is used by other public administrations and coporations, too.
+The Wollmux is an extension for [http://www.openoffice.org OpenOffice.org] / [http://www.documentfoundation.org LibreOffice] developed by the [http://www.muenchen.de/int/en City Administration of Munich]. WollMux adds functions to OpenOffice.org / LibreOffice, to make the handling of templates, forms and letterheads much easier. Because WollMux is OpenSource and available for everyone, it is also used by other public administrative bodies and corporations.
 
-To find out, what WollMux can do, look here:  '''[[Features|Features des WollMux]]''' (only in German)
+To find out, what WollMux can do, look here:  '''[[Features|WollMux Features]]''' (in German only)
 
 &lt;div style=&quot;background-color:#FFFD7A; border:1px dashed gray; padding: 2px 6px; margin-top:1.2em; margin-bottom:1.2em; margin-left:1px; margin-right:auto; font-size:smaller;&quot;&gt;{{:News}}
 
@@ -23,19 +23,19 @@ To find out, what WollMux can do, look here:  '''[[Features|Features des WollMux
 
 == Documentation ==
 
-'''[[:Kategorie:WollMux Handbook|WollMux Handbook]]''' - How to manuals of WollMux and its configuration.
+'''[[:Kategorie:WollMux Handbook|WollMux Handbook]]''' - How-to manuals for WollMux and its configuration.
 
-'''[http://www.wollmux.net/wiki/images/8/8e/FormularMax_Handbuch.pdf FormularMax-Handbuch (PDF)]''' - Handbook on how to create forms mit WollMux (FM4000). English version available soon.
+'''[http://www.wollmux.net/wiki/images/8/8e/FormularMax_Handbuch.pdf FormularMax Handbook (PDF - German language)]''' - Handbook on how to create forms with WollMux (FM4000). English version available soon.
 
-'''[[Mailinglisten]]''' - for further help use our mailinglists.
+'''[[Mailinglisten|Mailing lists]]''' - for further help use our mailing lists.
 
 == Source Code ==
 
 WollMux is an OpenSource-peoject (licensed under [http://joinup.ec.europa.eu/software/page/eupl European Union Public License]). The source code can be found in our '''[http://code.google.com/p/wollmux/ source code repository]'''.
 
-An instruction how to check out the source code from the repository and how to compile WollMux can be found on the Wiki Page '''[[Repository]]'''.
+Instructions on how to check out the source code from the repository and how to compile WollMux can be found on the Wiki Page '''[[Repository]]'''.
 
-If you have further questions use our '''[[Mailinglisten | mailingslists]]''' 
+If you have further questions use our '''[[Mailinglisten | mailing lists.]]'''
 
 == Error messages ==
 Bugs in WollMux can be submitted using the public [http://code.google.com/p/wollmux/issues/list issue tracker] on Google Code.
@@ -46,7 +46,7 @@ Bugs in WollMux can be submitted using the public [http://code.google.com/p/woll
 * http://code.google.com/p/wollmux/ - WollMux-repository on Google Code
 * http://www.muenchen.de/wollmux - WollMux-on muenchen.de
 * http://www.muenchen.de/limux - Informationen on the LiMux project
-* http://joinup.ec.europa.eu/software/wollmux/description - WollMux projekt on Joinup
+* http://joinup.ec.europa.eu/software/wollmux/description - WollMux project on Joinup
 * http://wiki.stadt.freiburg.de/ooo/ - Freiburg's OpenOffice.org-Wiki Freiburg
 
 [[Category:WollMux English]]</rev></revisions></page></pages></query></api>

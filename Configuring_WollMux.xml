@@ -1,18 +1,18 @@
-<?xml version="1.0"?><api><query><normalized><n from="Configuring_WollMux" to="Configuring WollMux" /></normalized><pages><page pageid="160" ns="0" title="Configuring WollMux"><revisions><rev contentformat="text/x-wiki" contentmodel="wikitext" xml:space="preserve">= Einführung =
-Der Wollmux benötigt um effektiv in Ihrem Referat in Betrieb gehen zu können, eine geeignete referatspezifische Infrastruktur und Konfiguration bei Ihnen vor Ort. Um Ihnen das Aufsetzen dieser zu erleichtern, wurde eine Standardkonfiguration entwickelt, die sich leicht installieren und anpassen lässt.
+<?xml version="1.0"?><api><query><normalized><n from="Configuring_WollMux" to="Configuring WollMux" /></normalized><pages><page pageid="160" ns="0" title="Configuring WollMux"><revisions><rev contentformat="text/x-wiki" contentmodel="wikitext" xml:space="preserve">= Introduction =
+In order for you and your department to effectively implement Wollmux, the program needs infrastructure and configuration suitable for your department's requirements. You must set this up locally. To make this easier for you, we've developed a standard configuration that you can easily install and adapt accordingly.
 
-== Weitere Dokumentationen und Begriffserläuterungen ==
-Hinweise zu den weiteren Dokumentationen zum WollMux und zum Briefkopf- bzw. Formularsystem und welche davon sie für welche Fragestellung benötigen, erfahren Sie im [[:Category:Handbuch_des_WollMux#Wegweiser | Wegweiser]].
+== Further documentation and definitions of terms ==
+References to further documentation on WollMux, to its Letterhead and Form system, as well as general problem-solving, are available at [[:Category:Handbuch_des_WollMux#Wegweiser | Guidepost]].
 
-= Die WollMux-Standard-Konfiguration =
+= WollMux Standard Configuration =
 == Download ==
-Es stehen Basisarchive der Standardkonfiguration auf der Seite [[Standardkonfiguration des WollMux downloaden]] zur Verfügung.
+A basic standard configuration file is available for download at [[Standardkonfiguration des WollMux downloaden|Download WollMux Standard Configuration File]].
 
 == Installation ==
-Installation und Pflege einer Standardkonfiguration sind im Artikel [[Standardkonfiguration des WollMux installieren und pflegen]] erklärt.
+Installation and maintenance of a standard configuration are explained in this article: [[Standardkonfiguration des WollMux installieren und pflegen|Installing and maintaining a standard WollMux configuration]]
 
-== Inhalt ==
-Eine detaillierten Erläuterung der Standardkonfiguration finden Sie im Artikel [[Standardkonfiguration des WollMux]].
+== Contents ==
+A detailed explanation of the standard configuration is available in this article: [[Standardkonfiguration des WollMux|WollMux's standard configuration]].
 
 
 

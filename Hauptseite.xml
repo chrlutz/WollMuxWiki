@@ -31,7 +31,7 @@ Mehr darüber, was der WollMux alles kann, erfahren Sie hier: '''[[Features|Feat
 
 == Source Code ==
 
-Der WollMux ist ein OpenSource-Projekt (lizenziert unter der [http://joinup.ec.europa.eu/software/page/eupl European Union Public License]). Den aktuellen Quelltext finden Sie in unserem '''[http://code.google.com/p/wollmux/ Source Code Repository]'''.
+Der WollMux ist ein OpenSource-Projekt (lizenziert unter der [http://joinup.ec.europa.eu/software/page/eupl European Union Public License]). Den aktuellen Quelltext finden Sie in unserem '''[https://github.com/WollMux/WollMux Source Code Repository]'''.
 
 Eine Anleitung zum Auschecken des Quelltextes aus dem Code Repository und wie Sie den WollMux selber compilieren können, finden Sie auf der Wiki-Seite '''[[Repository]]'''.
 
@@ -44,7 +44,7 @@ Fehler im WollMux können über den öffentlichen [http://code.google.com/p/woll
 == Weitergehende Links ==
 [[Datei:Limux_power.gif|right|link=http://www.muenchen.de/limux]]
 
-* http://code.google.com/p/wollmux/ - WollMux-Repository bei Google Code
+* https://github.com/WollMux/WollMux - WollMux-Repository bei GitHub
 * http://www.muenchen.de/wollmux - WollMux-Seite auf muenchen.de
 * http://www.muenchen.de/limux - Informationen zum LiMux-Projekt
 * http://joinup.ec.europa.eu/software/wollmux/description - WollMux-Projektseite bei Joinup

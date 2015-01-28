@@ -1,27 +1,27 @@
-<?xml version="1.0"?><api><query><pages><page pageid="12" ns="0" title="Repository"><revisions><rev contentformat="text/x-wiki" contentmodel="wikitext" xml:space="preserve">= WollMux Code Repositories = 
+<?xml version="1.0"?><api><query><pages><page pageid="12" ns="0" title="Repository"><revisions><rev contentformat="text/x-wiki" contentmodel="wikitext" xml:space="preserve">= WollMux Code Repositories =
 
-Wer sich für den Quelltext des WollMux interessiert oder den WollMux selber compilieren will (um z.B. derzeit in Entwicklung befindliche Features des WollMux auszuprobieren), findet die aktuellste Version des Source Codes stets in unserem öffentlichen Mercurial Repository.
+Wer sich für den Quelltext des WollMux interessiert oder den WollMux selber kompilieren will (um z.B. derzeit in Entwicklung befindliche Features des WollMux auszuprobieren), findet die aktuellste Version des Source Codes stets in unserem öffentlichen Git Repository.
 
-Das Repository wird derzeit bei Google Code gehostet - die URL des zugehörigen WollMux-Projekts ist '''http://code.google.com/p/wollmux/'''.&lt;br/&gt;
+Das Repository wird derzeit bei GitHub gehostet - die URL des zugehörigen WollMux-Projekts ist '''http://github.com/WollMux/WollMux'''.&lt;br/&gt;
 Über die Website des Projekts kann sehr einfach im Source Code gebrowst werden und es sind übersichtlich alle Commit Logs und die damit verbundenen Quelltextänderungen zu sehen.
 
 == Checkout des Quelltextes aus dem Repository ==
 
-Es gibt verschiedene Tools, mit denen Sie den Quelltext aus unserem Mercurial Repository auschecken können (z.B. [http://tortoisehg.bitbucket.org/ TortoiseHg]). Diese Anleitung beschränkt sich auf das einfache Kommandozeilentool &quot;hg&quot;. Die folgenden Kommandos sollten sowohl unter Linux als auch unter Windows funktionieren. Voraussetzung ist natürlich, dass hg installiert und im Pfad ist (mehr zu Mercurial erfahren Sie im Unterabschnitt &quot;[[#Mercurial_-_Was_ist_das.3F|Mercurial - Was ist das?]]&quot;).
+Es gibt verschiedene Tools, mit denen Sie den Quelltext aus unserem Git Repository auschecken können. Diese Anleitung beschränkt sich auf das einfache Kommandozeilentool &quot;git&quot;. Die folgenden Kommandos sollten sowohl unter Linux als auch unter Windows funktionieren. Voraussetzung ist natürlich, dass Git installiert und im Pfad ist (mehr zu Git erfahren Sie unter &quot;[[#Git_-_Was_ist_das.3F|Git - Was ist das?]]&quot;).
 
 === WollMux auschecken ===
 
 Wechseln Sie in der Kommandozeile zunächst in den Dateiordner, in den Sie den WollMux-Quelltext auschecken wollen. Dann rufen Sie folgendes Kommando auf:
 
 &lt;pre&gt;
-hg clone https://wollmux.googlecode.com/hg/ WollMux
+git clone https://github.com/WollMux/WollMux
 &lt;/pre&gt;
 
 Durch dieses Kommando wird ein neuer Unterordner namens &quot;WollMux&quot; angelegt, in dem sich nach erfolgreichen Ausführen des Kommandos jetzt ein sogenannter Clone des WollMux-Repositories inkl. des aktuellen Stands des WollMux-Quelltextes befindet.
 
 Mehr ist im Prinzip nicht zu tun. Um den so ausgecheckten Quelltext auf den aktuellen Stand zu bringen, wechseln Sie einfach in den &quot;WollMux&quot;-Ordner und führen den folgenden Kommandozeilenbefehl aus:
 
- hg pull -u
+ git pull
 
 === UNOHelper auschecken ===
 
@@ -30,28 +30,26 @@ Um den WollMux selber kompilieren zu können, benötigen Sie noch ein zusätzlic
 Wechseln Sie in den Ordner, in dem sich auch ihr &quot;WollMux&quot;-Unterordner mit dem Clone des WollMux-Repositories befindet (es ist für den Build wichtig, dass &quot;WollMux&quot;-Ordner und &quot;UNOHelper&quot;-Ordner nebeneinander liegen) und führen Sie folgendes Kommando aus:
 
 &lt;pre&gt;
-hg clone https://unohelper.googlecode.com/hg/ UNOHelper
+git clone https://github.com/WollMux/UNOHelper
 &lt;/pre&gt;
 
 Durch dieses Kommando wird ein neuer Unterordner namens &quot;UNOHelper&quot; angelegt (achten Sie auf die Kapitalisierung!), in dem sich jetzt ein Clone des UNOHelper-Repositories befindet. Um den UNOHelper-Clone auf den aktuellen Stand zu bringen, wechseln Sie einfach in den &quot;UNOHelper&quot;-Ordner und führen den folgenden Kommandozeilenbefehl aus:
 
- hg pull -u
+ git pull
 
-== Mercurial - Was ist das? ==
+== Git - Was ist das? ==
 
-Als Versionsverwaltungssystem kommt beim WollMux-Projekt Mercurial (hg) zum Einsatz. Für diejenigen, die nur CVS oder Subversion (SVN) kennen, enthält Mercurial einige Fallstricke, da es sich um ein verteiltes Versionsverwaltungssystem handelt. Wer hingegen mit GIT vertraut ist, dürfte mit dem Prinzip von Mercurial wenig Schwierigkeiten haben. Wir können an dieser Stelle allerdings keine umfassene Einführung in die Verwendung von Mercurial geben, sondern verweisen an dieser Stelle einfach auf das umfangreiche Buch [http://hgbook.red-bean.com/ Mercurial: The Definitive Guide], das alles enthält, was man zu Mercurial wissen muss und komplett online lesbar ist.
+Als Versionsverwaltungssystem kommt beim WollMux-Projekt Git zum Einsatz. Für diejenigen, die nur CVS oder Subversion (SVN) kennen, enthält Git einige Fallstricke, da es sich um ein verteiltes Versionsverwaltungssystem handelt. Wer hingegen mit Mercurial vertraut ist, dürfte mit dem Prinzip von Git wenig Schwierigkeiten haben. Wir können an dieser Stelle allerdings keine umfassene Einführung in die Verwendung von Git geben, sondern verweisen an dieser Stelle einfach auf das umfangreiche Buch [http://git-scm.com/book/de Pro git], das alles enthält, was man zu Git wissen muss und komplett online lesbar ist.
 
-Um einfach nur den WollMux Source Code auszuchecken langt es allerdings, wenn Sie es schaffen Mercurial auf ihrem System zu installieren und dann die Anweisungen im Unterabschnitt &quot;[[#Checkout_des_Quelltextes_aus_dem_Repository|Checkout des Quelltext aus dem Repository]]&quot; befolgen. Eine Anleitung wie Sie Mercurial bei sich installieren, finden Sie ebenfalls im &quot;Definitive Guide&quot; unter http://hgbook.red-bean.com/read/a-tour-of-mercurial-the-basics.html.
-
-Für Windows empfehlen wir die Verwendung von [http://tortoisehg.bitbucket.org/ TortoiseHg] (auch verfügbar für Linux), das eine einfache Oberfläche und Explorer-Integration anbietet, welche die Arbeit mit Mercurial sehr erleichtern kann. Mittlerweile wird auch von den meisten Entwicklungsumgebungen (wie z.B. Eclipse) eine gute Mercurial-Integration angeboten bzw. ist per Plugin nachrüstbar.
+Um einfach nur den WollMux Source Code auszuchecken langt es allerdings, wenn Sie es schaffen Git auf ihrem System zu installieren und dann die Anweisungen im Unterabschnitt &quot;[[#Checkout_des_Quelltextes_aus_dem_Repository|Checkout des Quelltext aus dem Repository]]&quot; befolgen. Eine Anleitung wie Sie Git bei sich installieren, finden Sie ebenfalls im Buch unter http://git-scm.com/book/de/v1/Los-geht%E2%80%99s-Git-installieren.
 
 == WollMux selber kompilieren ==
 
-Wenn Sie den Quelltext von WollMux und UNOHelper ausgecheckt haben, können Sie theoretisch den WollMux selber bei sich bauen. Weitere Informationen hierzu finden Sie unter &quot;[[WollMux kompilieren]]&quot; sowie http://wollmux.googlecode.com/hg/doc/INSTALL (letztere Datei ist evtl. etwas veraltet - bei Problemen einfach auf der [[Mailinglisten|Mailingliste]] fragen).&lt;br/&gt;
-Die im INSTALL-File erwähnte Datei classes.tar.gz, die zum kompilieren des WollMux benötigt wird, finden Sie unter http://forge.osor.eu/frs/?group_id=11
+Wenn Sie den Quelltext von WollMux und UNOHelper ausgecheckt haben, können Sie theoretisch den WollMux selber bei sich bauen.&lt;br/&gt;
+Weitere Informationen hierzu finden Sie unter &quot;[[WollMux kompilieren]]&quot; sowie https://github.com/WollMux/WollMux/blob/master/doc/INSTALL (bei Problemen einfach auf der [[Mailinglisten|Mailingliste]] fragen).&lt;br/&gt;
+Die im INSTALL-File erwähnte Datei classes.tar.gz, die zum kompilieren des WollMux benötigt wird, finden Sie unter http://www.wollmux.net/files/classes.tar.gz.
 
 Nicht vergessen, dass der WollMux zum funktionieren auf jeden Fall auch noch eine Konfiguration benötigt. Eine Beispielkonfiguration befindet sich z.B. in unserem [[Download|Download-Bereich]].
-
 
 [[Category:Eierlegender_WollMux]]
 [[Category:Handbuch_des_WollMux]]</rev></revisions></page></pages></query></api>
