@@ -31,20 +31,26 @@ Unter '''Run''' -> '''Debug configurations...''' -> '''Remote Java Application''
 Zum Debugging wird die oben erstellte Remote-Debugverbindung verwendet. LibreOffice muss dazu bereits gestartet worden sein.
 
 = Externer WollMux =
-Bei dieser Variante wird das WollMux-Plugin für LibreOffice von extern geladen, d.h. der WollMux ist nicht in LibreOffice installiert. Das Nachladen des WollMux geschieht in diesem Fall über die WollMuxBar.
+Bei dieser Variante wird das WollMux-Plugin für LibreOffice von extern geladen, d.h. der WollMux ist nicht in LibreOffice installiert. Das Nachladen des WollMux geschieht in diesem Fall über eine Main-Klasse, die direkt aus Eclipse aufgerufen wird und den WollMux zur Laufzeit per UNO in LibreOffice registriert. Die Registrierung bezieht sich dabei auf die entsprechenden Event-Handler wie z.B. dem OnOpen-Event das in LibreOffice beim Öffnen einer Vorlage ausgelöst wird.
 
-Vorteil ist, dass Codeänderungen direkt ohne Neuinstallation übernommen werden, mittels "hot code replace" funktioniert das - wie von anderen Java-Anwendungen gewohnt - auch im laufenden Betrieb. Nachteil ist, dass diese Methode nicht in allen Fällen stabil ist und unter Umständen zum Absturz von LibreOffice führen kann.
+Vorteil ist, dass Codeänderungen direkt ohne Neuinstallation übernommen werden. Mittels "hot code replace" funktioniert das - wie von anderen Java-Anwendungen gewohnt - auch im laufenden Betrieb. Eine Codeänderung geht "Medienbruchfrei". Im Vergleich dazu muss beim Remote-Debugging mit jeder zu testenden Änderung auch ein neues WollMux.oxt-Paket installiert werden, was jedes Mal zusätzliche Klicks und Fehlerquellen bedeutet. Nachteil ist, dass diese Methode nicht in allen Fällen stabil ist und unter Umständen (je nach Verwendung) zum Absturz von LibreOffice führen kann. 
 
-== Einstellungen für LibreOffice ==
-Das LibreOffice-Plugin des WollMux darf nicht installiert sein; eine Prüfung und Deinstallation ist z.B. unter '''Extras''' -> '''Extension Manager...''' möglich.
+== Vorbereitungen für's Debugging ==
+Vor dem Debugging des externen WollMux sollte folgendes Kommando gestartet werden (entweder von der Kommandozeile oder per ANT-Runconfig aus Eclipse):
+ ant WollMux.oxt-ButtonsOnly
 
-== Einstellungen in der wollmux.conf ==
-Folgende Einstellung muss der WollMux-Konfiguration hinzugefügt werden:
+;Hintergrund: Die Extension WollMux.oxt darf nicht im Office installiert sein. Wenn WollMux.oxt nicht installiert ist, sind allerdings auch die Symbolleisten des WollMux (wie z.B. "Werkzeuge für Vorlagenersteller (WollMux)") nicht verfügbar. Buttons wie z.B. "FM 4000", die zum Debuggen evtl. benötigt werden, sind damit ebenfalls nicht verfügbar. Daher gibt es seit Februar 2015 ein neues ant target ''WollMux.oxt-ButtonsOnly'', welches die aktuelle WollMux.oxt per unopkg deinstalliert und ein neues WollMux.oxt installiert, das ausschließlich die Symbolleisten/Buttons enthält, aber keinen Java-Code oder andere Dinge mit bringt.
 
-<code>ALLOW_EXTERNAL_WOLLMUX "true"</code>
+;Prüfung ob die Vorbereitung erfolgreich war (nicht zwingend erforderlich): Unter '''Extras''' -> '''Extension Manager...''' nach der Extension "WollMux" sehen. Die Vorbereitung war erfolgreich, wenn der WollMux in der Liste OHNE weitere Hinweise, wie z.B. "Briefkopfsystem der Landeshauptstadt München" aufgelistet wird.
 
 == Verwendung ==
-Das Debugging erfolgt durch den Start der WollMuxBar (WollMux/src/de/muenchen/allg/itd51/wollmux/dialog/WollMuxBar.java) im Debugmodus.
+Das Debuggen erfolgt durch den Start einer der folgenden Main-Klassen im Debugmodus:
+
+* '''de.muenchen.allg.itd51.wollmux.DebugExternalWollMux''': Erzeugt direkt einen externen WollMux über UNO --> Der schnellste und einfachste Weg, wenn nur Teile des WollMux gedebugged werden müssen
+* '''de.muenchen.allg.itd51.wollmux.dialog.WollMuxBar''': Startet die WollMuxBar. Wenn diese sich über UNO mit dem Office verbinden möchte und keine WollMux.oxt vorhanden ist, so erzeugt sie selbst einen externen WollMux. '''Achtung:''' Dies geht nur, wenn folgende Einstellung in der wollmux.conf gesetzt ist:<pre>ALLOW_EXTERNAL_WOLLMUX "true"</pre>
+
+;Achtung: '''Beim Stoppen des Debuggings sollte darauf geachtet werden, dass das Office immer beendet wird, BEVOR der Debugger gestoppt wird'''. Wird der WollMux vor dem Office gestoppt, kann das Office die registrierten Handler des WollMux nicht mehr aufrufen und friert ein.
+
 
 [[Category:Eierlegender_WollMux]]
 [[Category:Handbuch_des_WollMux]]

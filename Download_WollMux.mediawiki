@@ -50,26 +50,26 @@ You can use the extension manager for an installation in the user area. You can 
 | WollMuxBar.jar
 | Contains the Java classes to start the WollMux bar. Copy this file to a program directory of your choice, for example to /usr/share/java/ (for Linux) or C:\programs\wollmux (for Windows).
 
-The WollMux bar can be
-Die WollMux-Leiste kann mit dem Befehl <code>java -jar WollMuxBar.jar</code> aufgerufen werden. Alternativ können Sie auch eines der beiden folgenden Starter-Skripte verwenden:
-|-
-| wollmuxbar (für Linux)
-| Verwenden Sie dieses einfache Unix Shell-Skript zum Starten der WollMuxBar.jar. Das Skript geht davon aus, dass WollMuxBar.jar in <code>/usr/share/java/</code> liegt.
-|-
-| wollmuxbar.exe (für Windows)
-| Verwenden Sie dieses Executable zum Starten der WollMuxBar.jar unter Windows. Das Programm muss im selben Verzeichnis liegen wie die Datei WollMuxBar.jar. 
-|-
-| rowspan="3" | WollMux-Konfiguration
+The WollMux bar can be activated with the command <code>java -jar WollMuxBar.jar</code>. Alternatively, you can also use one of the two following starter scripts:
 
-''(Wählen Sie eine der nebenstehenden Dateien aus)''
+|-
+| wollmuxbar (for Linux)
+| Use this simple Unix Shell script to start the WollMuxBar.jar. The script assumes that WollMuxBar.jar is located in <code>/usr/share/java/</code>.   
+|-
+| wollmuxbar.exe (for Windows)
+| Use this executable to sart the WollMuxBar.jar in Windows. The programme has to be located in the same directory as the file WollMuxBar.jar.
+|-
+| rowspan="3" | WollMux Configuration
+
+''(Choose one of the files on the right)''
 | [[Datei:Linux-icon.png]] [http://www.wollmux.net/files/wollmux-config-de-utf8-11.11a.tar.gz wollmux-config-de-utf8-11.11a.tar.gz]
-| colspan="2" | Deutschsprachige Konfiguration für Linux-Systeme mit UTF-8 Dateikodierung.<br/>Extrahieren Sie dieses Archiv in <code>$HOME</code> damit dort das notwendige Verzeichnis <code>.wollmux/</code> erstellt wird.
+| colspan="2" | German-language configuration for Linux systems with UTF-8 file encoding.<br/>Extract this archive in <code>$HOME</code> so that the necessary directory <code>.wollmux/</code> is created there.
 |-
 | [[Datei:Linux-icon.png]] [http://www.wollmux.net/files/wollmux-config-en-utf8-11.11a.tar.gz wollmux-config-en-utf8-11.11a.tar.gz]
-| colspan="2" | Englischsprachige Konfiguration für Linux-Systeme mit UTF-8 Dateikodierung.<br/>Extrahieren Sie dieses Archiv in <code>$HOME</code> damit dort das notwendige Verzeichnis <code>.wollmux/</code> erstellt wird.
+| colspan="2" | English-language configuration for Linux systems with UTF-8 file encoding.<br/>Extract this archive in <code>$HOME</code> so that the necessary directory <code>.wollmux/</code> is created there.
 |-
 | [[Datei:Linux-icon.png]] [http://www.wollmux.net/files/wollmux-config-nl-utf8-11.11a.tar.gz wollmux-config-nl-utf8-11.11a.tar.gz]
-| colspan="2" | Niederländische Konfiguration für Linux-Systeme mit UTF-8 Dateikodierung.<br/>Extrahieren Sie dieses Archiv in <code>$HOME</code> damit dort das notwendige Verzeichnis <code>.wollmux/</code> erstellt wird.
+| colspan="2" | Dutch configuration for Linux systems with UTF-8 data encoding.<br/>Extract this archive in <code>$HOME</code> so that the necessary directory <code>.wollmux/</code> is created there.
 |-
 |}
 
@@ -77,9 +77,11 @@ Die WollMux-Leiste kann mit dem Befehl <code>java -jar WollMuxBar.jar</code> auf
 ==Releasenotes==
 ===WollMux 11.10a===
 * Bugfixes:
-** Verliert die WollMuxBar den Fokus, wird der Fokus von der Suchliste auf das nächste Steuerelement verschoben. Dadurch bleibt das Suchmenü geschlossen, wenn die WollMuxBar den Fokus zurückerhält. Voraussetzung ist, dass mindestens ein weiteres fokusierbares Steuerlement (z.B. ein Button) auf der WollMuxbar enthalten ist.
-** Im Fenstermodus "UpAndAway" der WollMuxBar hatte die minimierte WollMuxBar am oberen Bildschirmrand nicht die gewünschte Breite. Dieser Fehler ist nun behoben und die minimierte WollMuBar sollte dadurch im Allgemeinen wesentlich kleiner erscheinen.
-** In der Vorbelegung des Komfortdruckdialogs für Sachleitende Verfügungen werden jetzt unsichtbare Zuleitungszeilen nicht mehr mitgezählt (für den Zähler der angibt, wie viele Ausdrucke von einem Verfügungspunkt gemacht werden sollen).
+** If the WollMuxBar loses focus, the focus has switched from the search list to the next control element. This means that the search menu will remain closed when the WollMuxBar regains focus. It is a requirement that at least one other focusable control element (e.g. a button) is contained on the WollMuxbar.
+** In the WollMuxBar's "UpAndAway" window mode, the minimised WollMuxBar did not have the desired width at the top edge of the screen. This mistake has now been fixed and the minimised WollMuxBar should, in general, appear considerably smaller.
+** 
+In the default setting of the 
+In der Vorbelegung des Komfortdruckdialogs für Sachleitende Verfügungen werden jetzt unsichtbare Zuleitungszeilen nicht mehr mitgezählt (für den Zähler der angibt, wie viele Ausdrucke von einem Verfügungspunkt gemacht werden sollen).
 ** Falsches Encoding in temporärer .csv-Datei unter Windows bei WollMux-Seriendruck behoben
 * Neue Features:
 ** Überarbeiteter WollMux-Seriendruck:

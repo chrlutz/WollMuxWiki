@@ -105,17 +105,18 @@ Besides the logging mode, which determines what messages are written to wollmux.
 In Debug Mode, WollMux behaves differently in the following regard than when Debug Mode is not set:
 * When opening a template, WollMux carries out every command the template contains. In normal use, once all commands in a template have been carried out, the bookmarks are removed from the generated document. In Debug Mode, these bookmarks remain intact. This makes it easier to find errors in document commands, obviating the need to open the corresponding template for editing.
 
-= Das SENDER_DISPLAYTEMPLATE =
+= The SENDER_DISPLAYTEMPLATE =
 ;Syntax
- SENDER_DISPLAYTEMPLATE "<Anzeigeschema>"
-;Beispiel
+ SENDER_DISPLAYTEMPLATE "<DisplayElements>"
+;Example
  SENDER_DISPLAYTEMPLATE "%{Nachname}, %{Vorname} (%{Rolle})"
- oder
+ or
  SENDER_DISPLAYTEMPLATE "%{Vorname} %{Nachname} (Mailadresse: %{Mail})"
+''Note: the values above are for the German version of WollMux.''
 
-Über das Setzen von SENDER_DISPLAYTEMPLATE kann gesteuert werden wie die Einträge der persönlichen Absenderliste (PAL) angezeigt werden sollen (und auch intern über das XPALProvider-Interface ausgegeben werden, siehe [[Schnittstellen_des_WollMux_für_Experten#Einbinden_einer_SenderBox|Schnittstellen des WollMux für Experten]]). Neben statischen Textteilen kann das Anzeigemuster Platzhalter der Form <code>%{Spaltenname}</code> enthalten, die für den jeweiligen Datensatz durch den entsprechenden Datenbankspaltenwert ersetzt werden.
+Setting SENDER_DISPLAYTEMPLATE values controls which entries from the Personal Sender List (or PAL, from the German "persönliche Absenderliste") are to be displayed (internally as well, via the XPALProvider-Interface, see [[Schnittstellen_des_WollMux_für_Experten#Einbinden_einer_SenderBox|WollMux Interface Programming for Experts: Embedding a SenderBox (German)]]). Along with static text, the display template can contain placeholders of the form <code>%{ColumnName}</code>, which will be replaced by the respective data record in that column of the corresponding database.
 
-Die Einstellung von SENDER_DISPLAYTEMPLATE hat insbesondere Auswirkungen auf die Darstellung der Absenderliste in [[#Menue-Elemente|Menü-Elementen]] vom Typ "senderbox" in der WollMuxBar. Die Einstellung hat allerdings keinerlei Auswirkung auf den Dialog "[[#Pers.C3.B6nliche_Absenderliste_Verwalten|Persönliche Abenderliste Verwalten]]" oder den Dialog "[[Konfigurationsdatei_wollmux.conf#Absender_Ausw.C3.A4hlen|Absender Auswählen]]". Die Darstellung in den dort verwendeten Elementen vom Typ "listbox" mit ID "suchergebnis" oder "pal" können über das DISPLAY-Attribut gesteuert werden, das dort genauer beschrieben ist.
+Adjustments to SENDER_DISPLAYTEMPLATE have notable effects on the display of the Sender List in [[#Menue-Elemente|Menu Elements]] of type  "senderbox" in the WollMuxBar. Such adjustments, however, have no effect at all on the dialog "[[#Pers.C3.B6nliche_Absenderliste_Verwalten|Manage Personal Sender List]]" or the dialog "[[Konfigurationsdatei_wollmux.conf#Absender_Ausw.C3.A4hlen|Select Sender]]". Display of those elements, i.e. of type "listbox" with ID "suchergebnis" (search result) or "pal" (personal sender list), is controlled via the DISPLAY attribute. Please see DISPLAY section for more information.
 
 = Der PERSISTENT_DATA_MODE =
 Ab WollMux 11.9 wird das globale Attribut PERSISTENT_DATA_MODE ausgewertet.
