@@ -1,4 +1,4 @@
-<?xml version="1.0"?><api><query><normalized><n from="1._WollMux_Community_Workshop" to="1. WollMux Community Workshop" /></normalized><pages><page pageid="135" ns="0" title="1. WollMux Community Workshop"><revisions><rev contentformat="text/x-wiki" contentmodel="wikitext" xml:space="preserve">'''Entwurf'''
+'''Entwurf'''
 
 ==Ort==
 
@@ -55,14 +55,14 @@ Christoph Lutz (CIB) gibt in einem Vortrag einen Überblick über den Ad Hoc Ser
 
 Danach geht er auf die Details der aktuellen WollMux Seriendruckimplementierung und ihren Problemen ein.
 
-Besonders problematisch beim &quot;OOo Based Mail Merge Ansatz&quot;:
-# Ausführung atomar --&gt; kann nicht abgebrochen werden
+Besonders problematisch beim "OOo Based Mail Merge Ansatz":
+# Ausführung atomar --> kann nicht abgebrochen werden
 # Ein-/Ausblendungen eines WollMux-Formulars funktionieren nicht
-# Deutliche Performance-Probleme bei Datensatzanzahlen &gt; 500    
+# Deutliche Performance-Probleme bei Datensatzanzahlen > 500    
 
 Bei Druck in PDF Gesamtdokument:
 #Abstürze durch Memory Leak in OOo (Bug Patch bekannt und in LibO integriert)
-#Keine &quot;Nächste Datensatz&quot; Funktion
+#Keine "Nächste Datensatz" Funktion
 
 Ein möglicher, viel versprechender Lösungsansatz für den Seriendruck könnte die Integration von Third Party Modulen der CIB sein. Der vorgestellte Prototyp beeindruckt durch seine hohe Performance. 
 
@@ -79,7 +79,7 @@ Die Diskussion ergibt:
  
 * Andor Ertsey [LHM] und Christoph Lutz [CIB] nehmen miteinander Kontakt zur weiteren Planung/Abstimmung dieser API auf.
 
-====Liste &quot;Most Annoying WollMux-Issues&quot; und Lösungsansätze====
+====Liste "Most Annoying WollMux-Issues" und Lösungsansätze====
 
 Unter [http://code.google.com/p/wollmux/issues/list http://code.google.com/p/wollmux/issues/list] ist aktuell der Issuetracker des WollMux erreichbar.
 
@@ -91,12 +91,12 @@ Die dort erfassten Issues werden bisher eher informell und unstrukturiert bearbe
 
 =====Zielgruppenpotential=====
 
-Als Zielgruppe für den WollMux sind aktuell Unternehmen und die öffentliche Verwaltung zu betrachten. Diese sollten durch geeignete Maßnahmen dazu motiviert werden, die Behebung kritischer Fehler und die Implementierung von neuen Features zu unterstützen. Durch eine Konfigurationsvereinfachung mit Reduktion auf einzelne, für OOo/LibO AnwenderInnen direkt attraktive Funktionalitäten könnte mit diesem &quot;WollMux Light&quot; die Zielgruppe auch auf eine breite Basis mit Privatanwendern ausgebaut werden, was als sehr wichtig zur Verbreiterung der Anwenderbasis betrachtet wird.
+Als Zielgruppe für den WollMux sind aktuell Unternehmen und die öffentliche Verwaltung zu betrachten. Diese sollten durch geeignete Maßnahmen dazu motiviert werden, die Behebung kritischer Fehler und die Implementierung von neuen Features zu unterstützen. Durch eine Konfigurationsvereinfachung mit Reduktion auf einzelne, für OOo/LibO AnwenderInnen direkt attraktive Funktionalitäten könnte mit diesem "WollMux Light" die Zielgruppe auch auf eine breite Basis mit Privatanwendern ausgebaut werden, was als sehr wichtig zur Verbreiterung der Anwenderbasis betrachtet wird.
 
 =====Namen und Logo=====
 
-======Rechtestatus auf den &quot;Markennamen&quot;======
-Unklar ist der Rechtestatus auf den Namen &quot;WollMux&quot;. Hier sollte Klarheit geschaffen werden. Das aktuelle Beispiel der Namensrechte bei OOo/LibO zeigt die Bedeutung, die hier Rechssicherheit gibt.
+======Rechtestatus auf den "Markennamen"======
+Unklar ist der Rechtestatus auf den Namen "WollMux". Hier sollte Klarheit geschaffen werden. Das aktuelle Beispiel der Namensrechte bei OOo/LibO zeigt die Bedeutung, die hier Rechssicherheit gibt.
 
 Vorschlag von Thomas Krumbein: Der Verein FrODeV übernimmt in seiner gemeinnützigen Eigenschaft die Markenrechte auf den Namen WollMux.
 
@@ -106,7 +106,7 @@ Es besteht Einstimmigkeit, dass das bestehende Logo nicht beibehalten werden sol
 ======Änderung des Applikations/ Projektnamens======
 Folgende Optionen kommen in Betracht:
 
-#Beibehalten von &quot;WollMux&quot; + eindeutige Funktionsbeschreibung + neues Logo
+#Beibehalten von "WollMux" + eindeutige Funktionsbeschreibung + neues Logo
 #Neuer Namen + Logo mit eindeutigen Funktionsbezug und größerer internationaler Kompatibilität
 
 Ein Meinungsbild der TeilnehmerInnen ergibt:
@@ -118,7 +118,7 @@ Option 2: 6 Stimmen
 Enthaltung: 3 Stimmen
 
 =====ToDo/Nächste Schritte=====
-* Prüfung des Namensrechtstatus für &quot;WollMux&quot; bei der LHM (Andor Ertsey [LHM])
+* Prüfung des Namensrechtstatus für "WollMux" bei der LHM (Andor Ertsey [LHM])
 * Organisation eines Logowettbewerbs (Harald Kagerer [FrODeV])
 
 ====Community (Organisation)====
@@ -135,7 +135,7 @@ Es wird folgende zukünftige Organisation für die WollMux Community vereinbart:
 ===Block 3: Prozesse und Verfahren  ===
 
 ====Zukünftiges Releasekonzept====
-# Unter http://www.wollmux.net/daily/?C=M;O=D werden &quot;Daily Builds&quot; zur Prüfung von neuen Features zur Verfügung gestellt.  
+# Unter http://www.wollmux.net/daily/?C=M;O=D werden "Daily Builds" zur Prüfung von neuen Features zur Verfügung gestellt.  
 # Release der LHM werden als besonders stabile und getestete Long Term Releases veröffentlicht.
 # WollMux-Community Releases werden nach Abstimmung durch die WollMux-Commiter featuregesteuert zur Verfügung gestellt.
 
@@ -143,4 +143,4 @@ Es wird folgende zukünftige Organisation für die WollMux Community vereinbart:
 Als Basis für die Qualitätssicherung der WollMux Community Releases wird angestrebt, eine Community getragene Testkonzeption zu planen und umzusetzen. Vorschläge werden von Harald Kagerer vorbereitet.
 
 ====Repository====
-Das bestehende Repository soll von Mercurial auf GIT umgestellt werden. Diese Umstellung erfolgt durch Mitarbeiter der Landeshauptstadt München.</rev></revisions></page></pages></query></api>
+Das bestehende Repository soll von Mercurial auf GIT umgestellt werden. Diese Umstellung erfolgt durch Mitarbeiter der Landeshauptstadt München.

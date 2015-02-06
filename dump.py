@@ -1,5 +1,9 @@
+#!/usr/bin/python
+# coding=utf-8
+import urllib2
+import xml.etree.ElementTree as ET
 
-WIKI=http://www.wollmux.net/wiki
+WIKI="http://www.wollmux.net/wiki"
 
 ARTICLES="\
 1._WollMux_Community_Workshop \
@@ -31,7 +35,7 @@ Mailinglisten \
 Main_Page \
 Makro_Kochbuch \
 Neuer_Name_für_den_WollMux \
-News
+News \
 Rebranding \
 Repository \
 Schnittstellen_des_WollMux_für_Experten \
@@ -56,7 +60,11 @@ WollMux_kompilieren \
 WollMux_mit_LibreOffice_Portable \
 Wollmux-Debugging"
 
-for i in $ARTICLES
-do
-  wget "$WIKI/api.php?action=query&prop=revisions&rvprop=content&format=xml&titles=$i" -O "$i.xml"
-done
+for i in ARTICLES.split():
+	print "fetching " + i
+	response = urllib2.urlopen(WIKI + '/api.php?action=query&prop=revisions&rvprop=content&format=xml&titles=' + i)
+	xml = ET.fromstring( response.read() )
+	mwText = xml.find('query/pages/page/revisions/rev').text
+	fo = open(i + ".mediawiki", "wb")
+	fo.write( mwText.encode('utf8') )
+	fo.close()

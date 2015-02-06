@@ -1,10 +1,10 @@
-<?xml version="1.0"?><api><query><normalized><n from="Funktionen_im_WollMux_-_Workshop" to="Funktionen im WollMux - Workshop" /></normalized><pages><page pageid="113" ns="0" title="Funktionen im WollMux - Workshop"><revisions><rev contentformat="text/x-wiki" contentmodel="wikitext" xml:space="preserve">Hier entstehen die Inhalte eines Workshops zu den Funktionen die definiert werden können, um den WollMux auf eigene Bedürfnisse anzupassen:
+Hier entstehen die Inhalte eines Workshops zu den Funktionen die definiert werden können, um den WollMux auf eigene Bedürfnisse anzupassen:
 
 = Wozu werden Funktionen benötigt? =
 Der WollMux führt an vielen Stellen sog. Funktionen aus, in denen Geschäftslogik enthalten sein kann. Funktionen werden z.B. in folgenden Elementen verwendet:
-* Im Dokumentkommando [[Dokumentkommandos_des_WollMux#Das_Kommando_.22insertFunctionValue.22 | insertFunctionValue]]: WM(CMD 'insertFunctionValue' FUNCTION '&lt;Funktion&gt;' ARGS('&lt;arg1&gt;', '&lt;arg2&gt;', '&lt;argN&gt;'))
-* Im Dokumentkommando [[Dokumentkommandos_des_WollMux#Das_Kommando_.22insertValue.22 | insertValue]]: WM(CMD 'insertValue' DB_SPALTE '&lt;spaltenname&gt;' TRAFO '&lt;Funktionsbezeichner&gt;')
-* Im Dokumentkommando [[Dokumentkommandos_des_WollMux#Das_Kommando_.22insertFormValue.22 | insertFormValue]]: WM(CMD 'insertFormValue' ID '&lt;feldId&gt;' TRAFO '&lt;Funktionsbezeichner&gt;')
+* Im Dokumentkommando [[Dokumentkommandos_des_WollMux#Das_Kommando_.22insertFunctionValue.22 | insertFunctionValue]]: WM(CMD 'insertFunctionValue' FUNCTION '<Funktion>' ARGS('<arg1>', '<arg2>', '<argN>'))
+* Im Dokumentkommando [[Dokumentkommandos_des_WollMux#Das_Kommando_.22insertValue.22 | insertValue]]: WM(CMD 'insertValue' DB_SPALTE '<spaltenname>' TRAFO '<Funktionsbezeichner>')
+* Im Dokumentkommando [[Dokumentkommandos_des_WollMux#Das_Kommando_.22insertFormValue.22 | insertFormValue]]: WM(CMD 'insertFormValue' ID '<feldId>' TRAFO '<Funktionsbezeichner>')
 * In Formularen als Plausis
 * In Formularen als Autofill
 
@@ -18,7 +18,7 @@ Einen guten Überblick über alle Funktionen erhält man über das [[Konfigurati
 = Übung: Elementarfunktion String =
 * Editieren der wollmux.conf des aktuellen Benutzers und Hinzufügen einer neuen Funktion:
  Funktionen(
-   HelloWorld(&quot;Hallo Welt, dies ist meine erste Funktion&quot;)
+   HelloWorld("Hallo Welt, dies ist meine erste Funktion")
  )
 
 * Erstellen einer neuen Vorlage und Einbinden der soeben geschriebenen HelloWorld-Funktion über das Dokumentkommando insertFunctionValue:
@@ -33,7 +33,7 @@ Demonstriert die Möglichkeit, eine Funktion mit einem Parameter mit den Hausmit
 
 * Editieren der wollmux.conf des aktuellen Benutzers und Hinzufügen einer neuen Funktion:
  Funktionen(
-   MyFirstTrafo(CAT(&quot;X&quot; VALUE &quot;arg1&quot; &quot;Y&quot;))
+   MyFirstTrafo(CAT("X" VALUE "arg1" "Y"))
  )
 
 * Erstellen einer neuen Vorlage und Einbinden der soeben geschriebenen Funktion als TRAFO für insertValue:
@@ -41,14 +41,14 @@ Demonstriert die Möglichkeit, eine Funktion mit einem Parameter mit den Hausmit
 
 * Testen der Funktion durch Öffnen der Vorlage
 
-;Anmerkung: Die Funktion erwartet genau einen Parameter, der innerhalb der Funktion &quot;arg1&quot; genannt wird. Beim Ausführen des insertValue-Befehls wird das Sachbearbeiterfeld &quot;Vorname&quot; als Argument &quot;arg1&quot; übergeben.
+;Anmerkung: Die Funktion erwartet genau einen Parameter, der innerhalb der Funktion "arg1" genannt wird. Beim Ausführen des insertValue-Befehls wird das Sachbearbeiterfeld "Vorname" als Argument "arg1" übergeben.
 
 = Übung: Sachbearbeiterdaten transformieren 2 =
 Demonstriert die Mächtigkeit der bereits in WollMux verfügbaren Funktionen:
 
 * Editieren der wollmux.conf des aktuellen Benutzers und Hinzufügen einer neuen Funktion:
  Funktionen(
-   DerSachbearbeiterDieSachbearbeiterin(IF(MATCH(VALUE &quot;Anrede&quot; &quot;Herr&quot;) THEN &quot;Der Sachbearbeiter&quot; ELSE &quot;Die Sachbearbeiterin&quot;))
+   DerSachbearbeiterDieSachbearbeiterin(IF(MATCH(VALUE "Anrede" "Herr") THEN "Der Sachbearbeiter" ELSE "Die Sachbearbeiterin"))
  )
 
 * Erstellen einer neuen Vorlage und Einbinden der soeben geschriebenen Funktion als TRAFO für insertValue:
@@ -57,26 +57,26 @@ Demonstriert die Mächtigkeit der bereits in WollMux verfügbaren Funktionen:
 * Testen der Funktion durch Öffnen der Vorlage
 
 ;Anmerkung: 
-* Die Funktion erwartet genau einen Parameter, der innerhalb der Funktion &quot;Anrede&quot; genannt wird. Beim Ausführen des insertValue-Befehls wird das Sachbearbeiterfeld &quot;Anrede&quot; als Argument &quot;Anrede&quot; übergeben.
+* Die Funktion erwartet genau einen Parameter, der innerhalb der Funktion "Anrede" genannt wird. Beim Ausführen des insertValue-Befehls wird das Sachbearbeiterfeld "Anrede" als Argument "Anrede" übergeben.
 * '''Bevor man zu externen Funktionen greift, sollte man sich immer überlegen, ob die Mittel des WollMux die Anforderung nicht bereits abdecken können.'''
 ** Bisher wurden nur 5 von 12 möglichen internen Funktionen genutzt.
 
 
 ;Beobachtung am Rande: 
 * Der FormularMax 4000 (FM4000) zeigt die soeben definierten Funktionen auch an! 
-** Externen Briefkopf öffnen, FM4000 starten, auf Reiter &quot;Einfügungen&quot; wechseln und schauen, welche Funktionen bei Trafos angeboten werden.
+** Externen Briefkopf öffnen, FM4000 starten, auf Reiter "Einfügungen" wechseln und schauen, welche Funktionen bei Trafos angeboten werden.
 
-= Übung: Erste externe Funktion &quot;HelloWorldExtern&quot; =
+= Übung: Erste externe Funktion "HelloWorldExtern" =
 Demonstriert, wie eine externe Funktion in Basic geschrieben werden kann.
 
-* Schreiben einer Funktion in Basic unter MeineMakros-&gt;Standard/Module1:
+* Schreiben einer Funktion in Basic unter MeineMakros->Standard/Module1:
  Sub helloWorld as String
-   helloWorld=&quot;Hallo Welt, dies ist meine erste externe Funktion&quot;
+   helloWorld="Hallo Welt, dies ist meine erste externe Funktion"
  End Sub
 
 * Bekanntmachen der Funktion im WollMux (Editieren der wollmux.conf)
  Funktionen(
-   HelloWorldExtern(EXTERN(URL &quot;vnd.sun.star.script:Standard.Module1.helloWorld?language=Basic&amp;location=application&quot;
+   HelloWorldExtern(EXTERN(URL "vnd.sun.star.script:Standard.Module1.helloWorld?language=Basic&location=application"
          PARAMS()))
  )
 
@@ -91,31 +91,31 @@ Demonstriert, wie eine externe Funktion in Basic geschrieben werden kann.
 = Übung: Erste einfache Arithmetik in Basic =
 Demonstriert, wie eine externe Funktion in Basic geschrieben werden kann, die Berechnungen vornimmt und dazu ein Argument erwartet.
 
-* Schreiben einer Funktion in Basic unter MeineMakros-&gt;Standard/Module1:
+* Schreiben einer Funktion in Basic unter MeineMakros->Standard/Module1:
  Sub isOlderThan21(alter as Integer) as String
-    result = &quot;false&quot;
-      if(alter &gt;= 21) then
-        result = &quot;true&quot;
+    result = "false"
+      if(alter >= 21) then
+        result = "true"
       end if
     isOlderThan21 = result
  End Sub
 
 * Bekanntmachen der Funktion im WollMux (Editieren der wollmux.conf)
  Funktionen(
-   IsOlderThan21(EXTERN(URL &quot;vnd.sun.star.script:Standard.Module1.isOlderThan21?language=Basic&amp;location=application&quot;
-         PARAMS(&quot;alter&quot;)))
+   IsOlderThan21(EXTERN(URL "vnd.sun.star.script:Standard.Module1.isOlderThan21?language=Basic&location=application"
+         PARAMS("alter")))
  )
 
 * Öffnen einer Mischvorlage (z.B. für den internen Briefkopf)
-* Einfügen von zwei Eingabefeldern: &quot;Alter &lt;&lt;alter&gt;&gt;&quot; und &quot;AlterOk &lt;&lt;alter&gt;&gt;&quot; mit der Vorbelegung &quot;Alter&quot; bzw. &quot;Alter Ok?&quot;
+* Einfügen von zwei Eingabefeldern: "Alter <<alter>>" und "AlterOk <<alter>>" mit der Vorbelegung "Alter" bzw. "Alter Ok?"
 * Starten des FM4000
-* Formular-&gt;Formularfelder aus Dokument einlesen
-* Umbenennen der Einfügung &quot;alter1&quot; in &quot;alter&quot; und setzen der Trafo &quot;IsOlderThan21&quot;
+* Formular->Formularfelder aus Dokument einlesen
+* Umbenennen der Einfügung "alter1" in "alter" und setzen der Trafo "IsOlderThan21"
 * Speichern der Vorlage und Testen der Funktion durch Öffnen der Vorlage
 
 ;Anmerkung: 
 * Die Funktion erwartet einen Parameter, der dem WollMux im Schlüssel PARAMS bekannt gemacht wird.
-* Über den FM4000 erzeugen wir (indirekt) ein Dokumentkommando der Form &quot;WM(CMD 'insertFormValue' TRAFO 'IsOlderThan21')&quot;
+* Über den FM4000 erzeugen wir (indirekt) ein Dokumentkommando der Form "WM(CMD 'insertFormValue' TRAFO 'IsOlderThan21')"
 * Die Funktion bekommt damit automatisch den Wert als Parameter übergeben, der im Formularfeld angezeigt würde, wenn es keine Trafo gäbe.
 
 = Übung: BasicMakro am Dokument =
@@ -123,7 +123,7 @@ Demonstriert, wie eine externe Funktion in Basic geschrieben werden kann, die Be
 * Umbenennen der bisherigen Funktion im globalen Bereich, so dass nicht ausversehen die globale Funktion angesprungen wird.
 
 ;Beobachtungen:
-* Es erscheint beim Öffnen der Vorlage die Abfrage &quot;Makros aktivieren?&quot;
+* Es erscheint beim Öffnen der Vorlage die Abfrage "Makros aktivieren?"
 * '''Das Makro wird erkannt! Makros am Dokument funktionieren nicht zusammen mit dem WollMux!'''
 
 ;Fazit:
@@ -131,10 +131,10 @@ Demonstriert, wie eine externe Funktion in Basic geschrieben werden kann, die Be
 * Offene Frage: Wie können Funktionen geschrieben werden, die auf allen Rechnern global bekannt sind?
 
 = Übung: Erstellung eines Uno-Paketes =
-* Unter Extras-&gt;Makros-&gt;OOo Basic: Über &quot;Verwalten&quot; eine neue Bibliothek mit dem Namen &quot;POR&quot; erstellen.
-* unter POR ein Modul &quot;WollMuxFunctions&quot; erstellen.
+* Unter Extras->Makros->OOo Basic: Über "Verwalten" eine neue Bibliothek mit dem Namen "POR" erstellen.
+* unter POR ein Modul "WollMuxFunctions" erstellen.
 * Die Funktion isOlderThan21 dort hin kopieren.
-* Über &quot;Verwalten/Bibliotheken/Export&quot; die Bibliothek POR exportieren (geht erst ab 2.0.3) und danach POR löschen.
+* Über "Verwalten/Bibliotheken/Export" die Bibliothek POR exportieren (geht erst ab 2.0.3) und danach POR löschen.
 * Über den Extension-Manager die neue Extension importieren.
 * in der wollmux.conf unter Funktionen alle die externe Funktion an die neuen Bibliotheksnamen anpassen.
 * Vorlage testen
@@ -158,17 +158,17 @@ Zeigt eine sinnvolle Alternative zu Basic-Macros auf:
  
  public class HelloWorld {
    public static String helloWorldJava() {
-           return &quot;HelloWorld mit Java&quot;;
+           return "HelloWorld mit Java";
    }
  }
 * Aufrufen von javac HelloWorld.java
 * Eintragen der Funktion in der wollmux.conf:
  Funktionen(
-   HelloWorldJava(EXTERN(URL &quot;java:de.muenchen.por.HelloWorld.helloWorldJava&quot; 
+   HelloWorldJava(EXTERN(URL "java:de.muenchen.por.HelloWorld.helloWorldJava" 
        PARAMS()))
  )
 * Eintragen einer CLASSPATH-Anweisung in wollmux.conf:
- CLASSPATH(&quot;file:///home/christoph.lutz/&quot;)
+ CLASSPATH("file:///home/christoph.lutz/")
 * Erzeugen einer neuen Vorlage und Einbinden einer entsprechenden Trafo:
  WM(CMD 'insertFunctionValue' FUNCTION 'HelloWorldJava')
 * Testen der Vorlage
@@ -185,15 +185,15 @@ Zeigt eine sinnvolle Alternative zu Basic-Macros auf:
 = Übung: Mehrere Parameter über BIND verwenden =
 * Basic-Makro:
  Sub is6MoreThanY(x as Integer, y as Integer) as String
-      result = &quot;false&quot;
+      result = "false"
       if(x = y+6) then
-        result = &quot;true&quot;
+        result = "true"
       end if
       is6MoreThanY = result
  End Sub
 
 * wollmux.conf:
- Is6MoreThanY(EXTERN(URL &quot;vnd.sun.star.script:POR.WollMuxFunctions.is6MoreThanY?language=Basic&amp;location=application&quot; PARAMS(&quot;x&quot; &quot;y&quot;)))    
+ Is6MoreThanY(EXTERN(URL "vnd.sun.star.script:POR.WollMuxFunctions.is6MoreThanY?language=Basic&location=application" PARAMS("x" "y")))    
 
 * Vorlage bearbeiten und FM4000 starten
 * Bind wird vom FormularMax 4000 automatisch erzeugt.
@@ -202,4 +202,4 @@ Zeigt eine sinnvolle Alternative zu Basic-Macros auf:
 
 
 [[Kategorie:Wollmuxpraxis]]
-[[Kategorie:Handbuch des WollMux]]</rev></revisions></page></pages></query></api>
+[[Kategorie:Handbuch des WollMux]]

@@ -1,4 +1,4 @@
-<?xml version="1.0"?><api><query><normalized><n from="Text_fragments_in_wollmux" to="Text fragments in wollmux" /></normalized><pages><page pageid="162" ns="0" title="Text fragments in wollmux"><revisions><rev contentformat="text/x-wiki" contentmodel="wikitext" xml:space="preserve">= Einführung =
+= Einführung =
 
 == Der Begriff Textfragment ==
 
@@ -6,7 +6,7 @@ Ein Textfragment ist ein Teil eines Writer-Dokuments. Ein Textfragment kann beli
 
 Es können auch Absatzformate in eigene Textfragmente ausgelagert werden. So ist es möglich auch die zu verwendenden Schriftarten zentral in einer Datei zu hinterlegen und darauf zu verzichten, diese Informationen in jedem Dokument vorzuhalten und dort warten zu müssen. Dies erlaubt z.B. auch ein zentrales Ändern der zu verwendenden Schrift, ohne alle Vorlagen anpassen zu müssen.
 
-;Anmerkung: Der Begriff &quot;Textfragment&quot; wurde gewählt, um einer Verwechslung mit dem Begriff &quot;Textbaustein&quot; vorzubeugen, der vor allem im Zusammenhang mit Texthandbüchern und manueller Auswahl durch den Benutzer verwendet wird.
+;Anmerkung: Der Begriff "Textfragment" wurde gewählt, um einer Verwechslung mit dem Begriff "Textbaustein" vorzubeugen, der vor allem im Zusammenhang mit Texthandbüchern und manueller Auswahl durch den Benutzer verwendet wird.
 
 == Verweise auf Textfragmente und automatisches Ersetzen ==
 
@@ -36,7 +36,7 @@ Nehmen wir an, es wird stadtweit folgendes Erscheinungsbild für alle externe Ko
  |L| Fuss|
  |-------|
 
-Dabei ist &quot;Kopf&quot; der Platz für die Kopfdaten (Sachbearbeiter etc.) und &quot;Fuss&quot; der Platz für die Fussdaten (Bankverbindungen etc.). Für ein referatsspezifisches Logo ist der Platz &quot;L&quot; vorgesehen. 
+Dabei ist "Kopf" der Platz für die Kopfdaten (Sachbearbeiter etc.) und "Fuss" der Platz für die Fussdaten (Bankverbindungen etc.). Für ein referatsspezifisches Logo ist der Platz "L" vorgesehen. 
 
 Ohne den WollMux müssten die Referate jeweils Kopien dieser zentralen Vorlage erstellen und dort ihr eigenes Logo einbinden. Dies verursacht einen großen Aufwand und macht spätestens dann Probleme, wenn das Erscheinungsbild so geändert wird, dass das Logo rechts zu stehen hat:
 
@@ -49,7 +49,7 @@ Ohne den WollMux müssten die Referate jeweils Kopien dieser zentralen Vorlage e
  |Fuss |L|
  |-------|
 
-Ohne den WollMux müssten die Referate all ihre vorher erstellten Vorlagen ändern. Mit dem WollMux ist dies einfacher. Er erlaubt es, die Vorlage, die das Layout nach dem städtischen Erscheinungsbild beschreibt, zentral zur Verfügung zu stellen und an den von den Referaten anzupassenden Stellen &quot;Kopf&quot;, &quot;Fuss&quot; und &quot;L&quot; Verweise auf Textfragmente einzubetten. Der WollMux  fügt beim Laden der Vorlage die entsprechenden Fragmente ein. 
+Ohne den WollMux müssten die Referate all ihre vorher erstellten Vorlagen ändern. Mit dem WollMux ist dies einfacher. Er erlaubt es, die Vorlage, die das Layout nach dem städtischen Erscheinungsbild beschreibt, zentral zur Verfügung zu stellen und an den von den Referaten anzupassenden Stellen "Kopf", "Fuss" und "L" Verweise auf Textfragmente einzubetten. Der WollMux  fügt beim Laden der Vorlage die entsprechenden Fragmente ein. 
 
 Wichtig ist hier, nochmals zu betonen, dass alle Verweise indirekt über eine Tabelle aufgelöst werden, die einen Verweisbezeichner auf die konkrete Datei umsetzt, in der das Textfragment gespeichert ist. Da die Tabelle gemäß dem überall im WollMux umgesetzten 3-stufigen Konzept vom Referat für die eigenen Benutzer ganz oder teilweise geändert werden kann, ist es kein Problem, dass jedes Referat ein eigenes Logo verwendet und gleichzeitig das Layout aus einer zentralen Datei bezieht, die vom Referat nicht geändert werden muss.
 
@@ -66,9 +66,9 @@ Besteht das einzufügende Textfragment aus genau einem Absatz, so wird das Absat
 
 [[Bild:insertFrag_Absatzformate2.png]]
 
-Auf der linken Seite sehen Sie die Vorlage, die den Einfügepunkt enthält. An dieser Stelle soll der Inhalt des rechten Textfragments eingefügt werden. Das rechte Textfragment besitzt das Absatzformat &quot;Standard&quot;, in der Vorlage ist jedoch am Einfügepunkt das Absatzformat &quot;Bescheidtext&quot; definiert.
+Auf der linken Seite sehen Sie die Vorlage, die den Einfügepunkt enthält. An dieser Stelle soll der Inhalt des rechten Textfragments eingefügt werden. Das rechte Textfragment besitzt das Absatzformat "Standard", in der Vorlage ist jedoch am Einfügepunkt das Absatzformat "Bescheidtext" definiert.
 
-Da das Textfragment auf der rechten Seite aus genau einem Absatz besteht, wird der Inhalt nach dem Einfügen im Absatzformat &quot;Bescheidtext&quot; der Vorlage dargestellt.
+Da das Textfragment auf der rechten Seite aus genau einem Absatz besteht, wird der Inhalt nach dem Einfügen im Absatzformat "Bescheidtext" der Vorlage dargestellt.
 
 Auf diese Weise können Sie kleine Textfragmente erstellen, um deren Formatierung Sie sich zum Zeitpunkt der Erstellung noch nicht kümmern brauchen. Es kommt bei diesen Textfragmenten nur auf den Inhalt an. Erst beim Einfügen des Textfragments in eine Vorlage kommt die Formatierung ins Spiel. Sie können in der Vorlage frei definieren, in welchem Absatzformat das eingefügte Textfragment später erscheint.
 
@@ -77,9 +77,9 @@ Enthält das einzufügende Textfragment mindestens drei Absätze, von denen der 
 
 [[Bild:insertFrag_Absatzformate1.png]]
 
-Die Vorlage auf der linken Seite enthält den Einfügepunkt &quot;&lt;Hauptabteilung&gt;&quot; an dem der Inhalt des rechten Textfragments eingefügt werden soll. Für den Einfügepunkt ist das Absatzformat &quot;Standard&quot; gesetzt, für das einzufügende Textfragment das Absatzformat &quot;Hauptabteilung_Fachbereich&quot;. 
+Die Vorlage auf der linken Seite enthält den Einfügepunkt "<Hauptabteilung>" an dem der Inhalt des rechten Textfragments eingefügt werden soll. Für den Einfügepunkt ist das Absatzformat "Standard" gesetzt, für das einzufügende Textfragment das Absatzformat "Hauptabteilung_Fachbereich". 
 
-Nach dem Einfügen des Textfragments in die Vorlage, befindet sich der eingefügte Inhalt im Absatzformat &quot;Hauptabteilung_Fachbereich&quot;. Die beiden leeren Absätze zum Beginn und Ende des Textfragments werden nach dem Einsetzen entfernt, so dass nur noch der eigentlich gewollte Inhalt übrig bleibt.
+Nach dem Einfügen des Textfragments in die Vorlage, befindet sich der eingefügte Inhalt im Absatzformat "Hauptabteilung_Fachbereich". Die beiden leeren Absätze zum Beginn und Ende des Textfragments werden nach dem Einsetzen entfernt, so dass nur noch der eigentlich gewollte Inhalt übrig bleibt.
 
 Auf diese Weise können Sie vor-formatierte Inhalte in Ihre Vorlagen einfügen. Im Gegensatz zum vorhergehenden Fall, können vor-formatierte Inhalte auch mehr als einen Absatz umfassen. Wichtig ist dabei nur, dass der Inhalt in leere Absätze zum Beginn und zum Ende eingeschlossen ist.
 
@@ -91,9 +91,9 @@ Auf diese Weise können Sie vor-formatierte Inhalte in Ihre Vorlagen einfügen. 
 * Ist eine Tabelle der letzte Inhalt eines Textfragments, so ''muss'' ihr ein leerer Absatz folgen. Für anderer Fälle wird das korrekte Einfügen nicht garantiert und kann sich mit neuen WollMux-Versionen ändern.
 
 == Verhalten der Dateiendungen .odt und .ott ==
-Für das Briefkopfsystem macht es prinzipiell keinen Unterschied, ob sie das Dokument als &quot;Dokument&quot; (.odt) oder als &quot;Vorlage&quot; (.ott) abspeichern. Wenn Sie das Dokument oder Textfragment über die WollMuxBar öffnen, so öffnet der WollMux das Textfragment immer in dem Modus &quot;'''als Vorlage'''&quot;. D.h. es wird ein neues Dokument mit dem Titel &quot;UnbenanntX&quot; (X ist eine Zahl) erstellt und die in der Vorlage enthaltenen '''Dokumentkommandos werden sofort interpretiert'''.
+Für das Briefkopfsystem macht es prinzipiell keinen Unterschied, ob sie das Dokument als "Dokument" (.odt) oder als "Vorlage" (.ott) abspeichern. Wenn Sie das Dokument oder Textfragment über die WollMuxBar öffnen, so öffnet der WollMux das Textfragment immer in dem Modus "'''als Vorlage'''". D.h. es wird ein neues Dokument mit dem Titel "UnbenanntX" (X ist eine Zahl) erstellt und die in der Vorlage enthaltenen '''Dokumentkommandos werden sofort interpretiert'''.
 
-Öffnen Sie eine Vorlage über das Dateisystem oder über den Browser so wird das Dokument in dem zur Endung passenen Modus geöffnet. D.h. lautet die Endung des Dokuments &quot;.odt&quot;, so wird das Dokument &quot;'''als Dokument'''&quot; direkt zum Bearbeiten geöffnet, die enthaltenen '''WollMux-Kommandos werden dabei nicht interpretiert'''. Lautet die Endung &quot;.ott&quot;, so wird das Dokument wie bereits gehabt &quot;als Vorlage&quot; geöffnet.
+Öffnen Sie eine Vorlage über das Dateisystem oder über den Browser so wird das Dokument in dem zur Endung passenen Modus geöffnet. D.h. lautet die Endung des Dokuments ".odt", so wird das Dokument "'''als Dokument'''" direkt zum Bearbeiten geöffnet, die enthaltenen '''WollMux-Kommandos werden dabei nicht interpretiert'''. Lautet die Endung ".ott", so wird das Dokument wie bereits gehabt "als Vorlage" geöffnet.
 
 = Dokumentkommandos in Textfragmenten verwenden =
 ;Anmerkung: Dokumentkommandos werden im Folgenden auch manchmal WollMux-Kommandos genannt.
@@ -102,13 +102,13 @@ Am Schritt-für-Schritt Beispiel wird hier gezeigt, wie [[Dokumentkommandos_des_
 
 [[Bild:WollMux_insert_WMCMD1.png]]
 
-An die Position zwischen den eckigen Klammern &quot;[]&quot; soll im Text das WollMux-Kommando &quot;insertFrag&quot; eingefügt werden. Wir positionieren unseren Cursor in die Mitte der beiden Klammern.
+An die Position zwischen den eckigen Klammern "[]" soll im Text das WollMux-Kommando "insertFrag" eingefügt werden. Wir positionieren unseren Cursor in die Mitte der beiden Klammern.
 
-Da WollMux-Kommandos benannte Bookmarks (oder dt. &quot;Textmarken&quot;) sind, können die Kommandos direkt mit &quot;Einfügen-&gt;Textmarke&quot; erzeugt werden:
+Da WollMux-Kommandos benannte Bookmarks (oder dt. "Textmarken") sind, können die Kommandos direkt mit "Einfügen->Textmarke" erzeugt werden:
 
 [[Bild:WollMux_insert_WMCMD2.png]]
 
-Es erscheint ein kleiner Dialog zur Erzeugung eines Bookmarks. In das Textfeld muss nun das gewünscht WM-Kommando &quot;WM(CMD 'insertFrag' FRAG_ID 'test_a')&quot; eingetragen werden. Damit das Kommando erfolgreich ausgeführt werden kann, muss das referenzierte Textfragment test_a [[Textfragmente_im_WollMux#Erstellung_eines_Textfragments_oder_einer_Vorlage|erstellt und registriert]] werden. 
+Es erscheint ein kleiner Dialog zur Erzeugung eines Bookmarks. In das Textfeld muss nun das gewünscht WM-Kommando "WM(CMD 'insertFrag' FRAG_ID 'test_a')" eingetragen werden. Damit das Kommando erfolgreich ausgeführt werden kann, muss das referenzierte Textfragment test_a [[Textfragmente_im_WollMux#Erstellung_eines_Textfragments_oder_einer_Vorlage|erstellt und registriert]] werden. 
 
 [[Bild:WollMux_insert_WMCMD3.png]]
 
@@ -117,7 +117,7 @@ Fertig! Das Kommando ist in das Dokument eingebettet. Wir können das Dokument u
 == Zwischen WollMux-Kommandos navigieren, Kommandos bearbeiten und löschen ==
 Da WollMux-Kommandos in Bookmarks abgelegt sind, und alle Bookmarks standardmässig unsichtbar sind, hier eine Beschreibung, wie man zwischen den WollMux-Kommandos und dem normalen Text navigieren kann.
 
-Angenommen der Cursor steht auf dem &quot;.&quot; am Ende des Satzes. Wir möchten nun wissen:
+Angenommen der Cursor steht auf dem "." am Ende des Satzes. Wir möchten nun wissen:
 * welche WollMux-Kommandos überhaupt im Dokument sind,
 * wie man zu unserem eben erstellten Kommando kommt,
 * wie man ein WollMux-Kommando nachträglich bearbeitet,
@@ -125,17 +125,17 @@ Angenommen der Cursor steht auf dem &quot;.&quot; am Ende des Satzes. Wir möcht
 
 [[Bild:WollMux_navigate_WMCMD1.png]]
 
-Ein Rechts-Klick auf den String &quot;Seite 1/1&quot; in der Statuszeile links unten gibt uns eine Übersicht über alle vorhandenen Bookmarks. Da wir keine weiteren Bookmarks definiert haben, erscheint hier im Beispiel nur unser eben erzeugtes WollMux-Kommando. Der Links-Klick auf das Kommando versetzt den Cursor an die Stelle, an der unser Befehl eingefügt wurde.
+Ein Rechts-Klick auf den String "Seite 1/1" in der Statuszeile links unten gibt uns eine Übersicht über alle vorhandenen Bookmarks. Da wir keine weiteren Bookmarks definiert haben, erscheint hier im Beispiel nur unser eben erzeugtes WollMux-Kommando. Der Links-Klick auf das Kommando versetzt den Cursor an die Stelle, an der unser Befehl eingefügt wurde.
 
-Es gibt eine weitere Möglichkeit, schnell alle Bookmarks und damit alle WollMux-Kommandos angezeigt zu bekommen: Der &quot;Navigator&quot; zeigt u.A. auch alle definierten Bookmarks an. Man erreicht ihn über &quot;Bearbeiten-&gt;Navigator&quot; oder schneller über F5:
+Es gibt eine weitere Möglichkeit, schnell alle Bookmarks und damit alle WollMux-Kommandos angezeigt zu bekommen: Der "Navigator" zeigt u.A. auch alle definierten Bookmarks an. Man erreicht ihn über "Bearbeiten->Navigator" oder schneller über F5:
 
 [[Bild:WollMux_navigate_WMCMD2.png]]
 
 ;Navigieren: Im Navigator werden alle Bookmarks und WollMux-Kommandos angezeigt. Bei einem Doppelklick auf einen entsprechenden Eintrag wird der Cursor auf das Kommando gesetzt.
 
-;Bearbeiten: Rechts-Klick auf den Eintrag im Navigator, dann &quot;Textmarke-&gt;umbenennen&quot; und einen neuen Kommandotext eingeben.
+;Bearbeiten: Rechts-Klick auf den Eintrag im Navigator, dann "Textmarke->umbenennen" und einen neuen Kommandotext eingeben.
 
-;Löschen: Durch Drücken der &quot;Entf&quot;- oder &quot;Del&quot;-Taste wird ein im Navigator markierter Eintrag gelöscht.
+;Löschen: Durch Drücken der "Entf"- oder "Del"-Taste wird ein im Navigator markierter Eintrag gelöscht.
 
 == WollMux-Kommandos ausführen und testen ==
 1) Dokument oder Vorlage speichern und schließen.
@@ -144,10 +144,10 @@ Es gibt eine weitere Möglichkeit, schnell alle Bookmarks und damit alle WollMux
 
 [[Bild:WollMux_run_WMCMD1.png]]
 
-Im Beispiel wurde nach dem Öffnen automatisch der Text &quot;Dieser Text kommt aus Textfragment 'test_a'&quot; aus dem Textfragment 'test_a' an die Stelle des Kommandos eingefügt.
+Im Beispiel wurde nach dem Öffnen automatisch der Text "Dieser Text kommt aus Textfragment 'test_a'" aus dem Textfragment 'test_a' an die Stelle des Kommandos eingefügt.
 
 [[Category:AG-Office]]
 [[Category:Eierlegender_WollMux]]
 [[Category:Handbuch_des_WollMux]]
 [[Kategorie:Office_Vorlagenumsteller_Handbuch]]
-[[Category:WollMux English]]</rev></revisions></page></pages></query></api>
+[[Category:WollMux English]]

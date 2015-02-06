@@ -1,4 +1,4 @@
-<?xml version="1.0"?><api><query><pages><page pageid="13" ns="0" title="Mailinglisten"><revisions><rev contentformat="text/x-wiki" contentmodel="wikitext" xml:space="preserve">Die folgenden Mailinglisten stehen Ihnen zur Verfügung um Kontakt mit unseren WollMux-Entwicklern und anderen WollMux-Interessierten aufzunehmen.
+Die folgenden Mailinglisten stehen Ihnen zur Verfügung um Kontakt mit unseren WollMux-Entwicklern und anderen WollMux-Interessierten aufzunehmen.
 
 Bei Fragen oder Problemen können Sie sich auch an ''limux@muenchen.de'' wenden.
 
@@ -15,4 +15,4 @@ Bei Fragen oder Problemen können Sie sich auch an ''limux@muenchen.de'' wenden.
 * [http://joinup.ec.europa.eu/mailman/listinfo/wollmux-announce Weitere Informationen (inkl. Formular zum Abonnieren)]
 
 == Extern verfügbarer Issue-Tracker / Problemdatenbank ==
-Für Externe gibt es folgenden Issue-Tracker https://code.google.com/p/wollmux/issues/list</rev></revisions></page></pages></query></api>
+Für Externe gibt es folgenden Issue-Tracker https://code.google.com/p/wollmux/issues/list

@@ -1,8 +1,8 @@
-<?xml version="1.0"?><api><query><pages><page pageid="118" ns="0" title="WollMux-Schulungen"><revisions><rev contentformat="text/x-wiki" contentmodel="wikitext" xml:space="preserve">Das Projekt LiMux bietet folgende Schulungen zum WollMux für &lt;span style=&quot;color:red&quot;&gt;Dienstkräfte anderer Kommunen und öffentlicher Einrichtungen&lt;/span&gt; an.
+Das Projekt LiMux bietet folgende Schulungen zum WollMux für <span style="color:red">Dienstkräfte anderer Kommunen und öffentlicher Einrichtungen</span> an.
 
 = WollMux-Vorlagenerstellung - Grundlagen und einfache Vorlagen =
 == Termin ==
-September 2011 (1 Tag)&lt;br&gt;
+September 2011 (1 Tag)<br>
 Bei entsprechender Nachfrage können weitere Termine angeboten werden.
 ==Inhalte ==
 # Unterschiede Dokument, Vorlage und Formular
@@ -19,7 +19,7 @@ Anwender oder Anwenderinnen des WollMux, die einfache Vorlagen selbst erstellen 
 
 = WollMux-Vorlagenerstellung - Vorlagen mit Formularelementen =
 == Termin ==
-September 2011 (2 Tage)&lt;br&gt;
+September 2011 (2 Tage)<br>
 Bei entsprechender Nachfrage können weitere Termine angeboten werden.
 ==Inhalte ==
 # Erstellung der Formular GUI mit dem FormularMax 4000
@@ -46,7 +46,7 @@ Anwender oder Anwenderinnen des WollMux, die komplexere Vorlagen mit Formularele
 
 = WollMux Standard-Konfiguration =
 == Termin ==
-September 2011 (2 Tage)&lt;br&gt;
+September 2011 (2 Tage)<br>
 Bei entsprechender Nachfrage können weitere Termine angeboten werden.
 ==Inhalte ==
 # Aufbau der WollMux-Konfiguration
@@ -65,11 +65,11 @@ Bei entsprechender Nachfrage können weitere Termine angeboten werden.
 Systemadministratoren, die eine WollMux-Konfiguration erstellen oder warten
 
 = Weitere Informationen=
-&lt;span style=&quot;color:red&quot;&gt;'''Die Kurse können wir nur für Mitarbeiterinnen und Mitarbeiter anderer Kommunen und öffentlicher Einrichtungen anbieten. '''&lt;/span&gt;
+<span style="color:red">'''Die Kurse können wir nur für Mitarbeiterinnen und Mitarbeiter anderer Kommunen und öffentlicher Einrichtungen anbieten. '''</span>
 
 == Kosten ==
 Für eintägige Kurse 210,- Euro pro Person, für zweitägige 250,- Euro pro Person ohne Verpflegung und Unterkunft. 
 ==Ort==
 Die Kurse finden im Fortbildungszentrum der Landeshauptstadt München (Ruppertstr. 11, 80337 München) oder direkt in den Räumlichkeiten des LiMux Projektes (Sonnenstr. 25, 80331 München) statt.
 ==Kontakt==
-Bei Fragen zu den Kursen können Sie sich an das LiMux Team der Landeshauptstadt München wenden (limux@muenchen.de] oder direkt an Christian Siebels (christian.siebels@muenchen.de bzw. 089/233-82201).</rev></revisions></page></pages></query></api>
+Bei Fragen zu den Kursen können Sie sich an das LiMux Team der Landeshauptstadt München wenden (limux@muenchen.de] oder direkt an Christian Siebels (christian.siebels@muenchen.de bzw. 089/233-82201).

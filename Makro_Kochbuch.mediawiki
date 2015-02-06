@@ -1,4 +1,4 @@
-<?xml version="1.0"?><api><query><normalized><n from="Makro_Kochbuch" to="Makro Kochbuch" /></normalized><pages><page pageid="150" ns="0" title="Makro Kochbuch"><revisions><rev contentformat="text/x-wiki" contentmodel="wikitext" xml:space="preserve">&lt;!-- 
+<!-- 
 == Einführung ==
 
 Im Rahmen der Umstellung von Microsoft Office auf OpenOffice.org in der Landeshauptstadt München wurden auch zahlreiche Excel- und Word-Makros auf Calc und Writer portiert. Da der Funktionsumfang von OOo und MS Office nicht deckungsgleich sind und sich die Makrosprachen deutlich unterscheiden, wurde viel Zeit und Arbeit investiert, die Makros in ihrer neuen Umgebung zu realisieren. In den meisten Fällen lief dies auf eine komplette Neuentwicklung hinaus. 
@@ -11,9 +11,9 @@ Dieses 'Makro-Kochbuch' ist eine Sammlung von Best Practices, die bei der Migrat
 
 '''Downloads:''' [[Media:Makro_Kochbuch.pdf|pdf]] [[Media:Makro_Kochbuch.odt|odt]]
 
-Das Buch wird vom Autor in erweiterter Form auch als Druckausgabe angeboten.[http://www.amazon.de/Makro-Kochbuch-LibreOffice-OOo-Basic/dp/3943771024/ref=sr_1_11?ie=UTF8&amp;qid=1350918344&amp;sr=8-11]
+Das Buch wird vom Autor in erweiterter Form auch als Druckausgabe angeboten.[http://www.amazon.de/Makro-Kochbuch-LibreOffice-OOo-Basic/dp/3943771024/ref=sr_1_11?ie=UTF8&qid=1350918344&sr=8-11]
 
 == Lizenz ==
 Dieses Werk bzw. Inhalt steht unter einer Creative Commons Namensnennung 3.0 Unported Lizenz.
 
---&gt;</rev></revisions></page></pages></query></api>
+-->

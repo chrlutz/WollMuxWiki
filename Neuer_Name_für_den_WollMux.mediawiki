@@ -1,4 +1,4 @@
-<?xml version="1.0"?><api><query><normalized><n from="Neuer_Name_für_den_WollMux" to="Neuer Name für den WollMux" /></normalized><pages><page pageid="140" ns="0" title="Neuer Name für den WollMux"><revisions><rev contentformat="text/x-wiki" contentmodel="wikitext" xml:space="preserve">'''Abstimmung abgeschlossen'''
+'''Abstimmung abgeschlossen'''
 
 =Worum geht es?=
 
@@ -6,7 +6,7 @@
 
 Folgende Optionen kommen in Betracht:
 
-==Beibehalten von &quot;WollMux&quot; + eindeutige Funktionsbeschreibung + neues Logo==
+==Beibehalten von "WollMux" + eindeutige Funktionsbeschreibung + neues Logo==
 
 Dafür sind:
 * Stefan Ströbl
@@ -41,4 +41,4 @@ Alle, die auf der Seite [[Community-Mitglieder_und_Ansprechpartner | Community-M
 Für diese Abstimmung gilt der 10.08.2012 als Schlußtermin
 
 ==Wie stimmt man ab?==
-Indem man seinen Namen unter der jeweiligen gewünschten Option schreibt</rev></revisions></page></pages></query></api>
+Indem man seinen Namen unter der jeweiligen gewünschten Option schreibt

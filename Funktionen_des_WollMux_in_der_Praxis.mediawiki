@@ -1,4 +1,4 @@
-<?xml version="1.0"?><api><query><normalized><n from="Funktionen_des_WollMux_in_der_Praxis" to="Funktionen des WollMux in der Praxis" /></normalized><pages><page pageid="35" ns="0" title="Funktionen des WollMux in der Praxis"><revisions><rev contentformat="text/x-wiki" contentmodel="wikitext" xml:space="preserve">Auf dieser Seite sind praktische Anwendungsfälle für [[Konfigurationsdatei_wollmux.conf#Grundfunktionen|WollMux-Funktionen]] gesammelt.
+Auf dieser Seite sind praktische Anwendungsfälle für [[Konfigurationsdatei_wollmux.conf#Grundfunktionen|WollMux-Funktionen]] gesammelt.
 
 = Tip: Funktionstester =
 Im [[FormularMax 4000]] lässt sich über ''Ansicht/Funktionstester'' ein Dialog aufrufen, in dem Funktionen zusammengeklickt und ausprobiert werden können.
@@ -6,23 +6,23 @@ Im [[FormularMax 4000]] lässt sich über ''Ansicht/Funktionstester'' ein Dialog
 = Allgemein =
 === Leere Eingabe für Berechnungen als 0 behandeln ===
 Die Felder a, b und c enthalten Zahlen, die z.B. mit Hilfe der SUM-Funktion addiert werden sollen. Dabei soll eine leere Eingabe eines Feldes als 0 behandelt werden:
- SUM( SELECT(VALUE &quot;a&quot; ELSE(&quot;0&quot;))
-      SELECT(VALUE &quot;b&quot; ELSE(&quot;0&quot;))
-      SELECT(VALUE &quot;c&quot; ELSE(&quot;0&quot;)) )
+ SUM( SELECT(VALUE "a" ELSE("0"))
+      SELECT(VALUE "b" ELSE("0"))
+      SELECT(VALUE "c" ELSE("0")) )
 
 === Zahlen formatieren mit Tausenderpunkt ===
 Funktion zum Formatieren von positiven oder negativen Zahlen mit Tausenderpunkt, sowohl mit Komma als auch ohne Komma.
 
  CAT(
   REPLACE(
-    REPLACE(VALUE &quot;Steuerelement&quot; &quot;,\d*&quot; &quot;&quot;)
-      &quot;(?&lt;=\d)(?=(\d\d\d)+$)&quot;
-      &quot;.&quot;
+    REPLACE(VALUE "Steuerelement" ",\d*" "")
+      "(?<=\d)(?=(\d\d\d)+$)"
+      "."
     )
   IF( 
-    MATCH(VALUE &quot;Steuerelement&quot; &quot;-?(\d+)(,\d*)$&quot;) 
-    THEN (REPLACE(VALUE &quot;Steuerelement&quot; &quot;-?(\d+)(,\d*)$&quot; &quot;$2&quot;))
-    ELSE &quot;&quot;
+    MATCH(VALUE "Steuerelement" "-?(\d+)(,\d*)$") 
+    THEN (REPLACE(VALUE "Steuerelement" "-?(\d+)(,\d*)$" "$2"))
+    ELSE ""
   )
  )
 
@@ -30,49 +30,49 @@ Funktion zum Formatieren von positiven oder negativen Zahlen mit Tausenderpunkt,
 Plausibilitätsprüfungen dienen dazu, den Benutzer bereits während des Ausfüllens eines Formulars zu warnen, dass seine Eingaben nicht den Vorgaben entsprechen.
 
 === Eingabe muss aus mindestens X und höchstens Y beliebigen Zeichen bestehen ===
- MATCH(VALUE &quot;&lt;id&gt;&quot;, &quot;.{&lt;X&gt;,&lt;Y&gt;}&quot;)
+ MATCH(VALUE "<id>", ".{<X>,<Y>}")
 ;Beispiel:
- MATCH(VALUE &quot;bearbeitungsnummer&quot;, &quot;.{7,10}&quot;)
+ MATCH(VALUE "bearbeitungsnummer", ".{7,10}")
 
 === Eingabe muss aus mindestens X und höchstens Y Ziffern bestehen ===
- MATCH(VALUE &quot;&lt;id&gt;&quot;, &quot;[0-9]{&lt;X&gt;,&lt;Y&gt;}&quot;)
+ MATCH(VALUE "<id>", "[0-9]{<X>,<Y>}")
 ;Beispiel:
- MATCH(VALUE &quot;bearbeitungsnummer&quot;, &quot;[0-9]{1,10}&quot;)
+ MATCH(VALUE "bearbeitungsnummer", "[0-9]{1,10}")
 
 === Eingegebene Zahl muss durch X teilbar sein ===
- NUMCMP(VALUE &quot;Zahl&quot; PRODUCT( DIVIDE( VALUE &quot;Zahl&quot; BY &quot;&lt;X&gt;&quot; MIN &quot;0&quot; MAX &quot;0&quot; ) &quot;&lt;X&gt;&quot;))
+ NUMCMP(VALUE "Zahl" PRODUCT( DIVIDE( VALUE "Zahl" BY "<X>" MIN "0" MAX "0" ) "<X>"))
 ;Beispiel:
- NUMCMP(VALUE &quot;Zahl&quot; PRODUCT( DIVIDE( VALUE &quot;Zahl&quot; BY &quot;100&quot; MIN &quot;0&quot; MAX &quot;0&quot; ) &quot;100&quot;))
+ NUMCMP(VALUE "Zahl" PRODUCT( DIVIDE( VALUE "Zahl" BY "100" MIN "0" MAX "0" ) "100"))
 
 = AUTOFILL =
 
 == Summenberechnung mit min. X bis max. Y Kommastellen ==
- FORMAT(SUM(VALUE &quot;&lt;id&gt;&quot;, VALUE &quot;&lt;id&gt;&quot;) MIN &quot;&lt;X&gt;&quot; MAX &quot;&lt;Y&gt;&quot;)
+ FORMAT(SUM(VALUE "<id>", VALUE "<id>") MIN "<X>" MAX "<Y>")
 ;Beispiel
- FORMAT(SUM(VALUE &quot;a&quot;, VALUE &quot;b&quot;) MIN &quot;2&quot; MAX &quot;2&quot;)
+ FORMAT(SUM(VALUE "a", VALUE "b") MIN "2" MAX "2")
 
 ===Fehleranzeigen abfangen===
-Ergänzung -&gt; Die Werte &quot;a&quot; und &quot;b&quot; sollten einen AUTOFILL-Wert von 0 haben. Ist der Wert &quot;&quot;, bringt die Funktion einen Fehler.
+Ergänzung -> Die Werte "a" und "b" sollten einen AUTOFILL-Wert von 0 haben. Ist der Wert "", bringt die Funktion einen Fehler.
 
 Ein anderer Lösungsansatz ist, die ONERROR-Funktion dahingehend zu verwenden dass ein Hinweistext ausgegeben wird, z.B.
  SELECT(
-   FORMAT(SUM(VALUE &quot;&lt;id&gt;&quot;, VALUE &quot;&lt;id&gt;&quot;) MIN &quot;&lt;X&gt;&quot; MAX &quot;&lt;Y&gt;&quot;)
-   ONERROR(&quot;wird automatisch berechnet&quot;)
+   FORMAT(SUM(VALUE "<id>", VALUE "<id>") MIN "<X>" MAX "<Y>")
+   ONERROR("wird automatisch berechnet")
  )
 
 Am elegantesten funktioniert diese Lösung, wenn in der Formularbeschreibung zusätzlich beim enstprechenden Feld der Parameter READONLY auf true gesetzt wird:
 ;Beispiel
  (
-   LABEL &quot;Gesamt&quot;
-   TYPE &quot;textfield&quot;
-   ID &quot;Gesamtsumme&quot;
-   TIP &quot;&quot;
-   READONLY &quot;true&quot;
+   LABEL "Gesamt"
+   TYPE "textfield"
+   ID "Gesamtsumme"
+   TIP ""
+   READONLY "true"
  
    AUTOFILL(
      SELECT(
-       PRODUCT(VALUE &quot;Betrag&quot; VALUE &quot;Tage&quot;)
-       ONERROR &quot;wird automatisch berechnet&quot;
+       PRODUCT(VALUE "Betrag" VALUE "Tage")
+       ONERROR "wird automatisch berechnet"
      )
    )
  )
@@ -80,28 +80,28 @@ Am elegantesten funktioniert diese Lösung, wenn in der Formularbeschreibung zus
 == Den Namen auf den ersten Buchstaben (mit anschließendem Punkt) kürzen ==
 
  CAT(
-     REPLACE(VALUE &quot;&lt;ID&gt;&quot;, &quot;(.)(.*+)&quot;, &quot;&lt;GRUPPE&gt;&quot;)
-     &quot;.&quot;
+     REPLACE(VALUE "<ID>", "(.)(.*+)", "<GRUPPE>")
+     "."
     )
 
 ;Beispiel:
  CAT(
-     REPLACE(VALUE &quot;Nachname&quot;, &quot;(.)(.*+)&quot;, &quot;$1&quot;)
-     &quot;.&quot;
+     REPLACE(VALUE "Nachname", "(.)(.*+)", "$1")
+     "."
     )
 
 
-Eine genauere Beschreibung der REPLACE-Funktion und Übersicht zu regulären Ausdrücken finden Sie auf der Wiki-Seite &quot;[[Konfigurationsdatei_wollmux.conf#REPLACE_.28.3CArgument.3E.2C_.3CRegEx.3E.2C_.3CRepStr.3E.29|Konfigurationsdatei wollmux.conf]]&quot;.
+Eine genauere Beschreibung der REPLACE-Funktion und Übersicht zu regulären Ausdrücken finden Sie auf der Wiki-Seite "[[Konfigurationsdatei_wollmux.conf#REPLACE_.28.3CArgument.3E.2C_.3CRegEx.3E.2C_.3CRepStr.3E.29|Konfigurationsdatei wollmux.conf]]".
 
 ;Erklärung
 
-In diesem regulären Ausdruck wird von der Verwendung von Gruppen Gebrauch gemacht. Jede Klammer stellt eine Gruppe dar. Die erste Gruppe &quot;'''''(.)'''''&quot; enthält nur den ersten Buchstaben und die zweite Gruppe &quot;'''''(.*+)'''''&quot; enthält den zweiten (falls überhaupt vorhanden) und alle weiteren Buchstaben.
+In diesem regulären Ausdruck wird von der Verwendung von Gruppen Gebrauch gemacht. Jede Klammer stellt eine Gruppe dar. Die erste Gruppe "'''''(.)'''''" enthält nur den ersten Buchstaben und die zweite Gruppe "'''''(.*+)'''''" enthält den zweiten (falls überhaupt vorhanden) und alle weiteren Buchstaben.
 
-Für die Ausgabe wurde in diesem Fall die erste Gruppe (mit '''''$1''''' bezeichnet) gewählt.&lt;br&gt; 
+Für die Ausgabe wurde in diesem Fall die erste Gruppe (mit '''''$1''''' bezeichnet) gewählt.<br> 
 Die weiteren möglichen Gruppen enthalten folgende Informationen:
 
-{|border=1 width=&quot;200&quot;
- !colspan=&quot;2&quot; align=&quot;center&quot;|Nachname = Müller
+{|border=1 width="200"
+ !colspan="2" align="center"|Nachname = Müller
  |-
  | '''$0'''
  | Müller
@@ -116,28 +116,28 @@ Die weiteren möglichen Gruppen enthalten folgende Informationen:
 = TRAFO =
 Transformationen dienen dazu, im Formular einen anderen Wert darzustellen als der Benutzer eingegeben hat. Dies wird typischerweise verwendet, um Werte automatisch auf bestimmte Weise zu formatieren. TRAFOs werden im FormularMax 4000 über den Reiter ''Einfügungen'' gesetzt.
 
-;Hinweis: TRAFOs bekommen immer den Feldwert des Feldes übergeben auf das sie gesetzt sind. Es kann also unabhängig von der ID des Feldes immer &lt;tt&gt;VALUE &quot;param&quot;&lt;/tt&gt; verwendet werden (&quot;param&quot; ist hier ''kein'' Platzhalter für die Feld-ID).
+;Hinweis: TRAFOs bekommen immer den Feldwert des Feldes übergeben auf das sie gesetzt sind. Es kann also unabhängig von der ID des Feldes immer <tt>VALUE "param"</tt> verwendet werden ("param" ist hier ''kein'' Platzhalter für die Feld-ID).
 
 === Zahl mit genau X Nachkommastellen darstellen ===
- FORMAT(VALUE &quot;param&quot; MIN &quot;&lt;X&gt;&quot; MAX &quot;&lt;X&gt;&quot;)
+ FORMAT(VALUE "param" MIN "<X>" MAX "<X>")
 ;Beispiel:
- FORMAT(VALUE &quot;param&quot; MIN &quot;2&quot; MAX &quot;2&quot;) 
+ FORMAT(VALUE "param" MIN "2" MAX "2") 
 
 ==== wie oben, nur falls die Eingabe leer ist, nimm Y an ====
- FORMAT(SELECT(VALUE &quot;param&quot; ELSE(&quot;Y&quot;)) MIN &quot;&lt;X&gt;&quot; MAX &quot;&lt;X&gt;&quot;)
+ FORMAT(SELECT(VALUE "param" ELSE("Y")) MIN "<X>" MAX "<X>")
 ;Beispiel:
- FORMAT(SELECT(VALUE &quot;param&quot; ELSE(&quot;0&quot;)) MIN &quot;2&quot; MAX &quot;2&quot;)
+ FORMAT(SELECT(VALUE "param" ELSE("0")) MIN "2" MAX "2")
 
 == Zahl in Worten mit abgeschnittenen Nachkommanstellen ==
-&quot;13,6&quot; wird zu &quot;dreizehn&quot;
+"13,6" wird zu "dreizehn"
  BIND(
-   FUNCTION(EXTERN(URL &quot;java:de.muenchen.allg.d101.ZahlInWorten.zahlInWorten&quot; PARAMS(&quot;Zahl&quot;)))
-   SET(&quot;Zahl&quot; 
-     REPLACE(VALUE &quot;ZuKonvertierendeZahl&quot;, &quot;,\d+&quot;, &quot;&quot;)
+   FUNCTION(EXTERN(URL "java:de.muenchen.allg.d101.ZahlInWorten.zahlInWorten" PARAMS("Zahl")))
+   SET("Zahl" 
+     REPLACE(VALUE "ZuKonvertierendeZahl", ",\d+", "")
    )
  )
 
 
 
 [[Category:Eierlegender_WollMux]]
-[[Category:Handbuch_des_WollMux]]</rev></revisions></page></pages></query></api>
+[[Category:Handbuch_des_WollMux]]

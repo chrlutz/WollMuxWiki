@@ -1,4 +1,4 @@
-<?xml version="1.0"?><api><query><pages><page pageid="117" ns="0" title="Features"><revisions><rev contentformat="text/x-wiki" contentmodel="wikitext" xml:space="preserve">Der &quot;Eierlegende WollMux&quot; (kurz: WollMux) ist eine Extension für [http://www.openoffice.org OpenOffice.org]&lt;!-- / [http://www.documentfoundation.org LibreOffice]--&gt;, die von der [http://www.muenchen.de Landeshauptstadt München] im Rahmen des [http://www.muenchen.de/limux LiMux-Projekts] entwickelt wurde. Der WollMux erweitert OpenOffice.org um zahlreiche Funktionen, welche die Arbeit mit Vorlagen, Formularen und Briefköpfen wesentlich erleichtern.
+Der "Eierlegende WollMux" (kurz: WollMux) ist eine Extension für [http://www.openoffice.org OpenOffice.org]<!-- / [http://www.documentfoundation.org LibreOffice]-->, die von der [http://www.muenchen.de Landeshauptstadt München] im Rahmen des [http://www.muenchen.de/limux LiMux-Projekts] entwickelt wurde. Der WollMux erweitert OpenOffice.org um zahlreiche Funktionen, welche die Arbeit mit Vorlagen, Formularen und Briefköpfen wesentlich erleichtern.
 
 === Features des WollMux ===
 
@@ -8,4 +8,4 @@
 * '''Textbausteinsystem:''' Unterstützung der Sachbearbeiterinnen und Sachbearbeiter beim Erstellen von Dokumenten aus Textbausteinen
 * '''Sachleitende Verfügung und Komfortdruckfunktionen:''' Automatisches Erstellen und Drucken verschiedener Ausfertigungen (mit entsprechenden Sachleitenden Verfügungen) aus einem Formular
 * '''Vereinfachte Serienbrieffunktion:''' Unter anderem mit Vorschau-Funktion und der Möglichkeit Serienbrieffelder mit diversen Funktionen zu hinterlegen (Wenn-Dann-Sonst, Gender-Funktion)
-* '''WollMuxBar:''' Frei konfigurierbare Toolbar zum Schnellzugriff auf Dokumente, Vorlagen, PDF-Dokumente, Webseiten, ...</rev></revisions></page></pages></query></api>
+* '''WollMuxBar:''' Frei konfigurierbare Toolbar zum Schnellzugriff auf Dokumente, Vorlagen, PDF-Dokumente, Webseiten, ...

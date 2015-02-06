@@ -1,4 +1,4 @@
-<?xml version="1.0"?><api><query><normalized><n from="Fragen_rund_um_Datenquellen" to="Fragen rund um Datenquellen" /></normalized><pages><page pageid="110" ns="0" title="Fragen rund um Datenquellen"><revisions><rev contentformat="text/x-wiki" contentmodel="wikitext" xml:space="preserve">=== Ich möchte eine externe Datenbank als Datenquelle im WollMux verwenden  ===
+=== Ich möchte eine externe Datenbank als Datenquelle im WollMux verwenden  ===
 siehe [[Datenbanken mit dem WollMux verwenden]]
 
 === Ich möchte sämtliche Daten einer Datenquelle in der Empfängerauswahl sehen ===
@@ -15,4 +15,4 @@ Dafür sind zwei Änderungen in der conf wichtig, die hier rot eingekreist sind.
 
 
 [[Kategorie:Wollmuxpraxis]]
-[[Kategorie:Handbuch des WollMux]]</rev></revisions></page></pages></query></api>
+[[Kategorie:Handbuch des WollMux]]

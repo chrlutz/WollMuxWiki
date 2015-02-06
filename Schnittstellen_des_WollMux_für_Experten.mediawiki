@@ -1,4 +1,4 @@
-<?xml version="1.0"?><api><query><normalized><n from="Schnittstellen_des_WollMux_für_Experten" to="Schnittstellen des WollMux für Experten" /></normalized><pages><page pageid="37" ns="0" title="Schnittstellen des WollMux für Experten"><revisions><rev contentformat="text/x-wiki" contentmodel="wikitext" xml:space="preserve">Der WollMux kann über verschiedene Schnittstellen von aussen gesteuert werden. Sachbearbeiterinnen und Sachbearbeiter müssen im Normalfall von diesen Steuermöglichkeiten nichts wissen, da die Kommunikation über diese Schnittstellen für sie im Hintergrund abläuft. Der Artikel richtet sich an fortgeschrittene Vorlagenersteller und Entwickler, die aufbauend auf den WollMux Vorlagen und Programmbibliotheken erstellen.
+Der WollMux kann über verschiedene Schnittstellen von aussen gesteuert werden. Sachbearbeiterinnen und Sachbearbeiter müssen im Normalfall von diesen Steuermöglichkeiten nichts wissen, da die Kommunikation über diese Schnittstellen für sie im Hintergrund abläuft. Der Artikel richtet sich an fortgeschrittene Vorlagenersteller und Entwickler, die aufbauend auf den WollMux Vorlagen und Programmbibliotheken erstellen.
 
 = Schnittstellen für Vorlagenersteller und Administratoren =
 
@@ -6,41 +6,41 @@
 Manche WollMux-Funktionalitäten können in Form von Schaltflächen in die Symbolleiste von OpenOffice eingebunden werden.
 
 Die Einbindung geht wie folgt:
-# Extras/Anpassen.../Reiter &quot;Symbolleisten&quot;
-# Oben bei Symbolleiste &quot;Standard&quot; auswählen
-# Unten bei Speichern in &quot;OpenOffice.org Writer&quot; auswählen
-# Button &quot;Hinzufügen...&quot; anklicken
-# Links bei &quot;Bereich&quot; auswählen OpenOffice.org Makros/Meine Makros/WollMux/Call
+# Extras/Anpassen.../Reiter "Symbolleisten"
+# Oben bei Symbolleiste "Standard" auswählen
+# Unten bei Speichern in "OpenOffice.org Writer" auswählen
+# Button "Hinzufügen..." anklicken
+# Links bei "Bereich" auswählen OpenOffice.org Makros/Meine Makros/WollMux/Call
 # Rechts bei Befehle die gewünschte Funktionalität auswählen
-# Button &quot;Hinzufügen&quot;
-# Button &quot;Schließen&quot;
-# Button &quot;OK&quot;
+# Button "Hinzufügen"
+# Button "Schließen"
+# Button "OK"
 
 Folgende Funktionalitäten sind derzeit über diese Schnittstelle verfügbar:
 
-* '''functionDialogEmpfaengerauswahl:''' öffnet den Funktionsdialog &quot;Empfängerauswahl&quot; (siehe auch [[#wollmux:FunctionDialog]])
+* '''functionDialogEmpfaengerauswahl:''' öffnet den Funktionsdialog "Empfängerauswahl" (siehe auch [[#wollmux:FunctionDialog]])
 * '''FormularMax4000:''' öffnet den FormularMax 4000 (siehe auch [[#wollmux:FormularMax4000]])
 * '''Kill:''' schließt alle OpenOffice-Prozesse ohne Rückfrage (siehe auch [[#wollmux:Kill]])
 * '''DumpInfo:''' erzeugt eine dump-Datei zur Fehlersuche (siehe auch [[#wollmux:DumpInfo]])
-* '''About:''' zeigt den Dialog &quot;Info über Vorlagen und Formulare&quot; (siehe auch [[#wollmux:About]])
-* '''TextbausteinEinfuegen:''' fügt ein vorhandenen Textbaustein ein&quot; (siehe auch [[#wollmux:TextbausteinEinfuegen]])
-* '''TextbausteinVerweisEinfuegen:''' fügt eine 'insertFrag' Textmarke ein die erst nach dem speichern und nochmaligen öffnen ausgewertet wird&quot; (siehe auch [[#wollmux:TextbausteinVerweisEinfuegen]])
-* '''PlatzhalterAnspringen:''' springt ab dem Cursor den nächsten vorhandenen Platzhalter an&quot; (siehe auch [[#wollmux:PlatzhalterAnspringen]])
+* '''About:''' zeigt den Dialog "Info über Vorlagen und Formulare" (siehe auch [[#wollmux:About]])
+* '''TextbausteinEinfuegen:''' fügt ein vorhandenen Textbaustein ein" (siehe auch [[#wollmux:TextbausteinEinfuegen]])
+* '''TextbausteinVerweisEinfuegen:''' fügt eine 'insertFrag' Textmarke ein die erst nach dem speichern und nochmaligen öffnen ausgewertet wird" (siehe auch [[#wollmux:TextbausteinVerweisEinfuegen]])
+* '''PlatzhalterAnspringen:''' springt ab dem Cursor den nächsten vorhandenen Platzhalter an" (siehe auch [[#wollmux:PlatzhalterAnspringen]])
 * '''Seriendruck:''' ruft die Seriendruckfunktion des WollMux auf (siehe auch [[#wollmux:Seriendruck]])
 
-Technisch gesehen handelt es sich bei dieser Schnittstelle um ein Basic-Bibliothek namens &quot;WollMux&quot; mit dem Modul &quot;Call&quot;, in der die entsprechenden [[#Die_Dispatch-Kommandos_des_WollMux|Dispatch-Kommandos]] des WollMux abgesetzt werden. Das Modul wird mit dem WollMux.uno.pkg automatisch mit installiert.
+Technisch gesehen handelt es sich bei dieser Schnittstelle um ein Basic-Bibliothek namens "WollMux" mit dem Modul "Call", in der die entsprechenden [[#Die_Dispatch-Kommandos_des_WollMux|Dispatch-Kommandos]] des WollMux abgesetzt werden. Das Modul wird mit dem WollMux.uno.pkg automatisch mit installiert.
 
 == Tastenkombination für eine Schnittstelle setzen ==
 Über einen [[Konfigurationsdatei_wollmux.conf#Tastenkuerzel| Tastenkuerzel Eintrag]] in Konfigurationsdateien kann eine OOo-Writer Tastenkombination für eine Schnittstelle (z.B strg+t für wollmux:TextbausteinEinfuegen)  gesetzt werden.
 
 = Programmierschnittstellen =
 == Die Dispatch-Kommandos des WollMux ==
-Der WollMux stellt eine Reihe von sog. &quot;Dispatch-Kommandos&quot; zur Verfügung, die über das [http://api.openoffice.org/docs/DevelopersGuide/OfficeDev/OfficeDev.xhtml#1_1_6_Using_the_Dispatch_Framework Dispatch-Framework] von OpenOffice eingebunden sind und den WollMux veranlassen, verschiedene Aktionen auszuführen.
+Der WollMux stellt eine Reihe von sog. "Dispatch-Kommandos" zur Verfügung, die über das [http://api.openoffice.org/docs/DevelopersGuide/OfficeDev/OfficeDev.xhtml#1_1_6_Using_the_Dispatch_Framework Dispatch-Framework] von OpenOffice eingebunden sind und den WollMux veranlassen, verschiedene Aktionen auszuführen.
 
 Das folgende Programmbeispiel in OpenOffice-Basic zeigt, wie die Dispatch-Kommandos des WollMux aufgerufen werden können:
 
  Sub About
-   dispatchURL(&quot;wollmux:About&quot;) # hier steht die &lt;URL&gt;
+   dispatchURL("wollmux:About") # hier steht die <URL>
  End Sub
  
  '''Sub dispatchURL(urlStr as String)'''
@@ -48,7 +48,7 @@ Das folgende Programmbeispiel in OpenOffice-Basic zeigt, wie die Dispatch-Komman
    url.Complete = urlStr
  
    frame = ThisComponent.currentController.Frame
-   dispatch = frame.queryDispatch(url, &quot;_self&quot;, com.sun.star.frame.FrameSearchFlag.SELF)
+   dispatch = frame.queryDispatch(url, "_self", com.sun.star.frame.FrameSearchFlag.SELF)
  
    dim args() as new com.sun.star.beans.PropertyValue
    dispatch.dispatch(url, args)
@@ -60,7 +60,7 @@ Dabei erwartet die Funktion dispatchURL(urlStr as String) eine der folgenden URL
 ;Syntax der URL:
  wollmux:AbsenderAuswaehlen
 
-Öffnet den Dialog &quot;Absender Auswählen&quot; über den der aktuelle Absender des Briefkopfsystems festgelegt werden kann. Hier ein Beispiel für einen solchen Dialog:
+Öffnet den Dialog "Absender Auswählen" über den der aktuelle Absender des Briefkopfsystems festgelegt werden kann. Hier ein Beispiel für einen solchen Dialog:
 
 [[Bild:WOL_AbsenderAuswaehlenDialog.png]]
 
@@ -68,47 +68,47 @@ Dabei erwartet die Funktion dispatchURL(urlStr as String) eine der folgenden URL
 ;Syntax der URL:
  wollmux:PALVerwalten
 
-Öffnet den Dialog &quot;Absenderliste verwalten&quot; über den die aktuelle Persönliche Absenderliste (PAL) des Briefkopfsystems verwaltet werden kann. Hier ein Beispiel für einen solchen Dialog:
+Öffnet den Dialog "Absenderliste verwalten" über den die aktuelle Persönliche Absenderliste (PAL) des Briefkopfsystems verwaltet werden kann. Hier ein Beispiel für einen solchen Dialog:
 
 [[Bild:WOL_PALVerwaltenDialog.png]]
 
 === wollmux:Open ===
 ;Syntax der URL:
- wollmux:Open#&lt;UTF8UrlEncodedInfo&gt;
+ wollmux:Open#<UTF8UrlEncodedInfo>
 
-Öffnet ein oder mehrere Dokumente oder Vorlagen. Die genaue Spezifikation, was wie geöffnet wird findet sich in &lt;UTF8UrlEncodedInfo&gt;. Dies ist ein URL-kodierter UTF-8 String, der in der [[Format_von_WollMux-Config-Dateien|Syntax von WollMux-Konfig-Dateien]] Daten wie im Folgenden näher erläutert enthält:
+Öffnet ein oder mehrere Dokumente oder Vorlagen. Die genaue Spezifikation, was wie geöffnet wird findet sich in <UTF8UrlEncodedInfo>. Dies ist ein URL-kodierter UTF-8 String, der in der [[Format_von_WollMux-Config-Dateien|Syntax von WollMux-Konfig-Dateien]] Daten wie im Folgenden näher erläutert enthält:
  
- AS_TEMPLATE &quot;true|false&quot;
- FORMGUIS &quot;independent|merged&quot;
- Labels(&quot;&lt;Label1&gt;&quot; &quot;&lt;Label2&gt;&quot; ...)
+ AS_TEMPLATE "true|false"
+ FORMGUIS "independent|merged"
+ Labels("<Label1>" "<Label2>" ...)
  Fragmente(
-   FRAG_ID_LIST (&quot;&lt;masterFragId1&gt;&quot; &quot;&lt;contentFragId11&gt;&quot; ...)
-   FRAG_ID_LIST (&quot;&lt;masterFragId2&gt;&quot; &quot;&lt;contentFragId21&gt;&quot; ...)
+   FRAG_ID_LIST ("<masterFragId1>" "<contentFragId11>" ...)
+   FRAG_ID_LIST ("<masterFragId2>" "<contentFragId21>" ...)
    ...
  )
  Buttonanpassung(
-   EinzigerTab( NEVER (&quot;form2PDF&quot;, &quot;prevTab&quot;, &quot;nextTab&quot; ) 
-                ALWAYS (LABEL &quot;Drucken...&quot; TYPE &quot;button&quot; HOTKEY &quot;D&quot; ACTION &quot;printForm&quot;) 
+   EinzigerTab( NEVER ("form2PDF", "prevTab", "nextTab" ) 
+                ALWAYS (LABEL "Drucken..." TYPE "button" HOTKEY "D" ACTION "printForm") 
               )
-   ErsterTab( NEVER (&quot;form2PDF&quot;, &quot;printForm&quot;, &quot;prevTab&quot;) 
-              ALWAYS (LABEL &quot;Weiter-&gt;&quot;  TYPE &quot;button&quot; HOTKEY &quot;W&quot;  ACTION &quot;nextTab&quot;) 
+   ErsterTab( NEVER ("form2PDF", "printForm", "prevTab") 
+              ALWAYS (LABEL "Weiter->"  TYPE "button" HOTKEY "W"  ACTION "nextTab") 
             )
-   MittlererTab( NEVER (&quot;form2PDF&quot;, &quot;printForm&quot;) 
-                 ALWAYS (LABEL &quot;&lt;-Zurück&quot;  TYPE &quot;button&quot; HOTKEY &quot;Z&quot;  ACTION &quot;prevTab&quot;)
-                 ALWAYS (LABEL &quot;Weiter-&gt;&quot;  TYPE &quot;button&quot; HOTKEY &quot;W&quot;  ACTION &quot;nextTab&quot;) 
+   MittlererTab( NEVER ("form2PDF", "printForm") 
+                 ALWAYS (LABEL "<-Zurück"  TYPE "button" HOTKEY "Z"  ACTION "prevTab")
+                 ALWAYS (LABEL "Weiter->"  TYPE "button" HOTKEY "W"  ACTION "nextTab") 
                )
-   LetzterTab(NEVER (&quot;form2PDF&quot;, &quot;nextTab&quot;) 
-                ALWAYS (LABEL &quot;&lt;-Zurück&quot;  TYPE &quot;button&quot; HOTKEY &quot;Z&quot;  ACTION &quot;prevTab&quot;)
-                ALWAYS (LABEL &quot;Drucken...&quot; TYPE &quot;button&quot; HOTKEY &quot;D&quot; ACTION &quot;printForm&quot;)
+   LetzterTab(NEVER ("form2PDF", "nextTab") 
+                ALWAYS (LABEL "<-Zurück"  TYPE "button" HOTKEY "Z"  ACTION "prevTab")
+                ALWAYS (LABEL "Drucken..." TYPE "button" HOTKEY "D" ACTION "printForm")
              )
  )
-;technische Anmerkung: Der Schlüssel FRAG_ID_LIST ist derzeit willkürlich (d.h. es kann ein beliebiger anderer Schlüssel stattdessen verwendet werden.) Einziger Zweck dieses Schlüssels ist es, dafür zu sorgen, dass auch im Falle, dass es keine &lt;contentFragId..&gt;s gibt, eine Liste erzeugt wird. Ohne den Schlüssel wird nämlich aus einer Liste mit einem Element ein einziges Element, d.h. die &lt;masterFragId..&gt; würde direkt unter dem Fragmente-Knoten stehen, ohne einen Zwischenknoten. Es ist allerdings durchaus möglich, dass der Schlüssel FRAG_ID_LIST später einmal verwendet wird. Es sollte also kein anderer verwendet werden, auch wenn dies derzeit keinen Fehler produziert.
+;technische Anmerkung: Der Schlüssel FRAG_ID_LIST ist derzeit willkürlich (d.h. es kann ein beliebiger anderer Schlüssel stattdessen verwendet werden.) Einziger Zweck dieses Schlüssels ist es, dafür zu sorgen, dass auch im Falle, dass es keine <contentFragId..>s gibt, eine Liste erzeugt wird. Ohne den Schlüssel wird nämlich aus einer Liste mit einem Element ein einziges Element, d.h. die <masterFragId..> würde direkt unter dem Fragmente-Knoten stehen, ohne einen Zwischenknoten. Es ist allerdings durchaus möglich, dass der Schlüssel FRAG_ID_LIST später einmal verwendet wird. Es sollte also kein anderer verwendet werden, auch wenn dies derzeit keinen Fehler produziert.
 
-==== AS_TEMPLATE &quot;true|false&quot; ====
-Falls auf &quot;true&quot; gesetzt, werden alle Master-Fragmente als Vorlage geöffnet, d.h. sie ergeben jeweils ein neues &quot;UnbenanntX&quot; Dokument. Default-Wert ist &quot;true&quot;.
+==== AS_TEMPLATE "true|false" ====
+Falls auf "true" gesetzt, werden alle Master-Fragmente als Vorlage geöffnet, d.h. sie ergeben jeweils ein neues "UnbenanntX" Dokument. Default-Wert ist "true".
 
-==== FORMGUIS &quot;independent|merged&quot; ====
-Falls ein oder mehrere der Fragmente eine Formularbeschreibung enthalten, so werden diese im &quot;merged&quot; Fall zu einer einzigen Formularbeschreibung verschmolzen, die alle Dokumente gleichzeitig befüllt. Im &quot;independent&quot; Fall bekommt jedes Dokument eine eigene Formularbeschreibung. Default-Wert ist &quot;independent&quot;.
+==== FORMGUIS "independent|merged" ====
+Falls ein oder mehrere der Fragmente eine Formularbeschreibung enthalten, so werden diese im "merged" Fall zu einer einzigen Formularbeschreibung verschmolzen, die alle Dokumente gleichzeitig befüllt. Im "independent" Fall bekommt jedes Dokument eine eigene Formularbeschreibung. Default-Wert ist "independent".
 
 Das Verschmelzen der Formularbeschreibungen läuft so, dass die neue Formularbeschreibung die Reiter aller ursprünglichen Formularbeschreibungen in der ursprünglichen Reihenfolge enthält. Dabei werden Reiter mit dem gleichen Bezeichner (d.i. der Name des Abschnitts des Reiters) als der selbe Reiter angesehen und Duplikate werden eliminiert.
 ;Achtung: Das Ergebnis ist nur dann wohldefiniert, wenn alle Reiter, die den gleichen Bezeichner haben auch den identischen Inhalt haben. Dies muss bei der Erstellung der einzelnen Formulare eines Multi-Forms berücksichtigt werden.
@@ -117,17 +117,17 @@ Das Verschmelzen der Formularbeschreibungen läuft so, dass die neue Formularbes
 Beispiel:
  WM(
    Formular(
-     TITLE &quot;Testformular&quot;
+     TITLE "Testformular"
      Fenster( 
        '''Empfaenger'''(
          Eingabefelder(
-           (LABEL &quot;Name&quot; TYPE &quot;textfield&quot; ID &quot;Name&quot;)
+           (LABEL "Name" TYPE "textfield" ID "Name")
          )
        )
   
        '''Daten1'''(
          Eingabefelder(
-           (LABEL &quot;Datum Eins&quot; TYPE &quot;textfield&quot; '''ID &quot;Datum&quot;''')
+           (LABEL "Datum Eins" TYPE "textfield" '''ID "Datum"''')
          )
        )         
      )   
@@ -136,17 +136,17 @@ Beispiel:
 verschmolzen mit
  WM(
    Formular(
-     TITLE &quot;Testformular&quot;
+     TITLE "Testformular"
      Fenster( 
        '''Empfaenger'''(
          Eingabefelder(
-           (LABEL &quot;Name&quot; TYPE &quot;textfield&quot; ID &quot;Name&quot;)
+           (LABEL "Name" TYPE "textfield" ID "Name")
          )
        )
   
        '''Daten2'''(
          Eingabefelder(
-           (LABEL &quot;Datum Zwei&quot; TYPE &quot;textfield&quot; '''ID &quot;Datum&quot;''')  '''#Fehler (siehe unten)!'''
+           (LABEL "Datum Zwei" TYPE "textfield" '''ID "Datum"''')  '''#Fehler (siehe unten)!'''
          )
        )         
      )   
@@ -155,23 +155,23 @@ verschmolzen mit
 ergibt
  WM(
    Formular(
-     TITLE &quot;Testformular&quot;
+     TITLE "Testformular"
      Fenster( 
        '''Empfaenger'''(
          Eingabefelder(
-           (LABEL &quot;Name&quot; TYPE &quot;textfield&quot; ID &quot;Name&quot;)
+           (LABEL "Name" TYPE "textfield" ID "Name")
          )
        )
  
        '''Daten1'''(
          Eingabefelder(
-           (LABEL &quot;Datum Eins&quot; TYPE &quot;textfield&quot; '''ID &quot;Datum&quot;''')
+           (LABEL "Datum Eins" TYPE "textfield" '''ID "Datum"''')
          )
        )         
   
        '''Daten2'''(
          Eingabefelder(
-           (LABEL &quot;Datum Zwei&quot; TYPE &quot;textfield&quot; '''ID &quot;Datum&quot;''') '''#Fehler (siehe unten)!'''
+           (LABEL "Datum Zwei" TYPE "textfield" '''ID "Datum"''') '''#Fehler (siehe unten)!'''
          )
        )         
      )   
@@ -180,38 +180,38 @@ ergibt
 Man sieht dabei Folgendes:
 * Die verschmolzene Beschreibung hat nur einen Reiter mit Bezeichner '''Empfaenger'''. Aus welcher der beiden Beschreibungen dieser kommt ist undefiniert! Dies macht aber keine Probleme, da beide Reiter identischen Inhalt haben.
 * Die verschmolzene Beschreibung hat sowohl den Reiter '''Daten1''' als auch den Reiter '''Daten2''', da diese unterschiedliche Bezeichner haben und daher nicht zusammengefasst werden.
-* Die verschmolzene Beschreibung hat zwei Eingabefelder mit der '''ID &quot;Datum&quot;'''. Dies ist ein ''schwerer Fehler'', auch wenn beide Felder für den Endbenutzer durch die unterschiedlichen Labels und die Lage auf unterschiedlichen Tabs deutlich voneinander unterscheidbar sind. Würde dieses Multi-Form in der Praxis eingesetzt, würde jedes der beiden Eingabefelder ''alle'' Dokumente ändern, nicht nur das zu dem es gehört. Dies wäre in der Formular-GUI jedoch nicht sichtbar. Benutzer können problemlos verschiedene Werte in das Feld &quot;Datum Eins&quot; und das Feld &quot;Datum Zwei&quot; eintragen und sehen die unterschiedlichen Werte in der Formular-GUI. Dass jeweils die letzte Änderung, egal in welchem der beiden Felder, ''alle'' Dokumente ändert, bemerken die Benutzer nur bei Überprüfung der Dokumente.
+* Die verschmolzene Beschreibung hat zwei Eingabefelder mit der '''ID "Datum"'''. Dies ist ein ''schwerer Fehler'', auch wenn beide Felder für den Endbenutzer durch die unterschiedlichen Labels und die Lage auf unterschiedlichen Tabs deutlich voneinander unterscheidbar sind. Würde dieses Multi-Form in der Praxis eingesetzt, würde jedes der beiden Eingabefelder ''alle'' Dokumente ändern, nicht nur das zu dem es gehört. Dies wäre in der Formular-GUI jedoch nicht sichtbar. Benutzer können problemlos verschiedene Werte in das Feld "Datum Eins" und das Feld "Datum Zwei" eintragen und sehen die unterschiedlichen Werte in der Formular-GUI. Dass jeweils die letzte Änderung, egal in welchem der beiden Felder, ''alle'' Dokumente ändert, bemerken die Benutzer nur bei Überprüfung der Dokumente.
 
 ==== Buttonanpassung ====
-Im Falle FORMGUIS &quot;merged&quot; kann es beim Verschmelzen der Formular-GUIs der Formulare dazu kommen, dass die Benutzerführung der Buttonleiste gestört wird. Zum Beispiel ist es möglich, dass in der verschmolzenen Formular-GUI ein mittleres Tab keinen &quot;Weiter-&gt;&quot; Button, dafür jedoch einen Drucken-Button hat. Des weiteren wird eventuell ein PDF-Button angeboten, obwohl diese Funktion bei verschmolzenen Formularen nicht funktioniert. Um all diese Probleme zu umgehen kann ein Abschnitt Buttonanpassung verwendet werden. Die Funktionsweise diese Abschnitts ist genau gleich wie die einer [[Konfigurationsdatei_wollmux.conf#Buttonanpassung|''Buttonanpassung'' in einer ''Formularanpassung'']].
+Im Falle FORMGUIS "merged" kann es beim Verschmelzen der Formular-GUIs der Formulare dazu kommen, dass die Benutzerführung der Buttonleiste gestört wird. Zum Beispiel ist es möglich, dass in der verschmolzenen Formular-GUI ein mittleres Tab keinen "Weiter->" Button, dafür jedoch einen Drucken-Button hat. Des weiteren wird eventuell ein PDF-Button angeboten, obwohl diese Funktion bei verschmolzenen Formularen nicht funktioniert. Um all diese Probleme zu umgehen kann ein Abschnitt Buttonanpassung verwendet werden. Die Funktionsweise diese Abschnitts ist genau gleich wie die einer [[Konfigurationsdatei_wollmux.conf#Buttonanpassung|''Buttonanpassung'' in einer ''Formularanpassung'']].
 
-==== &lt;nowiki&gt;&quot;&lt;masterFragId...&gt;&quot;&lt;/nowiki&gt; ====
-Gibt ein Fragment an, das in einem eigenen OpenOffice-Fenster geöffnet werden soll. Pro Gruppe innerhalb des ''Fragmente''-Abschnitts ist mindestens eine Fragment-ID anzugeben. Die erste Fragment-ID ist immer die &lt;masterFragId...&gt;.
+==== <nowiki>"<masterFragId...>"</nowiki> ====
+Gibt ein Fragment an, das in einem eigenen OpenOffice-Fenster geöffnet werden soll. Pro Gruppe innerhalb des ''Fragmente''-Abschnitts ist mindestens eine Fragment-ID anzugeben. Die erste Fragment-ID ist immer die <masterFragId...>.
 
-==== &lt;nowiki&gt;&quot;&lt;contentFragId...&gt;&quot;&lt;/nowiki&gt; ====
-Optional können in jeder Gruppe des ''Fragmente''-Abschnitts beliebig viele &lt;contentFragId...&gt; angegeben werden. Diese werden in der Reihenfolge in der sie angegeben werden benutzt um [[Dokumentkommandos_des_WollMux#Das_Kommando_.22insertContent.22|insertContent-Kommandos]] zu befüllen.
+==== <nowiki>"<contentFragId...>"</nowiki> ====
+Optional können in jeder Gruppe des ''Fragmente''-Abschnitts beliebig viele <contentFragId...> angegeben werden. Diese werden in der Reihenfolge in der sie angegeben werden benutzt um [[Dokumentkommandos_des_WollMux#Das_Kommando_.22insertContent.22|insertContent-Kommandos]] zu befüllen.
 
 ==== Labels ====
-Der ''Labels''-Abschnitt wird beim Ausführen des Dispatch-Kommandos ignoriert. Er wird nur im Kontext von [[Konfigurationsdatei_wollmux.conf#Menues_und_Symbolleisten|Menüs und Symbolleisten]] in der wollmux.conf ausgewertet. Hier bestimmt er bei der ACTION &quot;open&quot; die Anzeige der Gruppen im Auswahlfenster, in dem der Anwender die Dokumente/Vorlagen auswählt, die er gemeinsam öffnen möchte. Zu jeder Gruppe im ''Fragmente''-Abschnitt existiert ein Label im ''Labels''-Abschnitt (in der selben Reihenfolge).
+Der ''Labels''-Abschnitt wird beim Ausführen des Dispatch-Kommandos ignoriert. Er wird nur im Kontext von [[Konfigurationsdatei_wollmux.conf#Menues_und_Symbolleisten|Menüs und Symbolleisten]] in der wollmux.conf ausgewertet. Hier bestimmt er bei der ACTION "open" die Anzeige der Gruppen im Auswahlfenster, in dem der Anwender die Dokumente/Vorlagen auswählt, die er gemeinsam öffnen möchte. Zu jeder Gruppe im ''Fragmente''-Abschnitt existiert ein Label im ''Labels''-Abschnitt (in der selben Reihenfolge).
 
 === wollmux:OpenTemplate ===
 ;Syntax der URL:
- wollmux:OpenDocument#&lt;FRAG_ID&gt;
- wollmux:OpenDocument#&lt;FRAG_ID1&gt;&amp;&lt;FRAG_ID2&gt;&amp;&lt;FRAG_ID3&gt;...
+ wollmux:OpenDocument#<FRAG_ID>
+ wollmux:OpenDocument#<FRAG_ID1>&<FRAG_ID2>&<FRAG_ID3>...
 
-Öffnet die Vorlage mit der [[Konfigurationsdatei_wollmux.conf#FRAG_ID_.22Eindeutiger_Bezeichner.22|FRAG_ID]] &quot;&lt;FRAG_ID&gt;&quot;. Abhängig vom Typ des Dokuments und dem evtl. enthaltenen [[Dokumentkommandos_des_WollMux#Das_Kommando_.22setType.22|Dokumentkommando setType]] werden dabei die (anderen) enthaltenen [[Dokumentkommandos_des_WollMux|Dokumentkommandos]] bearbeitet oder nicht. Für die Verwendung im Zusammenspiel mit dem [[Dokumentkommandos_des_WollMux#Das_Kommando_.22insertContent.22|insertContent-Kommando]] können mehrere FRAG_IDs angegeben werden. Diese werden durch &quot;&amp;&quot; getrennt.
+Öffnet die Vorlage mit der [[Konfigurationsdatei_wollmux.conf#FRAG_ID_.22Eindeutiger_Bezeichner.22|FRAG_ID]] "<FRAG_ID>". Abhängig vom Typ des Dokuments und dem evtl. enthaltenen [[Dokumentkommandos_des_WollMux#Das_Kommando_.22setType.22|Dokumentkommando setType]] werden dabei die (anderen) enthaltenen [[Dokumentkommandos_des_WollMux|Dokumentkommandos]] bearbeitet oder nicht. Für die Verwendung im Zusammenspiel mit dem [[Dokumentkommandos_des_WollMux#Das_Kommando_.22insertContent.22|insertContent-Kommando]] können mehrere FRAG_IDs angegeben werden. Diese werden durch "&" getrennt.
 
 === wollmux:OpenDocument ===
 ;Syntax der URL:
- wollmux:OpenDocument#&lt;FRAG_ID&gt;
+ wollmux:OpenDocument#<FRAG_ID>
 
-Öffnet die Vorlage mit der [[Konfigurationsdatei_wollmux.conf#FRAG_ID_.22Eindeutiger_Bezeichner.22|FRAG_ID]] &quot;&lt;FRAG_ID&gt;&quot; zum bearbeiten. Dabei werden die in der Vorlage enthaltenen [[Dokumentkommandos_des_WollMux|Dokumentkommandos]] '''nicht''' ausgewertet.
+Öffnet die Vorlage mit der [[Konfigurationsdatei_wollmux.conf#FRAG_ID_.22Eindeutiger_Bezeichner.22|FRAG_ID]] "<FRAG_ID>" zum bearbeiten. Dabei werden die in der Vorlage enthaltenen [[Dokumentkommandos_des_WollMux|Dokumentkommandos]] '''nicht''' ausgewertet.
 
 === wollmux:FunctionDialog ===
 ;Syntax der URL:
- wollmux:FunctionDialog#&lt;Dialogbezeichner&gt;
+ wollmux:FunctionDialog#<Dialogbezeichner>
 
-Öffnet den in der [[Konfigurationsdatei_wollmux.conf#Funktionsdialoge|Konfigurationsdatei wollmux.conf global definierten Funktionsdialog]] mit der Bezeichnung &quot;&lt;Dialogbezeichner&gt;&quot; und überträgt die dort ausgewählten Funktionswerte in die im aktuell geöffneten Dokument enthaltenen [[Dokumentkommandos_des_WollMux#Das_Kommando_.22insertFormValue.22|insertFormValue-Kommandos]].
+Öffnet den in der [[Konfigurationsdatei_wollmux.conf#Funktionsdialoge|Konfigurationsdatei wollmux.conf global definierten Funktionsdialog]] mit der Bezeichnung "<Dialogbezeichner>" und überträgt die dort ausgewählten Funktionswerte in die im aktuell geöffneten Dokument enthaltenen [[Dokumentkommandos_des_WollMux#Das_Kommando_.22insertFormValue.22|insertFormValue-Kommandos]].
 
 === wollmux:FormularMax4000 ===
 ;Syntax der URL:
@@ -223,25 +223,25 @@ Der ''Labels''-Abschnitt wird beim Ausführen des Dispatch-Kommandos ignoriert. 
 ;Syntax der URL:
  wollmux:ZifferEinfuegen
 
-Alle vom Cursor markierten Zeilen werden als Verfügungpunkte für Sachleitende Verfügungen markiert und mit den entsprechenden römischen Ziffern versehen. Befindet sich der Cursor bereits auf einer solchen Zeile, so wird die Markierung wieder aufgehoben und die römische Ziffer entfernt. Das Verhalten ist ausführlicher beschrieben auf der Seite [[Hilfen für Sachleitende Verfügungen verwenden#Die Schaltfläche &quot;Ziffer einfügen&quot;|&quot;Hilfen für Sachleitende Verfügungen verwenden&quot;]].
+Alle vom Cursor markierten Zeilen werden als Verfügungpunkte für Sachleitende Verfügungen markiert und mit den entsprechenden römischen Ziffern versehen. Befindet sich der Cursor bereits auf einer solchen Zeile, so wird die Markierung wieder aufgehoben und die römische Ziffer entfernt. Das Verhalten ist ausführlicher beschrieben auf der Seite [[Hilfen für Sachleitende Verfügungen verwenden#Die Schaltfläche "Ziffer einfügen"|"Hilfen für Sachleitende Verfügungen verwenden"]].
 
 === wollmux:Abdruck ===
 ;Syntax der URL:
  wollmux:Abdruck
 
-Ab der aktuellen Cursorposition wird ein neuer Absatz &quot;&lt;Ziffer&gt; Abdruck von ...&quot; eingefügt und als Verfügungspunkt von Sachleitenden Verfügungen markiert. Steht der Cursor bereits auf einem solchen Absatz, so wird der Abdruck entfernt. Das Verhalten ist ausführlicher beschrieben auf der Seite [[Hilfen für Sachleitende Verfügungen verwenden#Die Schaltfläche &quot;Abdruck&quot;|&quot;Hilfen für Sachleitende Verfügungen verwenden&quot;]].
+Ab der aktuellen Cursorposition wird ein neuer Absatz "<Ziffer> Abdruck von ..." eingefügt und als Verfügungspunkt von Sachleitenden Verfügungen markiert. Steht der Cursor bereits auf einem solchen Absatz, so wird der Abdruck entfernt. Das Verhalten ist ausführlicher beschrieben auf der Seite [[Hilfen für Sachleitende Verfügungen verwenden#Die Schaltfläche "Abdruck"|"Hilfen für Sachleitende Verfügungen verwenden"]].
 
 === wollmux:Zuleitungszeile ===
 ;Syntax der URL:
  wollmux:Zuleitungszeile
 
-Alle über den Cursor ausgewählten Absätze des aktuellen Vordergrunddokuments werden als Zuleitungszeilen von Sachleitenden Verfügungen markiert oder eine evtl. bestehende Markierung wird aufgehoben. Das Verhalten ist ausführlicher beschrieben auf der Seite [[Hilfen für Sachleitende Verfügungen verwenden#Die Schaltfläche &quot;Zuleitungszeile&quot;|&quot;Hilfen für Sachleitende Verfügungen verwenden&quot;]].
+Alle über den Cursor ausgewählten Absätze des aktuellen Vordergrunddokuments werden als Zuleitungszeilen von Sachleitenden Verfügungen markiert oder eine evtl. bestehende Markierung wird aufgehoben. Das Verhalten ist ausführlicher beschrieben auf der Seite [[Hilfen für Sachleitende Verfügungen verwenden#Die Schaltfläche "Zuleitungszeile"|"Hilfen für Sachleitende Verfügungen verwenden"]].
 
 === wollmux:DumpInfo ===
 ;Syntax der URL:
  wollmux:DumpInfo
 
-Veranlasst den WollMux eine Datei $HOME/.wollmux/dump&lt;DatumUndZeit&gt; zu erzeugen, die wichtige Informationen für die Fehlersuche im Zusammenhang mit dem WollMux enthält. DumpInfo ist vor allem für WollMux-Administratoren geeignet, die bei der Installation und Einrichtung des WollMux auf Fehler stoßen, für deren Lösung Unterstützung durch D-III-ITD-5.1 notwendig wird. In diesem Fall ist die über dumpInfo erzeugte dump-Datei an ein entsprechendes Vorfallticket anzuhängen.
+Veranlasst den WollMux eine Datei $HOME/.wollmux/dump<DatumUndZeit> zu erzeugen, die wichtige Informationen für die Fehlersuche im Zusammenhang mit dem WollMux enthält. DumpInfo ist vor allem für WollMux-Administratoren geeignet, die bei der Installation und Einrichtung des WollMux auf Fehler stoßen, für deren Lösung Unterstützung durch D-III-ITD-5.1 notwendig wird. In diesem Fall ist die über dumpInfo erzeugte dump-Datei an ein entsprechendes Vorfallticket anzuhängen.
 
 === wollmux:Kill ===
 ;Syntax der URL:
@@ -254,11 +254,11 @@ Schließt alle OpenOffice Fenster ohne jede Sicherheitsabfragen(!).
 ;Syntax der URL:
  wollmux:About
 
- wollmux:About#&lt;Version der WollMuxBar&gt;
+ wollmux:About#<Version der WollMuxBar>
 
-Veranlass den WollMux, den Dialog &quot;Info über Vorlagen und Formulare (WollMux)&quot; anzuzeigen, der folgende wichtige Versionsinformationen enthält:
+Veranlass den WollMux, den Dialog "Info über Vorlagen und Formulare (WollMux)" anzuzeigen, der folgende wichtige Versionsinformationen enthält:
 * Die Release-Version und SVN-Revision der WollMux-Kernkomponente WollMux.uno.pkg
-* Die Release-Version und SVN-Revision der WollMuxBar falls das Argument &quot;&lt;Version der WollMuxBar&gt;&quot; in obiger URL angebeben wurde. '''Anmerkung:''' Die Kernkomponente des WollMux weiss nicht, welche WollMuxBar eingesetzt wird. Daher gibt die WollMuxBar beim Aufruf von &quot;wollmux:About&quot; ihre Versionsinformation an die Kernkomponente weiter, die sie dann im Dialog darstellt. Fehlt das Argument, so wird gar keine Information über die WollMuxBar ausgegeben.
+* Die Release-Version und SVN-Revision der WollMuxBar falls das Argument "<Version der WollMuxBar>" in obiger URL angebeben wurde. '''Anmerkung:''' Die Kernkomponente des WollMux weiss nicht, welche WollMuxBar eingesetzt wird. Daher gibt die WollMuxBar beim Aufruf von "wollmux:About" ihre Versionsinformation an die Kernkomponente weiter, die sie dann im Dialog darstellt. Fehlt das Argument, so wird gar keine Information über die WollMuxBar ausgegeben.
 * Die Release-Version der zugrundeliegenden WollMux-Konfiguration.
 * Der DEFAULT_CONTEXT, von dem die Konfiguration bezogen wird.
 
@@ -309,27 +309,27 @@ siehe [[Schnittstellen_des_WollMux_f%C3%BCr_Experten#Zus.C3.A4tzliche_Schaltfl.C
 
 Öffnet die Seriendruckleiste des WollMux über die alle Seriendruckfunktionen des WollMux angesprochen werden können. Ist bereits eine Seriendruckleiste geöffnet, so bleibt die bestehende Seriendruckleiste im Vordergrund.
 
-Eine zugehörige Schaltfläche bietet der WollMux automatisch an im Menü des Writers unter &quot;Extras-&gt;Seriendruck (WollMux)&quot;
+Eine zugehörige Schaltfläche bietet der WollMux automatisch an im Menü des Writers unter "Extras->Seriendruck (WollMux)"
 
 === wollmux:Test ===
 ;Syntax der URL:
- wollmux:Test#&lt;NameDerRoutine&gt;
+ wollmux:Test#<NameDerRoutine>
 
 Über diesen Dispatch können Routinen gestartet werden, die den automatisierten Test des WollMux über das Paket wollmux-qatest unterstützen. Manche Routinen erwarten Parameter, die über eine Hilfsdatei /tmp/wollmux-qatest.args übergeben werden. Der entsprechende Test im Testtool stellt sicher, dass die Parameterdatei vor dem Aufruf des Dispatches erstellt wird.
 
 Folgende Routinen sind bereits implementiert:
 
-;wollmux&lt;nowiki&gt;:&lt;/nowiki&gt;Test#VerfuegungspunktDrucken: Druckt den Verfügungspunkt aus, der im Parameter &quot;VerfPunkt&quot; (als String) übergeben wird.
-;wollmux&lt;nowiki&gt;:&lt;/nowiki&gt;Test#SchreibeFormularwerte: Schreibt die Formularwerte, die als Parameter übergeben werden, in die geöffnete FormGUI.
+;wollmux<nowiki>:</nowiki>Test#VerfuegungspunktDrucken: Druckt den Verfügungspunkt aus, der im Parameter "VerfPunkt" (als String) übergeben wird.
+;wollmux<nowiki>:</nowiki>Test#SchreibeFormularwerte: Schreibt die Formularwerte, die als Parameter übergeben werden, in die geöffnete FormGUI.
 
 == Der UNO-Service de.muenchen.allg.itd51.wollmux.WollMux ==
 Zusätzlich zu den Dispatch-Kommandos stellt der WollMux einen zentralen UNO-Service zur Verfügung, der über die folgende OpenOffice-Basic Zeile erzeugt werden kann:
 
 In OpenOffice.org-Basic:
- mux = createUNOService(&quot;de.muenchen.allg.itd51.wollmux.WollMux&quot;)
+ mux = createUNOService("de.muenchen.allg.itd51.wollmux.WollMux")
 
 In Java:
- XWollMux mux = UnoRuntime.queryInterface(XWollMux.class, UNO.createUNOService(&quot;de.muenchen.allg.itd51.wollmux.WollMux&quot;);
+ XWollMux mux = UnoRuntime.queryInterface(XWollMux.class, UNO.createUNOService("de.muenchen.allg.itd51.wollmux.WollMux");
 
 Das Interface XWollMux ist dabei wie folgt definiert:
  /**
@@ -377,7 +377,7 @@ Das Interface XWollMux ist dabei wie folgt definiert:
  
     /**
       Liefert die zum aktuellen Zeitpunkt im WollMux ausgewählten Absenderdaten (die
-      über das Dokumentkommandos WM(CMD'insertValue' DB_SPALTE'&lt;dbSpalte&gt;') in ein
+      über das Dokumentkommandos WM(CMD'insertValue' DB_SPALTE'<dbSpalte>') in ein
       Dokument eingefügt würden) in einem Array von PropertyValue-Objekten
       zurück. Dabei repräsentieren die Attribute PropertyValue.Name die
       verfügbaren DB_SPALTEn und die Attribute PropertyValue.Value die zu
@@ -396,7 +396,7 @@ Das Interface XWollMux ist dabei wie folgt definiert:
     /**
       Diese Methode liefert den Wert der Absenderdaten zur Datenbankspalte dbSpalte,
       der dem Wert entspricht, den das Dokumentkommando WM(CMD'insertValue'
-      DB_SPALTE'&lt;dbSpalte&gt;') in das Dokument einfügen würde, oder den Leerstring &quot;&quot;
+      DB_SPALTE'<dbSpalte>') in das Dokument einfügen würde, oder den Leerstring ""
       wenn dieser Wert nicht bestimmt werden kann (z.B. wenn ein ungültiger
       Spaltennamen dbSpalte übergeben wurde).
     
@@ -406,7 +406,7 @@ Das Interface XWollMux ist dabei wie folgt definiert:
       @param dbSpalte
                Name der Datenbankspalte deren Wert zurückgeliefert werden soll.
       @return Der Wert der Datenbankspalte dbSpalte des aktuell ausgewählten
-              Absenders oder &quot;&quot;, wenn der Wert nicht bestimmt werden kann.
+              Absenders oder "", wenn der Wert nicht bestimmt werden kann.
      */	
     '''string getValue([in] string dbSpalte);'''
  
@@ -419,7 +419,7 @@ Das Interface XWollMux ist dabei wie folgt definiert:
                Das Dokument, dem die Druckfunktion functionName hinzugefügt werden
                soll.
       @param functionName
-               der Name einer Druckfunktion, die im Abschnitt &quot;Druckfunktionen&quot; der
+               der Name einer Druckfunktion, die im Abschnitt "Druckfunktionen" der
                WollMux-Konfiguration definiert sein muss.
       @deprecated since 2009-09-18
      */
@@ -576,7 +576,7 @@ Folgende Java-Klasse enthält ein Beispiel dafür, wie der Eventmechanismus verw
  
     final XComponent[] compo = new XComponent[2];
  
-    final XEventBroadcaster broadcaster = UNO.XEventBroadcaster(UNO.createUNOService(&quot;de.muenchen.allg.itd51.wollmux.WollMux&quot;));
+    final XEventBroadcaster broadcaster = UNO.XEventBroadcaster(UNO.createUNOService("de.muenchen.allg.itd51.wollmux.WollMux"));
  
     if (broadcaster != null) {
  
@@ -586,8 +586,8 @@ Folgende Java-Klasse enthält ein Beispiel dafür, wie der Eventmechanismus verw
  
         public void notifyEvent(EventObject e) {
           synchronized (compo) {
-            if (&quot;OnWollMuxProcessingFinished&quot;.equalsIgnoreCase(e.EventName)
-                &amp;&amp; UnoRuntime.areSame(compo[0], e.Source)) {
+            if ("OnWollMuxProcessingFinished".equalsIgnoreCase(e.EventName)
+                && UnoRuntime.areSame(compo[0], e.Source)) {
               broadcaster.removeEventListener(this);
               compo[1] = compo[0];
               compo.notify();
@@ -604,7 +604,7 @@ Folgende Java-Klasse enthält ein Beispiel dafür, wie der Eventmechanismus verw
           long endTime = timeoutSekunden * 1000 + System.currentTimeMillis();
           while (compo[1] == null) {
             long ctime = System.currentTimeMillis();
-            if (ctime &gt;= endTime) break;
+            if (ctime >= endTime) break;
             compo.wait(endTime - ctime);
           }
         } catch (InterruptedException i) {}
@@ -626,23 +626,23 @@ Folgende Beispielmethode verdeutlicht, wie obige Klasse eingesetzt werden kann:
  public static void main(String[] args) throws Exception {
  
     UNO.init();
-    '''XComponent compo = loadComponentFromURLAndWaitForWollMux(&quot;file:///tmp/test.ott&quot;, true, true, 20);'''
+    '''XComponent compo = loadComponentFromURLAndWaitForWollMux("file:///tmp/test.ott", true, true, 20);'''
  
-    System.out.println(&quot;Das Dokument ist nun vollständig aufgebaut (wenn mindestens WollMux 3.11.2 verwendet wird).&quot;);
+    System.out.println("Das Dokument ist nun vollständig aufgebaut (wenn mindestens WollMux 3.11.2 verwendet wird).");
  
     // Kontrolle - sind die Absenderdaten vollständig?
     try {
-       XTextFrame frame = UNO.XTextFrame(UNO.XTextFramesSupplier(compo).getTextFrames().getByName(&quot;Absenderdaten&quot;));
+       XTextFrame frame = UNO.XTextFrame(UNO.XTextFramesSupplier(compo).getTextFrames().getByName("Absenderdaten"));
  
-       System.out.println(&quot;Absenderdaten '&quot; + frame.getText().getString() + &quot;'&quot;);
+       System.out.println("Absenderdaten '" + frame.getText().getString() + "'");
     } catch (NoSuchElementException e) {
-       System.out.println(&quot;In diesem Dokument fehlt der Textrahmen 'Absenderdaten' oder der WollMux ist nicht installiert.&quot;);
+       System.out.println("In diesem Dokument fehlt der Textrahmen 'Absenderdaten' oder der WollMux ist nicht installiert.");
     }
  
     System.exit(0);
  }
 
-Diese Methode öffnet die Vorlage /tmp/test.ott. Der Aufruf von loadComponentFromURLAndWaitForWollMux(...) kehrt erst dann zurück, wenn der WollMux das Dokument vollständig aufgebaut hat oder ein Timeout von 20 Sekunden abgelaufen ist. Zur Kontrolle, ob das Dokument auch tatsächlich vollständig aufgebaut wurde, wird geschaut, ob in dem erzeugten Dokument ein Textrahmen &quot;Absenderdaten&quot; vorhanden ist und ggf. der Inhalt dieses Textrahmens ausgegeben. Zum Testen dieser Funktion wurde für /tmp/test.ott eine über eine Mischvorlage für den externen Briefkopf erzeugte Vorlage verwendet. Sie enthält die Anweisungen die dafür sorgen, dass der Textrahmen &quot;Absenderdaten&quot; nachträglich in das Dokument hineingezogen wird.
+Diese Methode öffnet die Vorlage /tmp/test.ott. Der Aufruf von loadComponentFromURLAndWaitForWollMux(...) kehrt erst dann zurück, wenn der WollMux das Dokument vollständig aufgebaut hat oder ein Timeout von 20 Sekunden abgelaufen ist. Zur Kontrolle, ob das Dokument auch tatsächlich vollständig aufgebaut wurde, wird geschaut, ob in dem erzeugten Dokument ein Textrahmen "Absenderdaten" vorhanden ist und ggf. der Inhalt dieses Textrahmens ausgegeben. Zum Testen dieser Funktion wurde für /tmp/test.ott eine über eine Mischvorlage für den externen Briefkopf erzeugte Vorlage verwendet. Sie enthält die Anweisungen die dafür sorgen, dass der Textrahmen "Absenderdaten" nachträglich in das Dokument hineingezogen wird.
 
 ;Achtung: In allen obigen Beispielen wird eine Helperklasse de.muenchen.allg.afid.UNO verwendet. Das dazugehörige JAR-Paket kann bei Bedarf über D-III-ITD-5.1 bezogen werden. Alle anderen importierten Module sind Bestandteile der Standard JAR-Pakete von OpenOffice.org bzw. der Java-Umgebung. Es sind zur Ausführung obiger Beispiele keine WollMux-spezifischen JAR-Pakete notwendig. Damit dieser Mechanismus funktioniert, muss jedoch mindestens ein WollMux 3.11.2 installiert sein.
 
@@ -735,10 +735,10 @@ Unmittelbar nach der Registrierung und bei jeder Änderung der PAL wird der de.m
        abhängig vom Wert von SENDER_DISPLAYTEMPLATE in der WollMux-Konfiguration.
        Unabhängig von SENDER_DISPLAYTEMPLATE enthalten die über diese Methode
        zurückgelieferten String-Repräsentationen der PAL-Einträge aber auf jeden
-       Fall immer am Ende den String &quot;§§%=%§§&quot; gefolgt vom Schlüssel des
+       Fall immer am Ende den String "§§%=%§§" gefolgt vom Schlüssel des
        entsprechenden Eintrags!
       */
-      sequence&lt; string &gt; getPALEntries();
+      sequence< string > getPALEntries();
  
      /**
        Diese Methode liefert eine String-Repräsentation des aktuell aus der
@@ -748,14 +748,14 @@ Unmittelbar nach der Registrierung und bei jeder Änderung der PAL wird der de.m
        SENDER_DISPLAYTEMPLATE in der WollMux-Konfiguration.
        Unabhängig von SENDER_DISPLAYTEMPLATE enthält die über diese Methode
        zurückgelieferte String-Repräsentation aber auf jeden Fall immer am Ende
-       den String &quot;§§%=%§§&quot; gefolgt vom Schlüssel des aktuell ausgewählten
+       den String "§§%=%§§" gefolgt vom Schlüssel des aktuell ausgewählten
        Absenders.
        Ist die PAL leer oder noch kein Absender ausgewählt, so liefert die Methode
-       den Leerstring &quot;&quot; zurück. Dieser Sonderfall sollte natürlich entsprechend
+       den Leerstring "" zurück. Dieser Sonderfall sollte natürlich entsprechend
        durch die aufrufende Methode behandelt werden.
  
        @return den aktuell aus der PAL ausgewählten Absender als String. Ist kein
-               Absender ausgewählt wird der Leerstring &quot;&quot; zurückgegeben.
+               Absender ausgewählt wird der Leerstring "" zurückgegeben.
       */
       string getCurrentSender();
  };
@@ -798,7 +798,7 @@ Die Hauptaufgabe des WollMux liegt in der Bearbeitung und Manipulation von Textd
   
     /**
       Liefert die zum aktuellen Zeitpunkt im WollMux ausgewählten Absenderdaten (die
-      über das Dokumentkommandos WM(CMD'insertValue' DB_SPALTE'&lt;dbSpalte&gt;') in ein
+      über das Dokumentkommandos WM(CMD'insertValue' DB_SPALTE'<dbSpalte>') in ein
       Dokument eingefügt würden) in einem Array von PropertyValue-Objekten
       zurück. Dabei repräsentieren die Attribute PropertyValue.Name die
       verfügbaren DB_SPALTEn und die Attribute PropertyValue.Value die zu
@@ -817,7 +817,7 @@ Die Hauptaufgabe des WollMux liegt in der Bearbeitung und Manipulation von Textd
     /**
       Diese Methode liefert den Wert der Absenderdaten zur Datenbankspalte dbSpalte,
       der dem Wert entspricht, den das Dokumentkommando WM(CMD'insertValue'
-      DB_SPALTE'&lt;dbSpalte&gt;') in das Dokument einfügen würde, oder den Leerstring &quot;&quot;
+      DB_SPALTE'<dbSpalte>') in das Dokument einfügen würde, oder den Leerstring ""
       wenn dieser Wert nicht bestimmt werden kann (z.B. wenn ein ungültiger
       Spaltennamen dbSpalte übergeben wurde).
     
@@ -827,19 +827,19 @@ Die Hauptaufgabe des WollMux liegt in der Bearbeitung und Manipulation von Textd
        @param dbSpalte
                 Name der Datenbankspalte deren Wert zurückgeliefert werden soll.
        @return Der Wert der Datenbankspalte dbSpalte des aktuell ausgewählten
-               Absenders oder &quot;&quot;, wenn der Wert nicht bestimmt werden kann.
+               Absenders oder "", wenn der Wert nicht bestimmt werden kann.
       */	
      '''string getValue([in] string dbSpalte);'''
  
      [...]
  };
 
-Folgendes Beispiel (in OOo-Basic) zeigt, wie mit Hilfe dieser Methode die Spaltenwerte &quot;Vorname&quot; und &quot;Nachname&quot; (des aktuell gesetzten Absenders) in die ersten beiden Zellen einer Calc-Tabelle übertragen werden können:
+Folgendes Beispiel (in OOo-Basic) zeigt, wie mit Hilfe dieser Methode die Spaltenwerte "Vorname" und "Nachname" (des aktuell gesetzten Absenders) in die ersten beiden Zellen einer Calc-Tabelle übertragen werden können:
 
  Sub sachbearbeiterdatenInCalcEinfuegen
-    mux = createUNOService(&quot;de.muenchen.allg.itd51.wollmux.WollMux&quot;)
-    vorname = mux.getValue(&quot;Vorname&quot;)
-    nachname = mux.getValue(&quot;Nachname&quot;)
+    mux = createUNOService("de.muenchen.allg.itd51.wollmux.WollMux")
+    vorname = mux.getValue("Vorname")
+    nachname = mux.getValue("Nachname")
  
     sheet = ThisComponent.Sheets.getByIndex(0)
  
@@ -913,7 +913,7 @@ Das Interface XWollMuxDocument ist dabei wie folgt definiert:
  {
  
     /**
-       Setzt den Wert, der bei insertValue-Dokumentkommandos mit DB_SPALTE &quot;dbSpalte&quot;
+       Setzt den Wert, der bei insertValue-Dokumentkommandos mit DB_SPALTE "dbSpalte"
        eingefügt werden soll auf Wert. Es ist nicht garantiert, dass der neue Wert im
        Dokument sichtbar wird, bevor updateInsertFields() aufgerufen wurde. Eine
        Implementierung mit einer Queue ist möglich.
@@ -980,7 +980,7 @@ Das Interface XWollMuxDocument ist dabei wie folgt definiert:
     /**
        Nimmt die Druckfunktion functionName in die Liste der Druckfunktionen des
        Dokuments auf. Die Druckfunktion wird dabei automatisch aktiv, wenn das
-       Dokument das nächste mal mit Datei-&gt;Drucken gedruckt werden soll. Ist die
+       Dokument das nächste mal mit Datei->Drucken gedruckt werden soll. Ist die
        Druckfunktion bereits in der Liste der Druckfunktionen des Dokuments
        enthalten, so geschieht nichts.
        
@@ -988,7 +988,7 @@ Das Interface XWollMuxDocument ist dabei wie folgt definiert:
        Umständen bereits zurück BEVOR die Methode ihre Wirkung entfaltet hat.
        
        @param functionName
-                der Name einer Druckfunktion, die im Abschnitt &quot;Druckfunktionen&quot; der
+                der Name einer Druckfunktion, die im Abschnitt "Druckfunktionen" der
                 WollMux-Konfiguration definiert sein muss.
      */
     '''void addPrintFunction([in] string functionName);'''
@@ -996,7 +996,7 @@ Das Interface XWollMuxDocument ist dabei wie folgt definiert:
     /**
        Löscht die Druckfunktion functionName aus der Liste der Druckfunktionen des
        Dokuments. Die Druckfunktion wird damit ab dem nächsten Aufruf von
-       Datei-&gt;Drucken nicht mehr aufgerufen. Ist die Druckfunktion nicht in der Liste
+       Datei->Drucken nicht mehr aufgerufen. Ist die Druckfunktion nicht in der Liste
        der Druckfunktionen des Dokuments enthalten, so geschieht nichts.
        
        Hinweis: Die Ausführung erfolgt asynchron, d.h. removePrintFunction() kehrt
@@ -1027,54 +1027,54 @@ Ein wichtiger Anwendungsfall ist das nachträgliche Ändern von durch den WollMu
 
 Folgendes Codebeispiel (in Java) demonstriert, wie über den WollMux-Service das Ändern von Feldern möglich ist:
 
- XWollMux mux = (XWollMux) UnoRuntime.queryInterface(XWollMux.class, UNO.createUNOService(&quot;de.muenchen.allg.itd51.wollmux.WollMux&quot;));
+ XWollMux mux = (XWollMux) UnoRuntime.queryInterface(XWollMux.class, UNO.createUNOService("de.muenchen.allg.itd51.wollmux.WollMux"));
  if (mux != null)
  {
    XWollMuxDocument doc = mux.getWollMuxDocument(compo);
    if (doc != null)
    {
      // Setzen von insertValues:
-     doc.setFormValue(&quot;EmpfaengerZeile1&quot;, &quot;Mein lieber Herr Gesangsverein&quot;);
-     doc.setFormValue(&quot;SGAnrede&quot;, &quot;Herr&quot;);
+     doc.setFormValue("EmpfaengerZeile1", "Mein lieber Herr Gesangsverein");
+     doc.setFormValue("SGAnrede", "Herr");
      doc.updateFormGUI();
-     System.out.println(&quot;SetFormValues done&quot;);
+     System.out.println("SetFormValues done");
  
      // Setzen von Formularwerten: 
-     doc.setInsertValue(&quot;Nachname&quot;, &quot;VollMilch&quot;);
-     doc.setInsertValue(&quot;Telefon&quot;, &quot;1234567&quot;);
-     doc.setInsertValue(&quot;Titel&quot;, &quot;Prof.&quot;);
+     doc.setInsertValue("Nachname", "VollMilch");
+     doc.setInsertValue("Telefon", "1234567");
+     doc.setInsertValue("Titel", "Prof.");
      doc.updateInsertFields();
-     System.out.println(&quot;SetInsertFields done&quot;);
+     System.out.println("SetInsertFields done");
    }
  }
 
 ==== Programmatisches Setzen von Komfortdruckfunktionen ====
 Komfortdruckfunktionen können entweder manuell bei der Vorlagenerstellung über den FormularMax 4000 gesetzt werden oder auch programmatisch. Dies kann in einigen Fällen sinnvoll sein, wenn z.B. ein externes Makro anhand einer bestimmten Logik erkennen soll, ob eine Komfortdruckfunktion für ein bestimmtes Dokument sinnvoll ist. In diesem Fall stehen die folgenden Methoden im Interface XWollMuxDocument zur Verfügung:
 
-;Die Methode ''void addPrintFunction([in] string functionName)'': Diese Methode nimmt die Druckfunktion functionName in die Liste der Druckfunktionen des Dokuments auf. Die Druckfunktion wird dabei automatisch aktiv, wenn das Dokument das nächste mal mit Datei-&gt;Drucken gedruckt werden soll. Ist die      Druckfunktion bereits in der Liste der Druckfunktionen des Dokuments enthalten, so geschieht nichts. Dabei erwartet der Parameter functionName den Namen einer Druckfunktion, die im Abschnitt &quot;Druckfunktionen&quot; der WollMux-Konfiguration definiert sein muss.
+;Die Methode ''void addPrintFunction([in] string functionName)'': Diese Methode nimmt die Druckfunktion functionName in die Liste der Druckfunktionen des Dokuments auf. Die Druckfunktion wird dabei automatisch aktiv, wenn das Dokument das nächste mal mit Datei->Drucken gedruckt werden soll. Ist die      Druckfunktion bereits in der Liste der Druckfunktionen des Dokuments enthalten, so geschieht nichts. Dabei erwartet der Parameter functionName den Namen einer Druckfunktion, die im Abschnitt "Druckfunktionen" der WollMux-Konfiguration definiert sein muss.
 
-;Die Methode ''void removePrintFunction([in] string functionName)'': Diese Methode löscht die Druckfunktion functionName aus der Liste der Druckfunktionen des Dokuments. Die Druckfunktion wird damit ab dem nächsten Aufruf von Datei-&gt;Drucken nicht mehr aufgerufen. Ist die Druckfunktion nicht in der Liste der Druckfunktionen des Dokuments enthalten, so geschieht nichts.
+;Die Methode ''void removePrintFunction([in] string functionName)'': Diese Methode löscht die Druckfunktion functionName aus der Liste der Druckfunktionen des Dokuments. Die Druckfunktion wird damit ab dem nächsten Aufruf von Datei->Drucken nicht mehr aufgerufen. Ist die Druckfunktion nicht in der Liste der Druckfunktionen des Dokuments enthalten, so geschieht nichts.
 
 Beispiel für die Verwendung von addPrintFunction(...) in einem Basic-Makro:
  Sub Main
    doc = ThisComponent
-   mux = createUNOService(&quot;de.muenchen.allg.itd51.wollmux.WollMux&quot;)
+   mux = createUNOService("de.muenchen.allg.itd51.wollmux.WollMux")
    wmDoc = mux.getWollMuxDocument(doc)
    if(NOT isNull(wmDoc)) then
-     wmDoc.addPrintFunction(&quot;SeriendruckOhneAuswahl&quot;)
+     wmDoc.addPrintFunction("SeriendruckOhneAuswahl")
    endif
  End Sub
 
 == Einbinden eigener Komfortdruckfunktionen ==
-Beim Drucken eines Dokuments über &quot;Datei-&gt;Drucken...&quot; oder den Drucken-Knopf in der Symbolleiste kann der WollMux an Stelle des normalen Druckdialogs selbst definierte Komfortdruckfunktionen aufrufen. Dabei können in jedem Dokument mehrere Komfortdruckfunktionen hinterlegt werden und in einer definierten Reihenfolge miteinander verkettet werden. So ist es z.B. möglich die Komfortdruckfunktion für Sachleitende Verfügungen mit der Komfortdruckfunktion für Serienbriefe zu verketten. Damit kann den Anwenderinnen und Anwendern sehr viel Zeit und unnötige Handarbeit erspart werden.
+Beim Drucken eines Dokuments über "Datei->Drucken..." oder den Drucken-Knopf in der Symbolleiste kann der WollMux an Stelle des normalen Druckdialogs selbst definierte Komfortdruckfunktionen aufrufen. Dabei können in jedem Dokument mehrere Komfortdruckfunktionen hinterlegt werden und in einer definierten Reihenfolge miteinander verkettet werden. So ist es z.B. möglich die Komfortdruckfunktion für Sachleitende Verfügungen mit der Komfortdruckfunktion für Serienbriefe zu verketten. Damit kann den Anwenderinnen und Anwendern sehr viel Zeit und unnötige Handarbeit erspart werden.
 
 === Einbinden in Dokument oder Vorlage ===
 Die Information, welche Druckfunktionen aktuell verwendet werden sollen, wird persistent unter dem Metadatenschlüssel [[Dokumentkommandos_des_WollMux#PrintFunction|'PrintFunction']] im entsprechenden Dokument bzw. in der entsprechenden Vorlage abgelegt und von dort ausgelesen. Hilfreich ist dabei der Menüpunkt [[FormularMax_4000#Formular.2FDruckfunktion_setzen|'Druckfunktion setzen' des FormularMax 4000]], über den die Druckfunktionen des Dokuments leicht manuell editiert werden können. Über das inzwischen veraltete Dokumentkommando [[Dokumentkommandos_des_WollMux#Das_Kommando_.22setPrintFunction.22|setPrintFunction]], ist es ebenso möglich einzelne Druckfunktionen in die Liste der Druckfunktionen aufzunehmen. Des weiteren bietet der WollMux die Möglichkeit, Komfortdruckfunktionen programmatisch zu setzen oder aus einem Dokument zu entfernen. Diese Möglichkeit ist in Abschnitt [[#Programmatisches_Setzen_von_Komfortdruckfunktionen|programmatisches Setzen von Komfortdruckfunktionen]] genauer beschrieben.
 
 === Registrierung im Abschnitt Druckfunktionen ===
-Alle im Dokument aufgeführten Druckfunktionen müssen in einem Abschnitt [[Konfigurationsdatei_wollmux.conf#Druckfunktionen|Druckfunktionen]] in der Konfigurationsdatei wollmux.conf global definiert sein. Jeder Eintrag in diesem Abschnitt besteht aus dem Funktionsbezeichner und dem Verweis auf eine physikalisch existierende Funktion, die in Java geschrieben sein muss. Die Definition der Funktion mit dem Funktionsbezeichner &quot;SachleitendeVerfuegung&quot; sieht beispielsweise wie folgt aus:
+Alle im Dokument aufgeführten Druckfunktionen müssen in einem Abschnitt [[Konfigurationsdatei_wollmux.conf#Druckfunktionen|Druckfunktionen]] in der Konfigurationsdatei wollmux.conf global definiert sein. Jeder Eintrag in diesem Abschnitt besteht aus dem Funktionsbezeichner und dem Verweis auf eine physikalisch existierende Funktion, die in Java geschrieben sein muss. Die Definition der Funktion mit dem Funktionsbezeichner "SachleitendeVerfuegung" sieht beispielsweise wie folgt aus:
  Druckfunktionen(
-   SachleitendeVerfuegung(EXTERN(URL &quot;java:de.muenchen.allg.itd51.wollmux.func.StandardPrint.sachleitendeVerfuegung&quot;) ORDER &quot;10&quot;)
+   SachleitendeVerfuegung(EXTERN(URL "java:de.muenchen.allg.itd51.wollmux.func.StandardPrint.sachleitendeVerfuegung") ORDER "10")
  )
 
 Im Beispiel ist die zugehörige Druckfunktion in Java geschrieben. Hier ein Auszug aus der entsprechenden Java-Datei StandardPrint.java:
@@ -1160,13 +1160,13 @@ Jede Druckfunktion bekommt ein Objekt vom Typ ''de.muenchen.allg.itd51.wollmux.X
     void setFormValue( [in] string id, [in] string value);
  
     /**
-     * Liefert true, wenn das Dokument als &quot;modifiziert&quot; markiert ist und damit
-     * z.B. die &quot;Speichern?&quot; Abfrage vor dem Schließen erscheint.
+     * Liefert true, wenn das Dokument als "modifiziert" markiert ist und damit
+     * z.B. die "Speichern?" Abfrage vor dem Schließen erscheint.
      * 
      * Manche Druckfunktionen verändern u.U. den Inhalt von Dokumenten. Trotzdem
-     * kann es sein, dass eine solche Druckfunktion den &quot;Modifiziert&quot;-Status des
-     * Dokuments nicht verändern darf um ungewünschte &quot;Speichern?&quot;-Abfragen zu
-     * verhindern. In diesem Fall kann der &quot;Modifiziert&quot;-Status mit folgendem
+     * kann es sein, dass eine solche Druckfunktion den "Modifiziert"-Status des
+     * Dokuments nicht verändern darf um ungewünschte "Speichern?"-Abfragen zu
+     * verhindern. In diesem Fall kann der "Modifiziert"-Status mit folgendem
      * Konstrukt innerhalb der Druckfunktion unverändert gehalten werden:
      * 
      * boolean modified = pmod.getDocumentModified();
@@ -1192,14 +1192,14 @@ Jede Druckfunktion bekommt ein Objekt vom Typ ''de.muenchen.allg.itd51.wollmux.X
     void collectNonWollMuxFormFields();
      
     /**
-     * Diese Methode setzt die Eigenschaften &quot;Sichtbar&quot; (visible) und die
+     * Diese Methode setzt die Eigenschaften "Sichtbar" (visible) und die
      * Anzeige der Hintergrundfarbe (showHighlightColor) für alle Druckblöcke
-     * eines bestimmten Blocktyps blockName (z.B. &quot;AllVersions&quot;). 
+     * eines bestimmten Blocktyps blockName (z.B. "AllVersions"). 
      * 
      * @param blockName
      *          Der Blocktyp dessen Druckblöcke behandelt werden sollen.
-     *          Folgende Blocknamen werden derzeit unterstützt: &quot;AllVersions&quot;,
-     *          &quot;DraftOnly&quot;, &quot;OriginalOnly&quot;, &quot;CopyOnly&quot; und &quot;NotInOriginal&quot;
+     *          Folgende Blocknamen werden derzeit unterstützt: "AllVersions",
+     *          "DraftOnly", "OriginalOnly", "CopyOnly" und "NotInOriginal"
      * @param visible
      *          Der Block wird sichtbar, wenn visible==true und unsichtbar, wenn
      *          visible==false.
@@ -1264,12 +1264,12 @@ Jede Druckfunktion bekommt ein Objekt vom Typ ''de.muenchen.allg.itd51.wollmux.X
     /**
      * Über diese Methode wird der Fortschrittsleiste ein neuer Fortschrittstatus
      * value (=Anzahl bis jetzt tatsächlich gedruckter Versionen) der aktuellen
-     * Druckfunktion übermittelt. Der Wert value muss im Bereich 0 &lt;= value &lt;=
+     * Druckfunktion übermittelt. Der Wert value muss im Bereich 0 <= value <=
      * maxValue (siehe setPrintProgressMaxValue(maxValue)) liegen.
      * 
      * @param value
      *          Die Anzahl der bis jetzt tatsächlich von dieser Druckfunktion
-     *          gedruckten Versionen. Es muss gelten: 0 &lt;= value &lt;= maxValue
+     *          gedruckten Versionen. Es muss gelten: 0 <= value <= maxValue
      */
     void setPrintProgressValue([in] short value);
  };
@@ -1295,15 +1295,15 @@ Bei jedem Aufruf einer Methode von pmod ist sichergestellt, dass der Aufruf sync
 * Die externe Druckfunktion darf keinen Rückgabewert liefern bzw. werden Rückgabewerte nicht beachtet.
 
 === Verketten von Druckfunktionen ===
-Die Möglichkeit der Verkettung von Druckfunktionen wird hier am Beispiel der Komfortdruckfunktionen &quot;SachleitendenVerfuegung&quot; und &quot;Seriendruck&quot; präsentiert. Dabei soll erreicht werden, dass der Komfortdruckdialog für die Sachleitenden Verfügungen und der Dialog für den Seriendruck genau einmal aufgerufen wird (sonst würde für jede Ausfertigung der Sachleitende Verfügungen ein eigener Seriendruck-Dialog erscheinen). In den zwei Dialogen sollen die gewünschten Einstellungen für den kombinierten Druck genau einmal vorgenommen werden. Erst nachdem alle Einstellungen gesetzt wurden, startet der eigentliche Druck auf dem Drucker. Um dies zu erreichen, wurde die Druckfunktion SachleitendeVerfuegung in zwei Teile, einen GUI-Teil und einen Ausgabeteil, aufgeteilt. Gemeinsam mit der Druckfunktion &quot;Seriendruck&quot; sieht der Konfigurationsabschnitt Druckfunktionen daher z.B. wie folgt aus:
+Die Möglichkeit der Verkettung von Druckfunktionen wird hier am Beispiel der Komfortdruckfunktionen "SachleitendenVerfuegung" und "Seriendruck" präsentiert. Dabei soll erreicht werden, dass der Komfortdruckdialog für die Sachleitenden Verfügungen und der Dialog für den Seriendruck genau einmal aufgerufen wird (sonst würde für jede Ausfertigung der Sachleitende Verfügungen ein eigener Seriendruck-Dialog erscheinen). In den zwei Dialogen sollen die gewünschten Einstellungen für den kombinierten Druck genau einmal vorgenommen werden. Erst nachdem alle Einstellungen gesetzt wurden, startet der eigentliche Druck auf dem Drucker. Um dies zu erreichen, wurde die Druckfunktion SachleitendeVerfuegung in zwei Teile, einen GUI-Teil und einen Ausgabeteil, aufgeteilt. Gemeinsam mit der Druckfunktion "Seriendruck" sieht der Konfigurationsabschnitt Druckfunktionen daher z.B. wie folgt aus:
 
  Druckfunktionen(
-   SachleitendeVerfuegung(EXTERN(URL &quot;java:de.muenchen.allg.itd51.wollmux.func.StandardPrint.sachleitendeVerfuegung&quot;) ORDER &quot;10&quot;)
-   Seriendruck(EXTERN(URL &quot;java:de.muenchen.allg.itd51.wollmux.func.StandardPrint.seriendruck&quot;) ORDER &quot;20&quot;)
-   SachleitendeVerfuegungOutput(EXTERN(URL &quot;java:de.muenchen.allg.itd51.wollmux.func.StandardPrint.sachleitendeVerfuegungOutput&quot;) ORDER &quot;30&quot;)  
+   SachleitendeVerfuegung(EXTERN(URL "java:de.muenchen.allg.itd51.wollmux.func.StandardPrint.sachleitendeVerfuegung") ORDER "10")
+   Seriendruck(EXTERN(URL "java:de.muenchen.allg.itd51.wollmux.func.StandardPrint.seriendruck") ORDER "20")
+   SachleitendeVerfuegungOutput(EXTERN(URL "java:de.muenchen.allg.itd51.wollmux.func.StandardPrint.sachleitendeVerfuegungOutput") ORDER "30")  
  )
 
-Die Komfortdruckfunktion &quot;SachleitendeVerfuegung&quot; besteht dabei nur aus dem notwendigen Dialog, über den die zugehörige Ausgabe-Komfortdruckfunktion &quot;SachleitendeVerfuegungOutput&quot; mit entsprechenden Daten über Properties versorgt wird. Die Druckfunktion &quot;Seriendruck&quot; enthält ebenfalls einen Dialog und wird direkt nach dem Dialog der Sachleitenden Verfügungen gestartet. Sie sorgt für eine Massenausgabe als Seriendruck und leitet alle Druckanfragen an die Ausgabe-Komfortdruckfunktion &quot;SachleitendeVerfuegungOutput&quot; weiter. Damit dieses Vorgehen funktioniert, müssen die Komfortdruckfunktionen also in exakt der Reihenfolge SachleitendeVerfuegung -&gt; Seriendruck -&gt; SachleitendeVerfuegungOutput aufgerufen werden.
+Die Komfortdruckfunktion "SachleitendeVerfuegung" besteht dabei nur aus dem notwendigen Dialog, über den die zugehörige Ausgabe-Komfortdruckfunktion "SachleitendeVerfuegungOutput" mit entsprechenden Daten über Properties versorgt wird. Die Druckfunktion "Seriendruck" enthält ebenfalls einen Dialog und wird direkt nach dem Dialog der Sachleitenden Verfügungen gestartet. Sie sorgt für eine Massenausgabe als Seriendruck und leitet alle Druckanfragen an die Ausgabe-Komfortdruckfunktion "SachleitendeVerfuegungOutput" weiter. Damit dieses Vorgehen funktioniert, müssen die Komfortdruckfunktionen also in exakt der Reihenfolge SachleitendeVerfuegung -> Seriendruck -> SachleitendeVerfuegungOutput aufgerufen werden.
 
 Diese Reihenfolge ist im Konfigurationsabschnitt Druckfunktionen über das Attribut ORDER festgelegt. Alle Druckfunktionen, die einem Dokument zugeordnet sind, werden vom WollMux zu einer Aufrufkette verbunden und dabei nach dem ORDER-Wert sortiert. Druckfunktionen mit kleinem Orderwert kommen in der Aufrufkette vor Druckfunktionen mit höherem Orderwert.
 
@@ -1312,25 +1312,25 @@ Druckfunktionen können unter Umständen lange Bearbeitungszeiten haben. Ein Bei
 
 Bei verketteten Druckfunktionen ist der Fortschrittsbalken in der Lage, automatisch die Gesamtzahl der Druckversionen, die sich aus der Multiplikation der Maximalwerte der einzelnen Druckfunktionen ergibt, korrekt zu bestimmen. Jede Druckfunktion muss also nur die Fortschrittswerte setzen, die auch in dieser Druckfunktion anfallen.
 
-;Die Property &quot;STAGE&quot; - Anzeigetitel des Fortschrittsfensters
-Zusätzlich zur Anzeige des Fortschrittsbalkens kann über die Property &quot;STAGE&quot; auch der Anzeigetitel des Forschrittsfensters geändert werden. Dies macht z.B. dann Sinn, wenn mehrere (u.U. zeitaufwändige) Schritte zur Erzeugung eines Seriendrucks notwendig sind und der Anwender zwischen diesen Schritten unterscheiden können soll. Folgendes Code-Gerüst in Java zeigt, wie das aussehen könnte:
+;Die Property "STAGE" - Anzeigetitel des Fortschrittsfensters
+Zusätzlich zur Anzeige des Fortschrittsbalkens kann über die Property "STAGE" auch der Anzeigetitel des Forschrittsfensters geändert werden. Dies macht z.B. dann Sinn, wenn mehrere (u.U. zeitaufwändige) Schritte zur Erzeugung eines Seriendrucks notwendig sind und der Anwender zwischen diesen Schritten unterscheiden können soll. Folgendes Code-Gerüst in Java zeigt, wie das aussehen könnte:
 
  public static void myPrintFunction(XPrintModel pmod) {
    
-     pmod.setPropertyValue(&quot;STAGE&quot;, &quot;Druck vorbereiten&quot;);
+     pmod.setPropertyValue("STAGE", "Druck vorbereiten");
     
      // ... Code, der langwierige Vorbereitungen macht
  
-     pmod.setPropertyValue(&quot;STAGE&quot;, &quot;Druck durchführen&quot;);
+     pmod.setPropertyValue("STAGE", "Druck durchführen");
  
      // ... Code, der den Druck startet, z.B. mit pmod.printWithProps()
  
  }
 
-Ein gesetzter Anzeigetitel gilt so lange auch für alle durch eine Druckfunktion aufgerufenen Druckfunktionen bis diese selbst den Anzeigetitel setzen. Wenn eine Druckfunktion zurück kehrt (zu der sie aufrufenden Druckfunktion), wird automatisch der Anzeigetiteln auf den Wert gesetzt, der vor dem Aufruf der Druckfunktion gegolten hat. Falls der Anzeigetitel gar nicht gesetzt ist, greift die Voreinstellung mit dem String &quot;Drucke&quot;.
+Ein gesetzter Anzeigetitel gilt so lange auch für alle durch eine Druckfunktion aufgerufenen Druckfunktionen bis diese selbst den Anzeigetitel setzen. Wenn eine Druckfunktion zurück kehrt (zu der sie aufrufenden Druckfunktion), wird automatisch der Anzeigetiteln auf den Wert gesetzt, der vor dem Aufruf der Druckfunktion gegolten hat. Falls der Anzeigetitel gar nicht gesetzt ist, greift die Voreinstellung mit dem String "Drucke".
 
 == Einbindung der WollMux-Interfaces in eigene Java-Komponenten ==
 Um die in den vorherigen Abschnitten aufgeführten Interfaces des WollMux (z.B. XWollMux, XPrintModel, ...) in eigenen Java-Komponenten nutzen zu können, müssen die dafür notwendigen .class-Dateien im Classpath des Java-Compilers bekannt sein. Zur Vereinfachung der Einbindung existiert im Downloadbereich der WollMux-Binärpakete seit WollMux 6.7.1 dafür ein eigenes Jar-File namens '''WollMuxInterfaces.jar'''. Es muss lediglich dieses Jar-File in den Classpath aufgenommen werden, und schon sind alle vom WollMux exportierten X-Interfaces ansprechbar.
 
 [[Category:Eierlegender_WollMux]]
-[[Category:Handbuch_des_WollMux]]</rev></revisions></page></pages></query></api>
+[[Category:Handbuch_des_WollMux]]
