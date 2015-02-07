@@ -15,4 +15,4 @@ Bei Fragen oder Problemen können Sie sich auch an ''limux@muenchen.de'' wenden.
 * [http://joinup.ec.europa.eu/mailman/listinfo/wollmux-announce Weitere Informationen (inkl. Formular zum Abonnieren)]
 
 == Extern verfügbarer Issue-Tracker / Problemdatenbank ==
-Für Externe gibt es folgenden Issue-Tracker https://code.google.com/p/wollmux/issues/list
+Für Externe gibt es folgenden Issue-Tracker https://github.com/WollMux/WollMux/issues
